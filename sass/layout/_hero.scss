@@ -1,5 +1,11 @@
 .hero {
-  background-color: getColor('foregroundFirst');
+  .container {
+    padding: 208px 113px 209px 31px;
+    background-color: getColor('foregroundFirst');
+    background-image: url('../../images/Slider-img-3-3x.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   &__title {
     font-size: 48px;
