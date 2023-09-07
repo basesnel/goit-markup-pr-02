@@ -1,0 +1,18 @@
+.features {
+  &__title::before {
+    content: '\00BF';
+  }
+
+  // &__subtitle {
+  // @extend %subtitle;
+  // }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  &__item {
+    color: getColor('titleDark');
+  }
+}

@@ -1,0 +1,22 @@
+$colors: (
+  'background': #fff,
+  'foregroundFirst': rgba(25, 28, 38, 0.2),
+  'foregroundSecond': #111319,
+  'foregroundThird': #f7f7f7,
+  'foregroundFourth': #191c26,
+  'textDark': #555,
+  'textLight': #9da4bd,
+  'titleDark': #303030,
+  'titleLight': rgba(157, 164, 189, 0.6),
+  'accent': #ff6c00,
+  'elemForm': rgba(157, 164, 189, 0.4),
+  'lineColor': rgba(157, 164, 189, 0.12),
+  'servicesGradient': linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+// $servicesGradient: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+$secondGradient: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);

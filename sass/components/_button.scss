@@ -1,0 +1,17 @@
+.btn {
+  border: 1px solid getColor('accent');
+
+  font-family: getFont('openSans'), getFont('sansSerif');
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: getColor('titleDark');
+  background-color: transparent;
+
+  &--light {
+    color: getColor('background');
+  }
+}

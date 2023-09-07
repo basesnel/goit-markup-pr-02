@@ -1,0 +1,23 @@
+.card {
+  text-align: center;
+
+  &__thumb {
+    overflow: hidden;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+
+    color: getColor('darkTitle');
+  }
+
+  &__text {
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 1.36;
+
+    color: getColor('accent');
+  }
+}

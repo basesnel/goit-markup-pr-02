@@ -1,0 +1,7 @@
+.booking {
+  background-color: getColor('foregroundSecond');
+
+  &__title {
+    color: getColor('background');
+  }
+}

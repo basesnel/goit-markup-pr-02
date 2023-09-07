@@ -1,0 +1,10 @@
+// Fonts:
+$fonts: (
+  'openSans': 'Open Sans',
+  'raleWay': 'Raleway',
+  'sansSerif': 'sans-serif',
+);
+
+@function getFont($key) {
+  @return map-get($fonts, $key);
+}

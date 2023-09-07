@@ -1,0 +1,22 @@
+.hero {
+  background-color: getColor('foregroundFirst');
+
+  &__title {
+    font-size: 48px;
+
+    color: getColor('background');
+  }
+
+  &__subtitle {
+    letter-spacing: 0.1em;
+
+    color: getColor('titleLight');
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.62;
+
+    color: getColor('textLight');
+  }
+}

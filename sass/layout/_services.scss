@@ -1,0 +1,22 @@
+.services {
+  background-color: getColor('foregroundSecond');
+
+  &__title {
+    font-size: 40px;
+    color: getColor('background');
+  }
+
+  &__subtitle {
+    color: getColor('titleLight');
+  }
+
+  &__list {
+    background-image: getColor('servicesGradient');
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.43;
+    color: getColor('titleLight');
+  }
+}

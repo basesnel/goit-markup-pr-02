@@ -1,0 +1,57 @@
+.container {
+  padding: 0 31px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.title {
+  font-family: getFont('raleWay'), getFont('sansSerif');
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: getColor('titleDark');
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: getColor('titleDark');
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
