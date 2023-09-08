@@ -1,18 +1,17 @@
 .hero {
   &__container {
-    position: relative;
-    padding: 208px 113px 209px 31px;
+    padding: 243px 113px 209px 31px;
     background-color: getColor('sliderOverlay');
   }
 
   &__title {
     font-size: 48px;
     margin-bottom: 20px;
-
     color: getColor('background');
   }
 
   &__subtitle {
+    top: 208px;
     margin-bottom: 20px;
     letter-spacing: 0.1em;
     color: getColor('titleLight');
