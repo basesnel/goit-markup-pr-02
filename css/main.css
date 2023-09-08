@@ -151,10 +151,11 @@ button {
   font-size: 16px;
 }
 
-.services {
+.services__container {
   background-color: #111319;
 }
 .services__title {
+  margin-bottom: 44px;
   font-size: 40px;
   color: #fff;
 }
@@ -162,12 +163,16 @@ button {
   color: rgba(157, 164, 189, 0.6);
 }
 .services__list {
+  margin-bottom: 44px;
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .services__item {
   font-size: 14px;
   line-height: 1.43;
   color: rgba(157, 164, 189, 0.6);
+}
+.services__btn {
+  margin: 0 auto;
 }
 
 .features__title::before {
@@ -196,14 +201,16 @@ button {
 }
 
 .btn {
+  display: block;
+  width: 160px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 12px;
   font-family: "Open Sans", "sans-serif";
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
-  letter-spacing: 0.09em;
+  letter-spacing: 1.08px;
   text-transform: uppercase;
   color: #303030;
   background-color: transparent;
