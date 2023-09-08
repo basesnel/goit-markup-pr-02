@@ -16,13 +16,15 @@
 
   &__list {
     margin-bottom: 44px;
-    padding: 30px 20px 30px 40px;
+    padding: 20px 20px 20px 40px;
 
     background-image: getColor('servicesGradient');
   }
 
   &__item {
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 
     font-size: 14px;
     line-height: 1.43;
