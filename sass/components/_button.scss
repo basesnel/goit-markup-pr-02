@@ -1,5 +1,7 @@
 .btn {
   border: 1px solid getColor('accent');
+  border-radius: 25px;
+  padding: 12px 20px;
 
   font-family: getFont('openSans'), getFont('sansSerif');
   font-weight: 600;

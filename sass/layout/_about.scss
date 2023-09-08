@@ -3,15 +3,13 @@
     font-size: 28px;
   }
 
-  // &__subtitle {
-  // @extend %subtitle;
-  // }
-
   &__text {
+    margin-bottom: 40px;
     font-size: 14px;
     line-height: 1.86;
 
     &--pretext {
+      margin-bottom: 20px;
       font-size: 16px;
     }
   }
