@@ -1,21 +1,25 @@
 .hero {
-  .container {
+  &__container {
+    position: relative;
     padding: 208px 113px 209px 31px;
-    background-image: url('../images/Slider-img-3-3x.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: getColor('sliderOverlay');
   }
 
   &__title {
     font-size: 48px;
+    margin-bottom: 20px;
 
     color: getColor('background');
   }
 
   &__subtitle {
+    margin-bottom: 20px;
     letter-spacing: 0.1em;
-
     color: getColor('titleLight');
+
+    &::before {
+      background-color: getColor('titleLight');
+    }
   }
 
   &__text {
