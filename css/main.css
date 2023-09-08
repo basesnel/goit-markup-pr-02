@@ -175,9 +175,6 @@ button {
   line-height: 1.43;
   color: rgba(157, 164, 189, 0.6);
 }
-.services__item:last-child {
-  padding-bottom: 0;
-}
 .services__btn {
   margin: 0 auto;
 }
