@@ -1,5 +1,7 @@
 .page-header {
-  background-color: getColor('foregroundFirst');
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
   &__container {
     display: flex;

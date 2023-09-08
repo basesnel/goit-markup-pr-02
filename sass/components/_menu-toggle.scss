@@ -12,5 +12,12 @@
   &__icon {
     width: 28px;
     height: 28px;
+    fill: getColor('background');
+  }
+}
+
+.menu-toggle__icon {
+  .menu-toggle:hover & {
+    fill: getColor('accent');
   }
 }
