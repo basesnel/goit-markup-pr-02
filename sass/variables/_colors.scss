@@ -12,6 +12,7 @@ $colors: (
   'elemForm': rgba(157, 164, 189, 0.4),
   'lineColor': rgba(157, 164, 189, 0.12),
   'servicesGradient': linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
+  'transparent': rgba(0, 0, 0, 0),
 );
 
 @function getColor($key) {

@@ -22,6 +22,10 @@ ul {
   padding-left: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   padding: 0 31px;
   margin: 0 auto;
@@ -94,6 +98,11 @@ ul {
 
 .page-header {
   background-color: rgba(25, 28, 38, 0.2);
+}
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero .container {
@@ -223,4 +232,34 @@ ul {
   font-size: 14px;
   line-height: 1.36;
   color: #ff6c00;
+}
+
+.site-nav {
+  position: relative;
+  display: none;
+}
+
+.logo {
+  display: block;
+  padding: 40px 0;
+}
+.logo__image {
+  width: 68.93px;
+  height: 55.46px;
+}
+
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.menu-toggle__icon {
+  width: 28px;
+  height: 28px;
 }/*# sourceMappingURL=main.css.map */
