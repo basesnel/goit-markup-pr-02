@@ -1,6 +1,7 @@
 .feature {
   width: 193px;
   height: 133px;
+  padding: 20px 35px;
 
   text-align: center;
   font-weight: 600;
@@ -11,6 +12,9 @@
   &__count {
     position: relative;
 
+    display: inline-block;
+    padding-bottom: 6px;
+
     font-weight: 700;
     font-size: 42px;
     letter-spacing: 0.05em;
@@ -19,10 +23,15 @@
       content: '+';
 
       position: absolute;
-      top: 6px;
+      top: 8px;
 
-      font-size: 16px;
+      display: inline-block;
+      width: 20px;
+
+      text-align: center;
       line-height: 1.38;
+      font-size: 16px;
+      font-weight: 600;
 
       color: getColor('accent');
     }

@@ -238,6 +238,7 @@ button {
 .feature {
   width: 193px;
   height: 133px;
+  padding: 20px 35px;
   text-align: center;
   font-weight: 600;
   line-height: 1.36;
@@ -246,6 +247,8 @@ button {
 }
 .feature__count {
   position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
   letter-spacing: 0.05em;
@@ -253,9 +256,13 @@ button {
 .feature__count:after {
   content: "+";
   position: absolute;
-  top: 6px;
-  font-size: 16px;
+  top: 8px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
   line-height: 1.38;
+  font-size: 16px;
+  font-weight: 600;
   color: #ff6c00;
 }
 .feature__text {
