@@ -31,6 +31,9 @@ button {
   padding: 119px 31px 84px;
   margin: 0 auto;
 }
+.container--smallbtm {
+  padding: 119px 31px 20px;
+}
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;

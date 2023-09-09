@@ -3,6 +3,10 @@
   padding: 119px 31px 84px;
   margin: 0 auto;
 
+  &--smallbtm {
+    padding: 119px 31px 20px;
+  }
+
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
