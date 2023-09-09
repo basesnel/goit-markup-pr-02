@@ -4,15 +4,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   border: none;
   margin: 0;
   padding: 0;
+
   background-color: getColor('transparent');
 
   &__icon {
     width: 28px;
     height: 28px;
+
     fill: getColor('background');
+    transition: fill $tns-time $tns-func;
   }
 }
 

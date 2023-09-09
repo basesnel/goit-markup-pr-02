@@ -20,6 +20,7 @@
     height: 20px;
 
     fill: getColor('titleDark');
+    transition: fill $tns-time $tns-func;
   }
 }
 
