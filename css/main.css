@@ -276,7 +276,11 @@ button {
   color: #ff6c00;
 }
 .feature__text {
+  margin: 0 auto;
   font-size: 11px;
+}
+.feature__text--small {
+  width: 84px;
 }
 
 .card {

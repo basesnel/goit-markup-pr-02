@@ -38,6 +38,11 @@
   }
 
   &__text {
+    margin: 0 auto;
     font-size: 11px;
+
+    &--small {
+      width: 84px;
+    }
   }
 }
