@@ -1,9 +1,3 @@
-// .barbers {
-// &__title {
-// @extend %title;
-// }
-//
-// &__subtitle {
-// @extend %subtitle;
-// }
-// }
+.barbers {
+  background-color: getColor('foregroundThird');
+}

@@ -151,7 +151,7 @@ button {
   font-size: 16px;
 }
 
-.services__container {
+.services {
   background-color: #111319;
 }
 .services__title {
@@ -210,6 +210,10 @@ button {
 .features__item:nth-child(odd) {
   position: relative;
   top: -36px;
+}
+
+.barbers {
+  background-color: #f7f7f7;
 }
 
 .booking {
@@ -289,12 +293,17 @@ button {
 .card__thumb {
   overflow: hidden;
 }
+.card__contain {
+  padding: 30px 0 64px;
+}
 .card__title {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
 }
 .card__text {
+  margin-bottom: 30px;
   text-transform: capitalize;
   font-size: 14px;
   line-height: 1.36;
@@ -342,4 +351,24 @@ button {
   top: 0;
   left: 0;
   z-index: -100;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  fill: #303030;
 }/*# sourceMappingURL=main.css.map */

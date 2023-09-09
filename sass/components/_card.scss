@@ -5,7 +5,13 @@
     overflow: hidden;
   }
 
+  &__contain {
+    padding: 30px 0 64px;
+  }
+
   &__title {
+    margin-bottom: 8px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 1.39;
@@ -14,6 +20,8 @@
   }
 
   &__text {
+    margin-bottom: 30px;
+
     text-transform: capitalize;
     font-size: 14px;
     line-height: 1.36;

@@ -1,7 +1,5 @@
 .services {
-  &__container {
-    background-color: getColor('foregroundSecond');
-  }
+  background-color: getColor('foregroundSecond');
 
   &__title {
     margin-bottom: 44px;
