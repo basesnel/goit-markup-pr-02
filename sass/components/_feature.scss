@@ -1,4 +1,7 @@
 .feature {
+  width: 193px;
+  height: 133px;
+
   text-align: center;
   font-weight: 600;
   line-height: 1.36;
@@ -6,17 +9,31 @@
   color: getColor('titleDark');
 
   &__count {
+    position: relative;
+
     font-weight: 700;
     font-size: 42px;
     letter-spacing: 0.05em;
+
+    &:after {
+      content: '+';
+
+      position: absolute;
+      top: 6px;
+
+      font-size: 16px;
+      line-height: 1.38;
+
+      color: getColor('accent');
+    }
   }
 
-  &__plus {
-    font-size: 16px;
-    line-height: 1.38;
+  // &__plus {
+  //   font-size: 16px;
+  //   line-height: 1.38;
 
-    color: getColor('accent');
-  }
+  //   color: getColor('accent');
+  // }
 
   &__text {
     font-size: 11px;
