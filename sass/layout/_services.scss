@@ -44,10 +44,9 @@
     padding: 0 4px 0 0;
   }
 
-  &__line {
+  &__divider {
     height: 1px;
     flex-grow: 1;
-    // order: 1;
     background: getColor('lineColor');
   }
 

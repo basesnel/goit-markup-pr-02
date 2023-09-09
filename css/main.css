@@ -179,7 +179,7 @@ button {
 .services__name {
   padding: 0 4px 0 0;
 }
-.services__line {
+.services__divider {
   height: 1px;
   flex-grow: 1;
   background: rgba(157, 164, 189, 0.12);
