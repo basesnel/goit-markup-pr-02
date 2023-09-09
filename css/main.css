@@ -374,4 +374,8 @@ button {
   width: 20px;
   height: 20px;
   fill: #303030;
+}
+
+.socials__link:hover .socials__icon {
+  fill: #ff6c00;
 }/*# sourceMappingURL=main.css.map */

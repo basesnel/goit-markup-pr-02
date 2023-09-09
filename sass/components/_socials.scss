@@ -22,3 +22,9 @@
     fill: getColor('titleDark');
   }
 }
+
+.socials__icon {
+  .socials__link:hover & {
+    fill: getColor('accent');
+  }
+}
