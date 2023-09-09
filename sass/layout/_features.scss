@@ -3,16 +3,25 @@
     content: '\00BF';
   }
 
-  // &__subtitle {
-  // @extend %subtitle;
-  // }
-
   &__text {
     font-size: 18px;
     line-height: 1.67;
   }
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    padding-top: 80px;
+  }
+
   &__item {
     color: getColor('titleDark');
+  }
+
+  &__item:nth-child(odd) {
+    position: relative;
+    top: -36px;
   }
 }

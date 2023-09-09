@@ -198,8 +198,18 @@ button {
   font-size: 18px;
   line-height: 1.67;
 }
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 80px;
+}
 .features__item {
   color: #303030;
+}
+.features__item:nth-child(odd) {
+  position: relative;
+  top: -36px;
 }
 
 .booking {
@@ -236,7 +246,7 @@ button {
 }
 
 .feature {
-  width: 193px;
+  width: 194px;
   height: 133px;
   padding: 20px 35px;
   text-align: center;
