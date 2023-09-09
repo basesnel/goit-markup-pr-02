@@ -24,11 +24,35 @@
   &__item {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     padding: 10px 0;
 
     font-size: 14px;
     line-height: 1.43;
     color: getColor('titleLight');
+
+    // &:after {
+    //   content: '';
+    //   height: 1px;
+    //   flex-grow: 1;
+    //   order: 1;
+    //   background: getColor('lineColor');
+    // }
+  }
+
+  &__name {
+    padding: 0 4px 0 0;
+  }
+
+  &__line {
+    height: 1px;
+    flex-grow: 1;
+    // order: 1;
+    background: getColor('lineColor');
+  }
+
+  &__price {
+    padding: 0 0 0 4px;
   }
 
   &__btn {
