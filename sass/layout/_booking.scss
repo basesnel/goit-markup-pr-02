@@ -1,7 +1,17 @@
 .booking {
   background-color: getColor('foregroundSecond');
 
+  &__container {
+    padding-top: 84px;
+  }
+
   &__title {
+    margin-bottom: 44px;
+
     color: getColor('background');
+  }
+
+  &__input {
+    margin-bottom: 44px;
   }
 }

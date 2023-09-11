@@ -375,13 +375,30 @@
 
       <!-- Section "Online-booking" -->
       <section class="booking">
-        <div class="container">
-          <h2 class="booking__title title">online-booking</h2>
-          <form>
-            <input type="text" name="name" />
-            <input type="tel" name="tel" />
-            <input type="email" name="email" />
-            <button>send</button>
+        <div class="booking__container container">
+          <h2 class="booking__title title">Online-booking</h2>
+          <form class="booking__form">
+            <label class="booking__field">
+              <span class="booking__label">name</span>
+              <div class="booking__wrap-input">
+                <input type="text" name="name" class="booking__input" />
+              </div>
+            </label>
+            <label class="booking__field">
+              <span class="booking__label">phone</span>
+              <div class="booking__wrap-input">
+                <input type="tel" name="tel" class="booking__input" />
+              </div>
+            </label>
+            <label class="booking__field">
+              <span class="booking__label">message</span>
+              <div class="booking__wrap-input">
+                <textarea class="booking__textarea"></textarea>
+              </div>
+            </label>
+            <div class="booking__field">
+              <button>send</button>
+            </div>
           </form>
         </div>
       </section>
