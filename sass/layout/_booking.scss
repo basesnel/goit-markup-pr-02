@@ -41,6 +41,7 @@
 
     background: transparent;
     color: getColor('elemForm');
+    transition: border-bottom $tns-time $tns-func;
   }
 
   &__textarea {
@@ -59,9 +60,28 @@
     letter-spacing: 1.1px;
 
     color: getColor('elemForm');
+    transition: color $tns-time $tns-func;
   }
 
   &__label--req::after {
     content: '*';
+  }
+}
+
+.booking__label {
+  .booking__field:hover & {
+    color: getColor('background');
+  }
+}
+
+.booking__input {
+  .booking__field:hover & {
+    border-bottom: 1px solid getColor('background');
+  }
+}
+
+.booking__textarea {
+  .booking__field:hover & {
+    border-bottom: 1px solid getColor('background');
   }
 }
