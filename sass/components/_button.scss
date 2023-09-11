@@ -16,6 +16,13 @@
   color: getColor('titleDark');
   background-color: transparent;
 
+  transition: color $tns-time $tns-func, background-color $tns-time $tns-func;
+
+  &:hover {
+    color: getColor('background');
+    background-color: getColor('accent');
+  }
+
   &--light {
     color: getColor('background');
   }
