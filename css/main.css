@@ -219,6 +219,22 @@ button {
   background-color: #f7f7f7;
 }
 
+.portfolio__container {
+  padding-top: 84px;
+}
+.portfolio__subtitle {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 71px;
+}
+.portfolio__item {
+  margin-bottom: 30px;
+}
+.portfolio__item:last-child {
+  margin-bottom: 0;
+}
+
 .booking {
   background-color: #111319;
 }

@@ -1,9 +1,24 @@
 .portfolio {
+  &__container {
+    padding-top: 84px;
+  }
+
   &__title {
     @extend %visually-hidden;
   }
 
-  // &__subtitle {
-  // @extend %subtitle;
-  // }
+  &__subtitle {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 71px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
