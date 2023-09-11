@@ -247,10 +247,34 @@ button {
 }
 .booking__title {
   margin-bottom: 44px;
+  text-align: center;
   color: #fff;
 }
-.booking__input {
+.booking__field {
+  position: relative;
+}
+.booking__label {
+  position: absolute;
+}
+.booking__wrap-input {
   margin-bottom: 44px;
+}
+.booking__input, .booking__textarea {
+  width: 100%;
+  height: 31px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background: transparent;
+}
+.booking__textarea {
+  resize: none;
+  height: 83px;
+}
+.booking__label {
+  text-transform: uppercase;
+}
+.booking__label *::after {
+  content: "f";
 }
 
 .contacts {
