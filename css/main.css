@@ -288,7 +288,7 @@ button {
   line-height: normal;
   letter-spacing: 1.1px;
   color: rgba(157, 164, 189, 0.4);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .booking__label--req::after {
   content: "*";
@@ -298,8 +298,19 @@ button {
   color: #fff;
 }
 
-.booking__input:focus + .booking__label {
+.booking__input:not(:-moz-placeholder-shown) + .booking__label {
   transform: translateY(-32px);
+  font-size: 8px;
+}
+
+.booking__input:not(:-ms-input-placeholder) + .booking__label {
+  transform: translateY(-32px);
+  font-size: 8px;
+}
+
+.booking__input:focus + .booking__label, .booking__input:not(:placeholder-shown) + .booking__label {
+  transform: translateY(-32px);
+  font-size: 8px;
 }
 
 .booking__field:hover .booking__input {

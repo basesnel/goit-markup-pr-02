@@ -62,7 +62,8 @@
     letter-spacing: 1.1px;
 
     color: getColor('elemForm');
-    transition: color $tns-time $tns-func, transform $tns-time $tns-func;
+    transition: color $tns-time $tns-func, transform $tns-time $tns-func,
+      font-size $tns-time $tns-func;
   }
 
   &__label--req::after {
@@ -77,8 +78,10 @@
 }
 
 .booking__label {
-  .booking__input:focus + & {
+  .booking__input:focus + &,
+  .booking__input:not(:placeholder-shown) + & {
     transform: translateY(-32px);
+    font-size: 8px;
   }
 }
 
