@@ -41,7 +41,12 @@
 
     background: transparent;
     color: getColor('elemForm');
-    transition: border-bottom $tns-time $tns-func;
+    transition: border-bottom $tns-time $tns-func, color $tns-time $tns-func;
+
+    &:focus {
+      border-bottom: 1px solid getColor('background');
+      color: getColor('background');
+    }
   }
 
   &__textarea {
