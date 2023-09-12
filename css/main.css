@@ -325,6 +325,26 @@ button {
   border-bottom: 1px solid #fff;
 }
 
+.booking__textarea + .booking__label {
+  top: 4px;
+  transform: translateY(0);
+}
+
+.booking__textarea:not(:-moz-placeholder-shown) + .booking__label {
+  transform: translateY(-27px);
+  font-size: 8px;
+}
+
+.booking__textarea:not(:-ms-input-placeholder) + .booking__label {
+  transform: translateY(-27px);
+  font-size: 8px;
+}
+
+.booking__textarea:focus + .booking__label, .booking__textarea:not(:placeholder-shown) + .booking__label {
+  transform: translateY(-27px);
+  font-size: 8px;
+}
+
 .contacts {
   background-color: #111319;
 }

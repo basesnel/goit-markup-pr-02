@@ -101,3 +101,18 @@
     border-bottom: 1px solid getColor('background');
   }
 }
+
+.booking__label {
+  .booking__textarea + & {
+    top: 4px;
+    transform: translateY(0);
+  }
+}
+
+.booking__label {
+  .booking__textarea:focus + &,
+  .booking__textarea:not(:placeholder-shown) + & {
+    transform: translateY(-27px);
+    font-size: 8px;
+  }
+}
