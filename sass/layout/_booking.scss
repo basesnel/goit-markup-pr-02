@@ -51,7 +51,9 @@
 
   &__label {
     position: absolute;
-    top: 8px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 
     text-transform: uppercase;
 
@@ -60,7 +62,7 @@
     letter-spacing: 1.1px;
 
     color: getColor('elemForm');
-    transition: color $tns-time $tns-func;
+    transition: color $tns-time $tns-func, transform $tns-time $tns-func;
   }
 
   &__label--req::after {
@@ -71,6 +73,12 @@
 .booking__label {
   .booking__field:hover & {
     color: getColor('background');
+  }
+}
+
+.booking__label {
+  .booking__input:focus + & {
+    transform: translateY(-32px);
   }
 }
 

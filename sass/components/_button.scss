@@ -18,12 +18,12 @@
 
   transition: color $tns-time $tns-func, background-color $tns-time $tns-func;
 
+  &--light {
+    color: getColor('background');
+  }
+
   &:hover {
     color: getColor('background');
     background-color: getColor('accent');
-  }
-
-  &--light {
-    color: getColor('background');
   }
 }
