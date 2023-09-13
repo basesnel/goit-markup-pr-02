@@ -43,7 +43,7 @@
         </nav>
         <button type="button" class="menu-toggle">
           <svg class="menu-toggle__icon">
-            <use class="menu-toggle__icon" href="./images/icons.svg#icon-menu"></use>
+            <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
@@ -464,8 +464,15 @@
         <p class="page-footer__text page-footer__text--copyright">Copyright 2020</p>
       </div>
     </footer>
-    <div class="backdrop backdrop--is-hidden">
-      <div class="menu-container"></div>
+
+    <div class="backdrop">
+      <div class="menu-container">
+        <button type="button" class="menu-toggle">
+          <svg class="menu-toggle__icon menu-toggle__icon--close">
+            <use href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </body>
 </html>

@@ -11,12 +11,18 @@
 
   background-color: getColor('transparent');
 
+  cursor: pointer;
+
   &__icon {
     width: 28px;
     height: 28px;
 
     fill: getColor('background');
     transition: fill $tns-time $tns-func;
+
+    &--close {
+      fill: getColor('titleDark');
+    }
   }
 }
 
