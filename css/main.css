@@ -426,6 +426,29 @@ button {
   background-color: #fff;
 }
 
+.page-footer {
+  background-color: #f7f7f7;
+}
+.page-footer__container {
+  padding: 44px 31px 44px;
+}
+.page-footer__text {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  color: #303030;
+}
+.page-footer__text--copyright {
+  color: #9da4bd;
+}
+.page-footer__text--copyright::before {
+  content: "©";
+  padding-right: 6px;
+}
+.page-footer__link {
+  text-decoration: none;
+}
+
 .btn {
   display: block;
   width: 160px;
