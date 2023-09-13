@@ -6,7 +6,7 @@
   height: 100vh;
   padding: 24px 20px;
   background-color: getColor('background');
-  z-index: 999;
+  z-index: 9999;
 
   transform: translateX(100%);
   transition: transform $tns-time $tns-func;
