@@ -3,6 +3,8 @@
 
   &__container {
     padding-top: 84px;
+
+    background-image: url('../images/mobile/contacts-bg-2x.png');
   }
 
   &__title {
@@ -95,5 +97,10 @@
     height: 1px;
 
     background-color: getColor('textLight');
+    transition: background-color $tns-time $tns-func;
+  }
+
+  .contacts__link:hover &::after {
+    background-color: getColor('background');
   }
 }
