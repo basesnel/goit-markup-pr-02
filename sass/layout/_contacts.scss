@@ -38,15 +38,6 @@
     }
   }
 
-  &__text {
-    font-size: 18px;
-    line-height: 1.6667;
-    font-style: normal;
-    letter-spacing: 0.36px;
-
-    color: getColor('textLight');
-  }
-
   &__link {
     display: flex;
     gap: 16px;
@@ -55,11 +46,35 @@
     text-decoration: none;
   }
 
+  &__text {
+    font-size: 18px;
+    line-height: 1.6667;
+    font-style: normal;
+    letter-spacing: 0.36px;
+
+    color: getColor('textLight');
+
+    transition: color $tns-time $tns-func;
+  }
+
   &__icon {
     width: 24px;
     height: 24px;
 
     fill: getColor('textLight');
+    transition: fill $tns-time $tns-func;
+  }
+}
+
+.contacts__text {
+  .contacts__link:hover & {
+    color: getColor('background');
+  }
+}
+
+.contacts__icon {
+  .contacts__link:hover & {
+    fill: getColor('background');
   }
 }
 

@@ -375,23 +375,33 @@ button {
 .contacts__item:last-child {
   margin-bottom: 0;
 }
-.contacts__text {
-  font-size: 18px;
-  line-height: 1.6667;
-  font-style: normal;
-  letter-spacing: 0.36px;
-  color: #9da4bd;
-}
 .contacts__link {
   display: flex;
   gap: 16px;
   align-items: center;
   text-decoration: none;
 }
+.contacts__text {
+  font-size: 18px;
+  line-height: 1.6667;
+  font-style: normal;
+  letter-spacing: 0.36px;
+  color: #9da4bd;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .contacts__icon {
   width: 24px;
   height: 24px;
   fill: #9da4bd;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts__link:hover .contacts__text {
+  color: #fff;
+}
+
+.contacts__link:hover .contacts__icon {
+  fill: #fff;
 }
 
 .contacts__text--map-pin {
