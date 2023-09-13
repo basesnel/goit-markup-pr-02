@@ -13,6 +13,12 @@
 
   cursor: pointer;
 
+  &--close {
+    position: absolute;
+    top: 48px;
+    right: 31px;
+  }
+
   &__icon {
     width: 28px;
     height: 28px;
@@ -21,6 +27,9 @@
     transition: fill $tns-time $tns-func;
 
     &--close {
+      width: 40px;
+      height: 40px;
+
       fill: getColor('titleDark');
     }
   }
