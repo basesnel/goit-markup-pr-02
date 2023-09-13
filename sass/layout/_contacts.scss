@@ -1,7 +1,42 @@
 .contacts {
   background-color: getColor('foregroundSecond');
 
+  &__container {
+    padding-top: 84px;
+  }
+
   &__title {
+    margin-bottom: 40px;
     color: getColor('background');
+  }
+
+  &__subtitle {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    color: getColor('background');
+
+    &::before {
+      background-color: getColor('elemForm');
+    }
+  }
+
+  &__link,
+  &__text {
+    font-size: 18px;
+    line-height: 1.67;
+    font-style: normal;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+
+    color: getColor('textLight');
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    fill: getColor('textLight');
   }
 }
