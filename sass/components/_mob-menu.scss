@@ -15,23 +15,27 @@
     transform: translateX(0);
   }
 
-  &__item-nav {
+  &__item {
+    padding-bottom: 24px;
+
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1.8px;
     line-height: normal;
 
     color: getColor('titleDark');
+
+    &--soc {
+      font-size: 14px;
+      letter-spacing: 2.8px;
+    }
+  }
+
+  &__item:last-child {
+    padding-bottom: 0;
   }
 
   &__link {
     color: getColor('titleDark');
-  }
-
-  &__item-soc {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2.8px;
-    line-height: normal;
   }
 }

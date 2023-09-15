@@ -661,19 +661,21 @@ button {
 .mob-menu.is-open {
   transform: translateX(0);
 }
-.mob-menu__item-nav {
+.mob-menu__item {
+  padding-bottom: 24px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1.8px;
   line-height: normal;
   color: #303030;
 }
+.mob-menu__item--soc {
+  font-size: 14px;
+  letter-spacing: 2.8px;
+}
+.mob-menu__item:last-child {
+  padding-bottom: 0;
+}
 .mob-menu__link {
   color: #303030;
-}
-.mob-menu__item-soc {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2.8px;
-  line-height: normal;
 }/*# sourceMappingURL=main.css.map */
