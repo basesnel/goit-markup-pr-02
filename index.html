@@ -41,7 +41,7 @@
             <li><a href="#" class="link">Youtube</a></li>
           </ul>
         </nav>
-        <button type="button" class="menu-toggle js-open-menu">
+        <button type="button" aria-label="Open the mobile menu" class="menu-toggle js-open-menu">
           <svg class="menu-toggle__icon">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -467,7 +467,11 @@
 
     <div class="backdrop backdrop--is-hidden" data-backdrop>
       <div class="mob-menu js-menu-container" id="mobile-menu">
-        <button type="button" class="menu-toggle menu-toggle--close js-close-menu">
+        <button
+          type="button"
+          aria-label="Close the mobile menu"
+          class="menu-toggle menu-toggle--close js-close-menu"
+        >
           <svg class="menu-toggle__icon menu-toggle__icon--close">
             <use href="./images/icons.svg#menu-close"></use>
           </svg>
