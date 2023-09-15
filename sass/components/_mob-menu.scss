@@ -15,6 +15,14 @@
     transform: translateX(0);
   }
 
+  &__list {
+    padding-bottom: 64px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
   &__item {
     padding-bottom: 24px;
 
@@ -26,6 +34,7 @@
     color: getColor('titleDark');
 
     &--soc {
+      padding-left: 100px;
       font-size: 14px;
       letter-spacing: 2.8px;
     }
@@ -37,5 +46,10 @@
 
   &__link {
     color: getColor('titleDark');
+  }
+
+  &__btn {
+    width: auto;
+    padding: 12px 37px;
   }
 }

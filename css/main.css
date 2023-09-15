@@ -661,6 +661,12 @@ button {
 .mob-menu.is-open {
   transform: translateX(0);
 }
+.mob-menu__list {
+  padding-bottom: 64px;
+}
+.mob-menu__list:last-child {
+  padding-bottom: 0;
+}
 .mob-menu__item {
   padding-bottom: 24px;
   font-size: 18px;
@@ -670,6 +676,7 @@ button {
   color: #303030;
 }
 .mob-menu__item--soc {
+  padding-left: 100px;
   font-size: 14px;
   letter-spacing: 2.8px;
 }
@@ -678,4 +685,8 @@ button {
 }
 .mob-menu__link {
   color: #303030;
+}
+.mob-menu__btn {
+  width: auto;
+  padding: 12px 37px;
 }/*# sourceMappingURL=main.css.map */
