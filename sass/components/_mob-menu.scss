@@ -1,0 +1,37 @@
+.mob-menu {
+  position: fixed;
+  top: 0;
+  right: 70vw;
+  width: 70vw;
+  height: 100vh;
+  padding: 118px 31px;
+  background-color: getColor('background');
+  z-index: 9999;
+
+  transform: translateX(100%);
+  transition: transform $tns-time $tns-func;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__item-nav {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: normal;
+
+    color: getColor('titleDark');
+  }
+
+  &__link {
+    color: getColor('titleDark');
+  }
+
+  &__item-soc {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2.8px;
+    line-height: normal;
+  }
+}
