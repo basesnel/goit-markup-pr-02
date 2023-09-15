@@ -6,13 +6,14 @@
   height: 100vh;
   padding: 118px 31px;
   background-color: getColor('background');
-  z-index: 9999;
+  z-index: 999;
 
   transform: translateX(100%);
   transition: transform $tns-time $tns-func;
 
   &.is-open {
-    transform: translateX(0);
+    width: 71vw;
+    transform: translateX(29vw);
   }
 
   &__list {
