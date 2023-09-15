@@ -20,6 +20,7 @@
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
+    backdrop.classList.add('backdrop--is-hidden');
     openMenuBtn.setAttribute('aria-expanded', false);
     //replace
     //bodyScrollLock.enableBodyScroll(document.body);
