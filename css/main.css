@@ -432,23 +432,6 @@ button {
 .page-footer__container {
   padding: 44px 31px 44px;
 }
-.page-footer__list {
-  display: flex;
-  gap: 40px;
-  justify-content: end;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.page-footer__list::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 1px;
-  background-color: #303030;
-}
-.page-footer__item {
-  line-height: 1.1;
-}
 .page-footer__text {
   font-size: 11px;
   font-weight: 600;
@@ -462,9 +445,6 @@ button {
 .page-footer__text--copyright::before {
   content: "©";
   padding-right: 6px;
-}
-.page-footer__link {
-  text-decoration: none;
 }
 
 .backdrop {
