@@ -36,6 +36,8 @@
 
   &__link {
     color: getColor('titleDark');
+
+    transition: color $tns-time $tns-func;
   }
 
   &__btn {
