@@ -8,7 +8,9 @@
 
   background-color: getColor('sliderOverlay');
   opacity: 1;
-  transition: opacity $tns-time $tns-func;
+  visibility: visible;
+
+  transition: opacity $tns-time $tns-func, visibility $tns-time $tns-func;
   overflow-y: scroll;
 
   &--is-hidden {
