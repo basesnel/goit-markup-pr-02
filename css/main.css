@@ -681,8 +681,8 @@ button {
 .mob-menu {
   position: fixed;
   top: 0;
-  right: 70vw;
-  width: 70vw;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   padding: 118px 31px;
   background-color: #fff;

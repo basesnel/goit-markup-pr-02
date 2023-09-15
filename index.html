@@ -41,7 +41,7 @@
             <li><a href="#" class="link">Youtube</a></li>
           </ul>
         </nav>
-        <button type="button" class="menu-toggle">
+        <button type="button" class="menu-toggle js-open-menu">
           <svg class="menu-toggle__icon">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -465,46 +465,48 @@
       </div>
     </footer>
 
-    <div class="backdrop">
-      <div class="mob-menu">
-        <button type="button" class="menu-toggle menu-toggle--close">
-          <svg class="menu-toggle__icon menu-toggle__icon--close">
-            <use href="./images/icons.svg#menu-close"></use>
-          </svg>
-        </button>
-        <ul class="list mob-menu__list">
-          <li class="item mob-menu__item">
-            <a href="#about" class="link mob-menu__link">About</a>
+    <!-- <div class="backdrop backdrop--is-hidden"> -->
+    <div class="mob-menu js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle menu-toggle--close js-close-menu">
+        <svg class="menu-toggle__icon menu-toggle__icon--close">
+          <use href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <ul class="list mob-menu__list">
+        <li class="item mob-menu__item">
+          <a href="#about" class="link mob-menu__link">About</a>
+        </li>
+        <li class="item mob-menu__item">
+          <a href="#services" class="link mob-menu__link">Services and prices</a>
+        </li>
+        <li class="item mob-menu__item">
+          <a href="#barbers" class="link mob-menu__link">Barbers</a>
+        </li>
+        <li class="item mob-menu__item">
+          <a href="#contacts" class="link mob-menu__link">Contacts</a>
+        </li>
+      </ul>
+      <ul class="list mob-menu__list">
+        <li class="item mob-menu__item">
+          <a href="tel:+380441111111" class="link mob-menu__link">+38 044 111 11 11</a>
+        </li>
+        <li class="item mob-menu__item">
+          <button class="btn mob-menu__btn">online-booking</button>
+        </li>
+      </ul>
+      <div class="soc-nav">
+        <ul class="list soc-nav__list soc-nav__list--mobmenu">
+          <li class="soc-nav__item soc-nav__item--mobmenu soc-nav__item--decor">
+            <a href="#" class="soc-nav__link">Instagram</a>
           </li>
-          <li class="item mob-menu__item">
-            <a href="#services" class="link mob-menu__link">Services and prices</a>
-          </li>
-          <li class="item mob-menu__item">
-            <a href="#barbers" class="link mob-menu__link">Barbers</a>
-          </li>
-          <li class="item mob-menu__item">
-            <a href="#contacts" class="link mob-menu__link">Contacts</a>
+          <li class="soc-nav__item soc-nav__item--mobmenu soc-nav__item--decor">
+            <a href="#" class="soc-nav__link">Youtube</a>
           </li>
         </ul>
-        <ul class="list mob-menu__list">
-          <li class="item mob-menu__item">
-            <a href="tel:+380441111111" class="link mob-menu__link">+38 044 111 11 11</a>
-          </li>
-          <li class="item mob-menu__item">
-            <button class="btn mob-menu__btn">online-booking</button>
-          </li>
-        </ul>
-        <div class="soc-nav">
-          <ul class="list soc-nav__list soc-nav__list--mobmenu">
-            <li class="soc-nav__item soc-nav__item--mobmenu soc-nav__item--decor">
-              <a href="#" class="soc-nav__link">Instagram</a>
-            </li>
-            <li class="soc-nav__item soc-nav__item--mobmenu soc-nav__item--decor">
-              <a href="#" class="soc-nav__link">Youtube</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
+    <!-- </div> -->
+
+    <script defer src="./js/mob-menu.js"></script>
   </body>
 </html>
