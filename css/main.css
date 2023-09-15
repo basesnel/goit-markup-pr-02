@@ -634,11 +634,21 @@ button {
   align-items: center;
   margin-bottom: 20px;
 }
+.soc-nav__list--mobmenu {
+  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
 .soc-nav__item {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2.2px;
   line-height: normal;
+}
+.soc-nav__item--mobmenu {
+  font-size: 14px;
+  letter-spacing: 2.8px;
 }
 .soc-nav__link {
   text-decoration: none;
@@ -661,6 +671,12 @@ button {
   height: 1px;
   background-color: #303030;
 }
+.soc-nav__item--decor:last-child {
+  padding-left: 100px;
+}
+.soc-nav__item--decor:last-child::before {
+  content: none;
+}
 
 .mob-menu {
   position: fixed;
@@ -680,9 +696,6 @@ button {
 .mob-menu__list {
   padding-bottom: 64px;
 }
-.mob-menu__list:last-child {
-  padding-bottom: 0;
-}
 .mob-menu__item {
   padding-bottom: 24px;
   font-size: 18px;
@@ -690,11 +703,6 @@ button {
   letter-spacing: 1.8px;
   line-height: normal;
   color: #303030;
-}
-.mob-menu__item--soc {
-  padding-left: 100px;
-  font-size: 14px;
-  letter-spacing: 2.8px;
 }
 .mob-menu__item:last-child {
   padding-bottom: 0;

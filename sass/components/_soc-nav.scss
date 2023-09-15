@@ -6,6 +6,14 @@
     align-items: center;
 
     margin-bottom: 20px;
+
+    &--mobmenu {
+      gap: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -13,6 +21,11 @@
     font-weight: 600;
     letter-spacing: 2.2px;
     line-height: normal;
+
+    &--mobmenu {
+      font-size: 14px;
+      letter-spacing: 2.8px;
+    }
   }
 
   &__link {
@@ -41,5 +54,13 @@
     height: 1px;
 
     background-color: getColor('titleDark');
+  }
+
+  &:last-child {
+    padding-left: 100px;
+
+    &::before {
+      content: none;
+    }
   }
 }
