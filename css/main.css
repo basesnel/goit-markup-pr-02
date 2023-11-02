@@ -189,8 +189,13 @@ button {
 }
 .services__list {
   margin-bottom: 44px;
-  padding: 20px 20px 20px 40px;
+  padding: 20px;
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+@media screen and (min-width: 480px) {
+  .services__list {
+    padding: 20px 20px 20px 40px;
+  }
 }
 .services__item {
   display: flex;
@@ -198,6 +203,7 @@ button {
   padding: 10px 0;
   font-size: 14px;
   line-height: 1.43;
+  word-break: break-all;
   color: rgba(157, 164, 189, 0.6);
 }
 .services__item::before {
@@ -492,7 +498,7 @@ button {
 
 .btn {
   display: block;
-  width: 160px;
+  max-width: 160px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
   padding: 12px;
@@ -637,6 +643,13 @@ button {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 220px) {
+  .socials {
+    flex-direction: row;
+  }
 }
 .socials__link {
   display: flex;
@@ -669,10 +682,17 @@ button {
   margin-bottom: 20px;
 }
 .soc-nav__list--mobmenu {
-  gap: 24px;
+  gap: 10px;
   flex-direction: column;
   align-items: flex-start;
+  align-items: flex-end;
   margin-bottom: 0;
+}
+@media screen and (min-width: 480px) {
+  .soc-nav__list--mobmenu {
+    align-items: flex-start;
+    gap: 24px;
+  }
 }
 .soc-nav__item {
   font-size: 11px;
@@ -680,9 +700,11 @@ button {
   letter-spacing: 2.2px;
   line-height: normal;
 }
-.soc-nav__item--mobmenu {
-  font-size: 14px;
-  letter-spacing: 2.8px;
+@media screen and (min-width: 480px) {
+  .soc-nav__item--mobmenu {
+    font-size: 14px;
+    letter-spacing: 2.8px;
+  }
 }
 .soc-nav__link {
   text-decoration: none;
@@ -707,8 +729,10 @@ button {
     background-color: #303030;
   }
 }
-.soc-nav__item--decor:last-child {
-  padding-left: 100px;
+@media screen and (min-width: 480px) {
+  .soc-nav__item--decor:last-child {
+    padding-left: 100px;
+  }
 }
 .soc-nav__item--decor:last-child::before {
   content: none;
@@ -734,12 +758,18 @@ button {
   padding-bottom: 64px;
 }
 .mob-menu__item {
-  padding-bottom: 24px;
-  font-size: 18px;
+  padding-bottom: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.8px;
   line-height: normal;
   color: #303030;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__item {
+    padding-bottom: 24px;
+    font-size: 18px;
+  }
 }
 .mob-menu__item:last-child {
   padding-bottom: 0;
@@ -750,5 +780,10 @@ button {
 }
 .mob-menu__btn {
   width: auto;
-  padding: 12px 37px;
+  padding: 12px 12px;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__btn {
+    padding: 12px 37px;
+  }
 }/*# sourceMappingURL=main.css.map */

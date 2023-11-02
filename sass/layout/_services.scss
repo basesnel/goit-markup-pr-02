@@ -14,9 +14,13 @@
 
   &__list {
     margin-bottom: 44px;
-    padding: 20px 20px 20px 40px;
+    padding: 20px;
 
     background-image: getColor('servicesGradient');
+
+    @media screen and (min-width: $mobile) {
+      padding: 20px 20px 20px 40px;
+    }
   }
 
   &__item {
@@ -26,6 +30,8 @@
 
     font-size: 14px;
     line-height: 1.43;
+    word-break: break-all;
+
     color: getColor('titleLight');
 
     &::before {

@@ -10,11 +10,17 @@
     margin-bottom: 20px;
 
     &--mobmenu {
-      gap: 24px;
+      gap: 10px;
       flex-direction: column;
       align-items: flex-start;
+      align-items: flex-end;
 
       margin-bottom: 0;
+
+      @media screen and (min-width: $mobile) {
+        align-items: flex-start;
+        gap: 24px;
+      }
     }
   }
 
@@ -25,8 +31,10 @@
     line-height: normal;
 
     &--mobmenu {
-      font-size: 14px;
-      letter-spacing: 2.8px;
+      @media screen and (min-width: $mobile) {
+        font-size: 14px;
+        letter-spacing: 2.8px;
+      }
     }
   }
 
@@ -61,7 +69,9 @@
   }
 
   &:last-child {
-    padding-left: 100px;
+    @media screen and (min-width: $mobile) {
+      padding-left: 100px;
+    }
 
     &::before {
       content: none;
