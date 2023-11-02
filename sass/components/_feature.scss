@@ -1,13 +1,18 @@
 .feature {
-  width: 194px;
-  height: 133px;
-  padding: 20px 35px;
+  height: auto;
+  padding: 20px 20px;
 
   text-align: center;
   font-weight: 600;
   line-height: 1.36;
   background-color: getColor('foregroundThird');
   color: getColor('titleDark');
+
+  @media screen and (min-width: $xs) {
+    width: 194px;
+    height: 133px;
+    padding: 20px 35px;
+  }
 
   &__count {
     position: relative;

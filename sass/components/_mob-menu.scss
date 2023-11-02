@@ -41,6 +41,8 @@
   }
 
   &__link {
+    word-break: break-all;
+
     color: getColor('titleDark');
 
     transition: color $tns-time $tns-func;

@@ -240,7 +240,13 @@ button {
   padding-top: 80px;
 }
 .features__item {
+  width: 100%;
   color: #303030;
+}
+@media screen and (min-width: 220px) {
+  .features__item {
+    width: inherit;
+  }
 }
 @media screen and (min-width: 480px) {
   .features__item:nth-child(odd) {
@@ -410,6 +416,7 @@ button {
   gap: 16px;
   align-items: center;
   text-decoration: none;
+  word-break: break-all;
 }
 .contacts__text {
   font-size: 18px;
@@ -521,14 +528,20 @@ button {
 }
 
 .feature {
-  width: 194px;
-  height: 133px;
-  padding: 20px 35px;
+  height: auto;
+  padding: 20px 20px;
   text-align: center;
   font-weight: 600;
   line-height: 1.36;
   background-color: #f7f7f7;
   color: #303030;
+}
+@media screen and (min-width: 220px) {
+  .feature {
+    width: 194px;
+    height: 133px;
+    padding: 20px 35px;
+  }
 }
 .feature__count {
   position: relative;
@@ -775,6 +788,7 @@ button {
   padding-bottom: 0;
 }
 .mob-menu__link {
+  word-break: break-all;
   color: #303030;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
