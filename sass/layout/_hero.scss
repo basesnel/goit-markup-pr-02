@@ -1,7 +1,11 @@
 .hero {
   &__container {
-    padding: 243px 31px 209px;
+    padding: 209px 31px 119px;
     background-color: getColor('sliderOverlay');
+
+    @media screen and (min-width: $mobile) {
+      padding: 243px 31px 209px;
+    }
   }
 
   &__title {
