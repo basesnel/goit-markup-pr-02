@@ -230,14 +230,16 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
   padding-top: 80px;
 }
 .features__item {
   color: #303030;
 }
-.features__item:nth-child(odd) {
-  position: relative;
-  top: -36px;
+@media screen and (min-width: 480px) {
+  .features__item:nth-child(odd) {
+    transform: translateY(-36px);
+  }
 }
 
 .barbers {

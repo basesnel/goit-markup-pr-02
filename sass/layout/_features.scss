@@ -12,6 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 
     padding-top: 80px;
   }
@@ -21,7 +22,8 @@
   }
 
   &__item:nth-child(odd) {
-    position: relative;
-    top: -36px;
+    @media screen and (min-width: $mobile) {
+      transform: translateY(-36px);
+    }
   }
 }
