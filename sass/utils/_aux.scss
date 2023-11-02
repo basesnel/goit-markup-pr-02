@@ -40,25 +40,32 @@
 }
 
 .subtitle {
-  position: absolute;
-  top: 84px;
-  left: 31px;
-  padding: 0 0 0 80px;
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+
   color: getColor('titleDark');
 
-  &::before {
-    content: '';
+  @media screen and (min-width: $mobile) {
     position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    background-color: getColor('titleDark');
-    width: 60px;
-    height: 1px;
+    top: 84px;
+    left: 31px;
+    margin-bottom: 0;
+    padding: 0 0 0 80px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      background-color: getColor('titleDark');
+      width: 60px;
+      height: 1px;
+    }
   }
 }
 

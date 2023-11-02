@@ -63,25 +63,31 @@ button {
 }
 
 .subtitle {
-  position: absolute;
-  top: 84px;
-  left: 31px;
-  padding: 0 0 0 80px;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
   color: #303030;
 }
-.subtitle::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  background-color: #303030;
-  width: 60px;
-  height: 1px;
+@media screen and (min-width: 480px) {
+  .subtitle {
+    position: absolute;
+    top: 84px;
+    left: 31px;
+    margin-bottom: 0;
+    padding: 0 0 0 80px;
+  }
+  .subtitle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    background-color: #303030;
+    width: 60px;
+    height: 1px;
+  }
 }
 
 .thumb {
@@ -124,7 +130,7 @@ button {
 }
 
 .hero__container {
-  padding: 243px 113px 209px 31px;
+  padding: 243px 31px 209px;
   background-color: rgba(25, 28, 38, 0.2);
 }
 .hero__title {
@@ -641,9 +647,12 @@ button {
 
 .soc-nav__list {
   display: flex;
-  gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 10px;
   justify-content: end;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 .soc-nav__list--mobmenu {
@@ -676,12 +685,14 @@ button {
   gap: 40px;
   align-items: center;
 }
-.soc-nav__item--decor::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 1px;
-  background-color: #303030;
+@media screen and (min-width: 480px) {
+  .soc-nav__item--decor::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+  }
 }
 .soc-nav__item--decor:last-child {
   padding-left: 100px;

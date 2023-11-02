@@ -1,9 +1,11 @@
 .soc-nav {
   &__list {
     display: flex;
-    gap: 40px;
+    column-gap: 40px;
+    row-gap: 10px;
     justify-content: end;
     align-items: center;
+    flex-wrap: wrap;
 
     margin-bottom: 20px;
 
@@ -46,14 +48,16 @@
   gap: 40px;
   align-items: center;
 
-  &::before {
-    content: '';
+  @media screen and (min-width: $mobile) {
+    &::before {
+      content: '';
 
-    display: block;
-    width: 60px;
-    height: 1px;
+      display: block;
+      width: 60px;
+      height: 1px;
 
-    background-color: getColor('titleDark');
+      background-color: getColor('titleDark');
+    }
   }
 
   &:last-child {
