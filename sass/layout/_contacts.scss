@@ -87,6 +87,8 @@
 .contacts__text--mail {
   position: relative;
 
+  word-break: break-all;
+
   &::after {
     content: '';
     position: absolute;

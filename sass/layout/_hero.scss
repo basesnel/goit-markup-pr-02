@@ -5,9 +5,13 @@
   }
 
   &__title {
-    font-size: 48px;
+    font-size: 28px;
     margin-bottom: 20px;
     color: getColor('background');
+
+    @media screen and (min-width: $mobile) {
+      font-size: 48px;
+    }
   }
 
   &__subtitle {

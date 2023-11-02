@@ -1,7 +1,8 @@
 .container {
   position: relative;
-  padding: 119px 31px 84px;
+
   margin: 0 auto;
+  padding: 119px 31px 84px;
 
   &--smallbtm {
     padding: 119px 31px 20px;
@@ -27,11 +28,14 @@
 
 .title {
   margin-bottom: 20px;
+
   font-family: getFont('raleWay'), getFont('sansSerif');
   font-weight: 700;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+  word-break: break-all;
+
   color: getColor('titleDark');
 }
 

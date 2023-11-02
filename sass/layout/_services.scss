@@ -39,12 +39,14 @@
 
   &__name {
     padding: 0 4px 0 0;
-    // order: 0;
   }
 
   &__price {
     padding: 0 0 0 4px;
+
     order: 2;
+
+    text-align: right;
   }
 
   &__btn {

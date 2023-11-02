@@ -28,8 +28,8 @@ button {
 
 .container {
   position: relative;
-  padding: 119px 31px 84px;
   margin: 0 auto;
+  padding: 119px 31px 84px;
 }
 .container--smallbtm {
   padding: 119px 31px 20px;
@@ -58,6 +58,7 @@ button {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+  word-break: break-all;
   color: #303030;
 }
 
@@ -112,6 +113,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  width: 100%;
 }
 .page-header__container {
   position: relative;
@@ -126,9 +128,14 @@ button {
   background-color: rgba(25, 28, 38, 0.2);
 }
 .hero__title {
-  font-size: 48px;
+  font-size: 28px;
   margin-bottom: 20px;
   color: #fff;
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 48px;
+  }
 }
 .hero__subtitle {
   top: 208px;
@@ -195,6 +202,7 @@ button {
 .services__price {
   padding: 0 0 0 4px;
   order: 2;
+  text-align: right;
 }
 .services__btn {
   margin: 0 auto;
@@ -413,6 +421,7 @@ button {
 
 .contacts__text--mail {
   position: relative;
+  word-break: break-all;
 }
 .contacts__text--mail::after {
   content: "";
