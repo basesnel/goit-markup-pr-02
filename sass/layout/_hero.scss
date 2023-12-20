@@ -35,4 +35,8 @@
 
     color: getColor('textLight');
   }
+
+  & .list {
+    display: none;
+  }
 }

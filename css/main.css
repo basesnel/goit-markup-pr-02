@@ -162,6 +162,9 @@ button {
   line-height: 1.62;
   color: #9da4bd;
 }
+.hero .list {
+  display: none;
+}
 
 .about__title {
   font-size: 28px;
