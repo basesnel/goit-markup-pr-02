@@ -20,6 +20,11 @@
 .link {
   text-decoration: none;
 
+  &:visited,
+  &:active {
+    color: getColor('titleDark');
+  }
+
   &:hover,
   &:focus {
     color: getColor('accent');
