@@ -47,7 +47,7 @@ button {
 .link {
   text-decoration: none;
 }
-.link:visited, .link:active {
+.link:visited {
   color: #303030;
 }
 .link:hover, .link:focus {
