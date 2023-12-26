@@ -3,7 +3,7 @@ body {
   font-family: "Open Sans", "sans-serif";
   letter-spacing: 0.02em;
   background-color: #fff;
-  color: #555;
+  color: #555555;
 }
 
 h1,
@@ -48,10 +48,13 @@ button {
   text-decoration: none;
 }
 .link:visited {
-  color: #303030;
+  color: rgba(85, 85, 85, 0.32);
 }
 .link:hover, .link:focus {
   color: #ff6c00;
+}
+.link:active {
+  color: rgba(255, 108, 0, 0.5);
 }
 
 .title {
@@ -101,6 +104,10 @@ button {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .portfolio__title {

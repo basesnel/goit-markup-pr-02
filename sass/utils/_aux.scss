@@ -21,12 +21,16 @@
   text-decoration: none;
 
   &:visited {
-    color: getColor('titleDark');
+    color: getColor('visited');
   }
 
   &:hover,
   &:focus {
     color: getColor('accent');
+  }
+
+  &:active {
+    color: getColor('active');
   }
 }
 
@@ -81,6 +85,10 @@
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 %visually-hidden {
