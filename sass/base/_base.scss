@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: getFont('openSans'), getFont('sansSerif');
   letter-spacing: 0.02em;
