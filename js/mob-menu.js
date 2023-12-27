@@ -4,6 +4,7 @@
   const closeMenuBtn = document.querySelector('.js-close-menu');
   const backdrop = document.querySelector('[data-backdrop]');
   const bodyScrollLock = document.querySelector('body');
+  const menuItems = document.querySelectorAll('.mob-menu__link');
 
   function toggleMenu() {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -15,6 +16,7 @@
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
+  menuItems.forEach(menuItem => menuItem.addEventListener('click', toggleMenu));
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
