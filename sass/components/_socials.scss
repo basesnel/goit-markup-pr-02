@@ -19,19 +19,27 @@
     border-radius: 50%;
 
     background-color: getColor('background');
+    color: getColor('titleDark');
+    transition: color $tns-time $tns-func;
   }
 
   &__icon {
     width: 20px;
     height: 20px;
 
-    fill: getColor('titleDark');
+    fill: currentColor;
     transition: fill $tns-time $tns-func;
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
   }
 }
 
 .socials__icon {
-  .socials__link:hover & {
+  .socials__link:hover &,
+  .socials__link:focus & {
     fill: getColor('accent');
   }
 }

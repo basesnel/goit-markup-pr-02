@@ -26,6 +26,7 @@
   &__item {
     display: flex;
     align-items: baseline;
+    gap: 4px;
     padding: 10px 0;
 
     font-size: 14px;
@@ -34,25 +35,16 @@
 
     color: getColor('titleLight');
 
-    &::before {
+    &::after {
       content: '';
       height: 1px;
       flex-grow: 1;
-      order: 1;
-      background: getColor('lineColor');
+      background: currentColor;
     }
   }
 
-  &__name {
-    padding: 0 4px 0 0;
-  }
-
   &__price {
-    padding: 0 0 0 4px;
-
-    order: 2;
-
-    text-align: right;
+    order: 1;
   }
 
   &__btn {
