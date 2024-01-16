@@ -750,15 +750,18 @@ button {
   align-items: center;
 }
 @media screen and (min-width: 480px) {
+  .soc-nav__item--decor {
+    padding-left: 100px;
+  }
+  .soc-nav__item--decor:first-child {
+    padding-left: 0;
+  }
   .soc-nav__item--decor:first-child:before {
     content: "";
     display: block;
     width: 60px;
     height: 1px;
     background-color: #303030;
-  }
-  .soc-nav__item--decor:last-child {
-    padding-left: 100px;
   }
 }
 
