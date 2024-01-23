@@ -298,6 +298,8 @@ button {
 }
 .booking__field {
   position: relative;
+  display: block;
+  margin-bottom: 36px;
 }
 .booking__field--submit {
   margin-bottom: 0;
@@ -306,9 +308,6 @@ button {
 }
 .booking__label {
   position: absolute;
-}
-.booking__wrap-input {
-  margin-bottom: 36px;
 }
 .booking__input, .booking__textarea {
   width: 100%;
