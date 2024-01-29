@@ -38,10 +38,7 @@
   margin-bottom: 20px;
 
   font-family: getFont('raleWay'), getFont('sansSerif');
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
+  @include fitfont(42px, 1.17, 700, 0.05em);
   word-break: break-all;
 
   color: getColor('titleDark');
@@ -50,9 +47,7 @@
 .subtitle {
   margin-bottom: 20px;
 
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  @include fitfont(11px, 1.36, 600);
   text-transform: uppercase;
 
   color: getColor('titleDark');

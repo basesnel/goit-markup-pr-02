@@ -30,8 +30,7 @@
   }
 
   &__text {
-    font-size: 16px;
-    line-height: 1.62;
+    @include fitfont(16px, 1.62);
 
     color: getColor('textLight');
   }
