@@ -50,10 +50,8 @@
   }
 
   &__text {
-    font-size: 18px;
-    line-height: 1.6667;
+    @include fitFont(18px, 1.6667, inherit, 0.36px);
     font-style: normal;
-    letter-spacing: 0.36px;
 
     color: getColor('textLight');
 

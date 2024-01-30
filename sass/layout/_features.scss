@@ -4,8 +4,7 @@
   }
 
   &__text {
-    font-size: 18px;
-    line-height: 1.67;
+    @include fitFont(18px, 1.67);
   }
 
   &__list {

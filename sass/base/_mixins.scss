@@ -1,6 +1,6 @@
-@mixin fitfont($fs, $lh, $fw: inherit, $ls: inherit) {
-  font-weight: $fw;
+@mixin fitFont($fs, $lh, $fw: inherit, $ls: inherit) {
   font-size: $fs;
   line-height: $lh;
+  font-weight: $fw;
   letter-spacing: $ls;
 }

@@ -25,10 +25,6 @@
     }
   }
 
-  &__label {
-    position: absolute;
-  }
-
   &__input,
   &__textarea {
     width: 100%;
@@ -60,9 +56,10 @@
 
     text-transform: uppercase;
 
-    font-size: 11px;
-    line-height: normal;
-    letter-spacing: 1.1px;
+    // font-size: 11px;
+    // line-height: normal;
+    // letter-spacing: 1.1px;
+    @include fitFont(11px, normal, inherit, 1.1px);
 
     color: getColor('elemForm');
     transition: color $tns-time $tns-func, transform $tns-time $tns-func,

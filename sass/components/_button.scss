@@ -7,10 +7,7 @@
   padding: 12px;
 
   font-family: getFont('openSans'), getFont('sansSerif');
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 1.08px;
+  @include fitFont(12px, 1.33, 600, 1.08px);
   text-transform: uppercase;
 
   color: getColor('titleDark');

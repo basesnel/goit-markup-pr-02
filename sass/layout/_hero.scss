@@ -30,7 +30,7 @@
   }
 
   &__text {
-    @include fitfont(16px, 1.62);
+    @include fitFont(16px, 1.62);
 
     color: getColor('textLight');
   }

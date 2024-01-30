@@ -29,8 +29,7 @@
     gap: 4px;
     padding: 10px 0;
 
-    font-size: 14px;
-    line-height: 1.43;
+    @include fitFont(14px, 1.43);
     word-break: break-all;
 
     color: getColor('titleLight');

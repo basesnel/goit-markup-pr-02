@@ -6,9 +6,7 @@
 
   &__text {
     margin-bottom: 40px;
-    // font-size: 14px;
-    // line-height: 1.86;
-    @include fitfont(14px, 1.86);
+    @include fitFont(14px, 1.86);
 
     &--pretext {
       margin-bottom: 20px;
