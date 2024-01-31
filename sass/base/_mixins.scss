@@ -1,4 +1,4 @@
-@mixin fitFont($fs, $lh, $fw: inherit, $ls: inherit) {
+@mixin fitFont($fs, $lh: null, $fw: null, $ls: null) {
   font-size: $fs;
   line-height: $lh;
   font-weight: $fw;

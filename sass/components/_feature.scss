@@ -20,7 +20,7 @@
     display: inline-block;
     padding-bottom: 6px;
 
-    @include fitFont(42px, inherit, 700, 0.05em);
+    @include fitFont(42px, null, 700, 0.05em);
 
     &:after {
       content: '+';
@@ -41,7 +41,7 @@
   &__text {
     margin: 0 auto;
 
-    @include fitFont(11px, inherit);
+    @include fitFont(11px);
 
     &--small {
       width: 84px;

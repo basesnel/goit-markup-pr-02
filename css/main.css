@@ -77,7 +77,6 @@ button {
   font-size: 11px;
   line-height: 1.36;
   font-weight: 600;
-  letter-spacing: inherit;
   text-transform: uppercase;
   color: #303030;
 }
@@ -173,8 +172,6 @@ button {
 .hero__text {
   font-size: 16px;
   line-height: 1.62;
-  font-weight: inherit;
-  letter-spacing: inherit;
   color: #9da4bd;
 }
 .hero .list {
@@ -189,8 +186,6 @@ button {
   margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
-  font-weight: inherit;
-  letter-spacing: inherit;
 }
 .about__text--pretext {
   margin-bottom: 20px;
@@ -225,8 +220,6 @@ button {
   padding: 10px 0;
   font-size: 14px;
   line-height: 1.43;
-  font-weight: inherit;
-  letter-spacing: inherit;
   word-break: break-all;
   color: rgba(157, 164, 189, 0.6);
 }
@@ -249,8 +242,6 @@ button {
 .features__text {
   font-size: 18px;
   line-height: 1.67;
-  font-weight: inherit;
-  letter-spacing: inherit;
 }
 .features__list {
   display: flex;
@@ -341,7 +332,6 @@ button {
   text-transform: uppercase;
   font-size: 11px;
   line-height: normal;
-  font-weight: inherit;
   letter-spacing: 1.1px;
   color: rgba(157, 164, 189, 0.4);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -438,7 +428,6 @@ button {
 .contacts__text {
   font-size: 18px;
   line-height: 1.6667;
-  font-weight: inherit;
   letter-spacing: 0.36px;
   font-style: normal;
   color: #9da4bd;
@@ -566,7 +555,6 @@ button {
   display: inline-block;
   padding-bottom: 6px;
   font-size: 42px;
-  line-height: inherit;
   font-weight: 700;
   letter-spacing: 0.05em;
 }
@@ -580,15 +568,11 @@ button {
   font-size: 16px;
   line-height: 1.38;
   font-weight: 600;
-  letter-spacing: inherit;
   color: #ff6c00;
 }
 .feature__text {
   margin: 0 auto;
   font-size: 11px;
-  line-height: inherit;
-  font-weight: inherit;
-  letter-spacing: inherit;
 }
 .feature__text--small {
   width: 84px;
@@ -605,15 +589,12 @@ button {
   font-size: 18px;
   line-height: 1.39;
   font-weight: 400;
-  letter-spacing: inherit;
 }
 .card__text {
   margin-bottom: 30px;
   text-transform: capitalize;
   font-size: 14px;
   line-height: 1.36;
-  font-weight: inherit;
-  letter-spacing: inherit;
   color: #ff6c00;
 }
 

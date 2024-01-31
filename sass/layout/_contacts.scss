@@ -50,7 +50,7 @@
   }
 
   &__text {
-    @include fitFont(18px, 1.6667, inherit, 0.36px);
+    @include fitFont(18px, 1.6667, null, 0.36px);
     font-style: normal;
 
     color: getColor('textLight');
