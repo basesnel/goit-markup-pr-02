@@ -1,9 +1,6 @@
 .page-footer {
   background-color: getColor('foregroundThird');
-
-  &__container {
-    padding: 44px 31px 44px;
-  }
+  padding: 44px 0;
 
   &__text {
     @include fitFont(11px, normal, 600, 2.2px);

@@ -30,13 +30,14 @@ button {
   cursor: pointer;
 }
 
+.section {
+  padding: 84px 0;
+}
+
 .container {
   position: relative;
   margin: 0 auto;
-  padding: 119px 31px 84px;
-}
-.container--smallbtm {
-  padding: 119px 31px 20px;
+  padding: 0 31px;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -82,13 +83,9 @@ button {
 }
 @media screen and (min-width: 480px) {
   .subtitle {
-    position: absolute;
-    top: 84px;
-    left: 31px;
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 0;
   }
   .subtitle::before {
     content: "";
@@ -161,7 +158,6 @@ button {
   }
 }
 .hero__subtitle {
-  top: 208px;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
   color: rgba(157, 164, 189, 0.6);
@@ -268,10 +264,16 @@ button {
 .barbers {
   background-color: #f7f7f7;
 }
-
-.portfolio__container {
-  padding-top: 84px;
+.barbers__title {
+  margin-bottom: 44px;
 }
+.barbers__item {
+  margin-bottom: 64px;
+}
+.barbers__item:last-child {
+  margin-bottom: 0;
+}
+
 .portfolio__subtitle {
   position: relative;
   top: 0;
@@ -287,9 +289,6 @@ button {
 
 .booking {
   background-color: #111319;
-}
-.booking__container {
-  padding-top: 84px;
 }
 .booking__title {
   margin-bottom: 44px;
@@ -389,9 +388,6 @@ button {
 
 .contacts {
   background-color: #111319;
-}
-.contacts__container {
-  padding-top: 84px;
   background-image: url("../images/mobile/contacts-bg-2x.png");
 }
 .contacts__title {
@@ -472,9 +468,7 @@ button {
 
 .page-footer {
   background-color: #f7f7f7;
-}
-.page-footer__container {
-  padding: 44px 31px 44px;
+  padding: 44px 0;
 }
 .page-footer__text {
   font-size: 11px;
@@ -582,7 +576,7 @@ button {
   text-align: center;
 }
 .card__contain {
-  padding: 30px 0 64px;
+  padding-top: 30px;
 }
 .card__title {
   margin-bottom: 8px;

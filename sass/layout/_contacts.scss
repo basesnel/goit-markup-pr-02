@@ -1,11 +1,6 @@
 .contacts {
   background-color: getColor('foregroundSecond');
-
-  &__container {
-    padding-top: 84px;
-
-    background-image: url('../images/mobile/contacts-bg-2x.png');
-  }
+  background-image: url('../images/mobile/contacts-bg-2x.png');
 
   &__title {
     margin-bottom: 40px;

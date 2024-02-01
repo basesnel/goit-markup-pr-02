@@ -1,3 +1,15 @@
 .barbers {
   background-color: getColor('foregroundThird');
+
+  &__title {
+    margin-bottom: 44px;
+  }
+
+  &__item {
+    margin-bottom: 64px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 }
