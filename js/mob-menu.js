@@ -2,7 +2,7 @@
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
-  const backdrop = document.querySelector('[data-backdrop]');
+  const backdrop = document.querySelector('[data-menu-backdrop]');
   const bodyScrollLock = document.querySelector('body');
   const menuItems = document.querySelectorAll('.mob-menu__link');
 

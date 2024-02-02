@@ -806,4 +806,26 @@ button {
   .mob-menu__btn {
     padding: 12px 37px;
   }
+}
+
+.modal {
+  margin: 3vh auto;
+  width: calc(100% - 30px);
+  padding: 40px;
+  background-color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+}
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
