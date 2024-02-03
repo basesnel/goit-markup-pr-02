@@ -16,6 +16,7 @@ $colors: (
   'servicesGradient': linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
   'transparent': rgba(0, 0, 0, 0),
   'sliderOverlay': rgba(25, 28, 38, 0.2),
+  'elemFormInverted': rgba(98, 91, 66, 0.88),
 );
 
 @function getColor($key) {

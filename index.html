@@ -148,7 +148,7 @@
               <span class="services__price">from 200 uah.</span>
             </li>
           </ul>
-          <button class="btn btn--light services__btn" type="button">online-booking</button>
+          <button class="btn btn--light" type="button">online-booking</button>
         </div>
       </section>
 
@@ -479,9 +479,7 @@
               <textarea class="booking__textarea" placeholder=" "></textarea>
               <span class="booking__label">message</span>
             </label>
-            <div class="booking__field booking__field--submit">
-              <button class="btn btn--light" type="submit">send</button>
-            </div>
+            <button class="btn btn--light" type="submit">send</button>
           </form>
         </div>
       </section>
@@ -631,7 +629,7 @@
     <div class="backdrop backdrop--is-hidden" data-modal-backdrop>
       <div class="modal" data-modal>
         <button
-          class="menu-toggle menu-toggle--close"
+          class="menu-toggle menu-toggle--close modal__close"
           type="button"
           aria-label="Close the modal"
           data-modal-close
@@ -646,34 +644,31 @@
             <use href="./images/icons.svg#menu-close"></use>
           </svg>
         </button>
-        <!-- <button class="modal__close" data-modal-close aria-label="Close the modal"> -->
-        <!-- <svg class="modal__icon">
-            <use href="./images/icons.svg#modal-close"></use>
-          </svg> -->
-        <!-- <span class="modal__icon"></span>
-        </button> -->
+
         <div class="feedback">
-          <p class="feedback__title">Залиште свої дані, ми вам передзвонимо</p>
+          <p class="feedback__title">Leave your details and we will call you back</p>
           <form class="feedback__form js-speaker-form" data-modal autocomplete="off">
             <div class="feedback__field">
-              <label class="feedback__label" for="name">Ім'я</label>
+              <label class="feedback__label" for="name">Name</label>
               <div class="feedback__wrap-input">
                 <input
                   type="text"
                   name="name"
                   id="name"
                   class="feedback__input"
-                  placeholder="Ваше ім'я"
+                  placeholder="Your name"
                   autofocus
                 />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#modal-person"></use>
                 </svg>
-                <span class="feedback__warning"> ! - Ім'я має містити від 3 до 25 символів! </span>
+                <span class="feedback__warning">
+                  ! - The name must contain from 3 to 25 characters!
+                </span>
               </div>
             </div>
             <div class="feedback__field">
-              <label class="feedback__label" for="tel">Телефон</label>
+              <label class="feedback__label" for="tel">Phone</label>
               <div class="feedback__wrap-input">
                 <input
                   type="tel"
@@ -686,39 +681,37 @@
                   <use href="./images/icons.svg#modal-tel"></use>
                 </svg>
                 <span class="feedback__warning">
-                  ! - Телефон має бути в форматі +38 (099) 000-00-00!
+                  ! - The phone number should be in the format +38 (099) 000-00-00!
                 </span>
               </div>
             </div>
             <div class="feedback__field">
-              <label class="feedback__label" for="email">Пошта</label>
+              <label class="feedback__label" for="email">E-mail</label>
               <div class="feedback__wrap-input">
                 <input
                   type="email"
                   name="email"
                   id="email"
                   class="feedback__input"
-                  placeholder="example@gmail.com"
+                  placeholder="example@mail.com"
                 />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#modal-mail"></use>
                 </svg>
-                <span class="feedback__warning">
-                  ! - Будь-ласка, введіть дійсну адресу електронної пошти!
-                </span>
+                <span class="feedback__warning"> ! - Please enter a valid email address! </span>
               </div>
             </div>
             <label class="feedback__field feedback__field--comment">
-              <span class="feedback__label">Коментар</span>
+              <span class="feedback__label">Leave a comment</span>
               <textarea
                 name="comment"
                 class="feedback__comment"
                 cols="30"
                 rows="7"
-                placeholder="Введіть текст"
+                placeholder="Enter a text"
               ></textarea>
               <span class="feedback__warning feedback__warning--coment">
-                ! - Напишіть, будь-ласка, коментар!
+                ! - Please write something in the comment field!
               </span>
             </label>
             <label class="feedback__field feedback__field--check">
@@ -729,13 +722,11 @@
                 </svg>
               </span>
               <span class="feedback__label feedback__label--check">
-                Погоджуюсь з розсилкою та приймаю
-                <a href="#" class="feedback__link">Умови договору</a>
+                I agree to the newsletter and accept
+                <a href="#" class="feedback__link">the terms of the agreement</a>
               </span>
             </label>
-            <div class="feedback__field feedback__field--submit">
-              <button type="submit" class="feedback__btn-submit">Відправити</button>
-            </div>
+            <button type="submit" class="btn">Send</button>
           </form>
         </div>
       </div>

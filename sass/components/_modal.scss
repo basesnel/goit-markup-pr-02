@@ -1,9 +1,10 @@
 .modal {
+  position: relative;
   margin: 3vh auto;
   width: calc(100% - 2 * 15px);
   // border-radius: 40px;
   // box-shadow: 0px 1px 3px $box-shadow1, 0px 1px 1px $box-shadow2, 0px 2px 1px $box-shadow3;
-  padding: 40px;
+  padding: 80px 40px;
   background-color: #ffffff;
   // transform: rotate(0) scale(1);
   opacity: 1;
@@ -12,20 +13,16 @@
   // transition: transform $animation-time $animation-function,
   //   opacity $animation-time $animation-function, visibility $animation-time $animation-function;
 
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
   &__close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    padding: 0;
+    top: 31px;
+    right: 31px;
     // border: 1px solid $box-shadow5;
-    border-radius: 50%;
     // background-color: $prim-bg-color;
-    cursor: pointer;
+    // cursor: pointer;
     // transition: background-color $animation-time $animation-function,
     //   color $animation-time $animation-function, border $animation-time $animation-function;
   }
