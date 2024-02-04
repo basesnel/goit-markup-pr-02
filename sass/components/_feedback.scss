@@ -163,8 +163,8 @@
 .feedback__icon-checkbox {
   position: relative;
   bottom: 1px;
-  width: 24px;
-  height: 21px;
+  width: 18px;
+  height: 18px;
   border: 2px solid currentColor;
   border-radius: 2px;
   margin-right: 7px;
@@ -178,10 +178,11 @@
 }
 
 .feedback__icon-check {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   fill: #fff;
   opacity: 0;
+  transform: translateY(-1px);
   transition: opacity $tns-time $tns-func;
 
   .feedback__checkbox:checked + .feedback__icon-checkbox > & {
