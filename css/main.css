@@ -310,7 +310,7 @@ button {
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   background: transparent;
   color: rgba(157, 164, 189, 0.4);
-  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-bottom 1000ms cubic-bezier(0.4, 0, 0.2, 1), color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .booking__input:focus, .booking__textarea:focus {
   border-bottom: 1px solid #fff;
@@ -330,7 +330,7 @@ button {
   line-height: normal;
   letter-spacing: 1.1px;
   color: rgba(157, 164, 189, 0.4);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1), transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), font-size 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .booking__label--req::after {
   content: "*";
@@ -427,13 +427,13 @@ button {
   letter-spacing: 0.36px;
   font-style: normal;
   color: #9da4bd;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__icon {
   width: 24px;
   height: 24px;
   fill: #9da4bd;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts__link:hover .contacts__text {
@@ -460,7 +460,7 @@ button {
   width: 100%;
   height: 1px;
   background-color: #9da4bd;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__link:hover .contacts__text--mail::after {
   background-color: #fff;
@@ -496,7 +496,7 @@ button {
   background-color: rgba(25, 28, 38, 0.2);
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
 .backdrop--is-hidden {
@@ -519,7 +519,7 @@ button {
   text-transform: uppercase;
   color: #303030;
   background-color: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn--light {
   color: #fff;
@@ -629,7 +629,7 @@ button {
   width: 28px;
   height: 28px;
   fill: #fff;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-toggle__icon--close {
   width: 40px;
@@ -675,13 +675,13 @@ button {
   border-radius: 50%;
   background-color: #fff;
   color: #303030;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials__icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials:hover, .socials:focus {
   color: #ff6c00;
@@ -729,7 +729,7 @@ button {
 .soc-nav__link {
   text-decoration: none;
   color: #303030;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-nav__link:hover {
   color: #ff6c00;
@@ -766,7 +766,7 @@ button {
   background-color: #fff;
   z-index: 999;
   transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-menu.is-open {
   width: 71vw;
@@ -794,7 +794,7 @@ button {
 .mob-menu__link, .mob-menu__phone {
   word-break: break-all;
   color: #303030;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-menu__btn {
   width: auto;
@@ -839,6 +839,12 @@ button {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  color: rgba(98, 91, 66, 0.88);
+  cursor: pointer;
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feedback__field:hover {
+  color: #ff6c00;
 }
 .feedback__label {
   margin-bottom: 4px;
@@ -846,6 +852,7 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  cursor: pointer;
 }
 .feedback__wrap-input {
   position: relative;
@@ -854,31 +861,29 @@ button {
   width: 100%;
   margin: 0;
   border: none;
-  border-bottom: 1px solid rgba(98, 91, 66, 0.88);
+  border-bottom: 1px solid currentColor;
   padding: 16px 12px;
   padding-left: 40px;
   background-color: #f7f7f7;
   font-size: 12px;
-  color: rgba(98, 91, 66, 0.88);
+  color: currentColor;
   outline: none;
 }
 .feedback__comment {
   resize: none;
   height: 120px;
   border: none;
-  border-bottom: 1px solid rgba(98, 91, 66, 0.88);
+  border-bottom: 1px solid currentColor;
   padding: 16px 12px;
   font-size: 12px;
   background-color: #f7f7f7;
-  color: rgba(98, 91, 66, 0.88);
+  color: currentColor;
   outline: none;
   line-height: 1.17;
 }
-.feedback__field--check, .feedback__field--submit {
+.feedback__field--check {
   flex-direction: row;
   justify-content: center;
-}
-.feedback__field--check {
   align-items: center;
   margin-bottom: 30px;
   height: 15px;
@@ -898,9 +903,6 @@ button {
   color: #ff6c00;
   text-decoration: underline;
 }
-.feedback__field--submit {
-  margin-bottom: 0;
-}
 
 .feedback__input-icon {
   position: absolute;
@@ -909,6 +911,7 @@ button {
   translate: 0 -50%;
   width: 18px;
   height: 18px;
+  fill: currentColor;
 }
 
 .feedback__warning {
@@ -923,20 +926,25 @@ button {
 .feedback__icon-checkbox {
   position: relative;
   bottom: 1px;
-  width: 16px;
-  height: 15px;
+  width: 24px;
+  height: 21px;
+  border: 2px solid currentColor;
   border-radius: 2px;
   margin-right: 7px;
+  transition: border-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback__checkbox:checked + .feedback__icon-checkbox {
-  border: transparent;
+  border-color: transparent;
+  background-color: currentColor;
   background-size: contain;
 }
 
 .feedback__icon-check {
   width: 16px;
-  height: 15px;
+  height: 16px;
+  fill: #fff;
   opacity: 0;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback__checkbox:checked + .feedback__icon-checkbox > .feedback__icon-check {
   opacity: 1;

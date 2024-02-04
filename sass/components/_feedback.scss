@@ -11,12 +11,25 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+
+    color: getColor(elemFormInverted);
+
+    cursor: pointer;
+
+    transition: color $tns-time $tns-func;
+  }
+
+  &__field:hover {
+    color: getColor(accent);
   }
 
   &__label {
     margin-bottom: 4px;
+
     text-align: left;
     @include fitFont(12px, 1.17, null, 0.01em);
+
+    cursor: pointer;
   }
 
   &__wrap-input {
@@ -28,12 +41,14 @@
     // height: 40px;
     margin: 0;
     border: none;
-    border-bottom: 1px solid getColor(elemFormInverted);
+    // border-bottom: 1px solid getColor(elemFormInverted);
+    border-bottom: 1px solid currentColor;
     padding: 16px 12px;
     padding-left: 40px;
     background-color: getColor(foregroundThird);
     font-size: 12px;
-    color: getColor(elemFormInverted);
+    // color: getColor(elemFormInverted);
+    color: currentColor;
     outline: none;
     // transition: border $animation-time $animation-function,
     //   color $animation-time $animation-function;
@@ -58,23 +73,21 @@
     resize: none;
     height: 120px;
     border: none;
-    border-bottom: 1px solid getColor(elemFormInverted);
+    // border-bottom: 1px solid getColor(elemFormInverted);
+    border-bottom: 1px solid currentColor;
     padding: 16px 12px;
     font-size: 12px;
     background-color: getColor(foregroundThird);
-    color: getColor(elemFormInverted);
+    // color: getColor(elemFormInverted);
+    color: currentColor;
     outline: none;
     line-height: 1.17;
     // transition: border $animation-time $animation-function;
   }
 
-  &__field--check,
-  &__field--submit {
+  &__field--check {
     flex-direction: row;
     justify-content: center;
-  }
-
-  &__field--check {
     align-items: center;
     margin-bottom: 30px;
     height: 15px;
@@ -102,10 +115,6 @@
     color: getColor(accent);
     text-decoration: underline;
   }
-
-  &__field--submit {
-    margin-bottom: 0;
-  }
 }
 
 .feedback__input-icon {
@@ -115,7 +124,7 @@
   translate: 0 -50%;
   width: 18px;
   height: 18px;
-  // fill: $prim-txt-color;
+  fill: currentColor;
   // transition: fill $animation-time $animation-function;
 
   // .feedback__input:hover ~ &,
@@ -154,26 +163,26 @@
 .feedback__icon-checkbox {
   position: relative;
   bottom: 1px;
-  width: 16px;
-  height: 15px;
-  // border: 2px solid $prim-txt-color;
+  width: 24px;
+  height: 21px;
+  border: 2px solid currentColor;
   border-radius: 2px;
   margin-right: 7px;
-  // transition: border $animation-time $animation-function,
-  //   background-color $animation-time $animation-function;
+  transition: border-color $tns-time $tns-func, background-color $tns-time $tns-func;
 
   .feedback__checkbox:checked + & {
-    border: transparent;
-    // background-color: $accent-color;
+    border-color: transparent;
+    background-color: currentColor;
     background-size: contain;
   }
 }
 
 .feedback__icon-check {
   width: 16px;
-  height: 15px;
+  height: 16px;
+  fill: #fff;
   opacity: 0;
-  // transition: opacity $animation-time $animation-function;
+  transition: opacity $tns-time $tns-func;
 
   .feedback__checkbox:checked + .feedback__icon-checkbox > & {
     opacity: 1;
