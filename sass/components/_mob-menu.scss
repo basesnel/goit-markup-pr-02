@@ -5,6 +5,8 @@
   @include fitSize(100vw, 100vh);
   padding: 118px 31px;
   background-color: getColor('background');
+  box-shadow: 0px 4px 40px getColor(box-shadow1), 0px 4px 40px getColor(box-shadow2),
+    0px 4px 40px getColor(box-shadow3);
   z-index: 999;
 
   transform: translateX(100%);

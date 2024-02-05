@@ -17,6 +17,9 @@ $colors: (
   'transparent': rgba(0, 0, 0, 0),
   'sliderOverlay': rgba(25, 28, 38, 0.2),
   'elemFormInverted': rgba(98, 91, 66, 0.88),
+  'box-shadow1': rgba(0, 0, 0, 0.12),
+  'box-shadow2': rgba(0, 0, 0, 0.14),
+  'box-shadow3': rgba(0, 0, 0, 0.2),
 );
 
 @function getColor($key) {

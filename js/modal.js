@@ -2,6 +2,8 @@
   // referals:
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
+    nepoModalBtn: document.querySelector('[data-modal-nepo]'),
+    peonModalBtn: document.querySelector('[data-modal-peon]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     backDrop: document.querySelector('[data-modal-backdrop]'),
     modal: document.querySelector('[data-modal]'),
@@ -9,6 +11,8 @@
 
   // events:
   refs.openModalBtn.addEventListener('click', onToggleModal);
+  refs.nepoModalBtn.addEventListener('click', onToggleModal);
+  refs.peonModalBtn.addEventListener('click', onToggleModal);
   refs.closeModalBtn.addEventListener('click', onToggleModal);
 
   addEventListener('resize', onClientResize);
