@@ -21,11 +21,11 @@
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    backdrop.classList.add('backdrop--is-hidden');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    //replace
-    //bodyScrollLock.enableBodyScroll(document.body);
-    bodyScrollLock.classList.remove('no-scroll');
+    if (mobileMenu.classList.contains('is-open')) {
+      mobileMenu.classList.remove('is-open');
+      bodyScrollLock.classList.remove('no-scroll');
+      backdrop.classList.add('backdrop--is-hidden');
+      openMenuBtn.setAttribute('aria-expanded', false);
+    }
   });
 })();

@@ -9,6 +9,9 @@ body {
   background-color: #fff;
   color: #555555;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -103,10 +106,6 @@ button {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.no-scroll {
-  overflow: hidden;
 }
 
 .feedback__checkbox, .portfolio__title {
@@ -814,6 +813,13 @@ button {
   background-color: #ffffff;
   opacity: 1;
   visibility: visible;
+}
+.modal--absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 @media screen and (min-width: 480px) {
   .modal {

@@ -8,6 +8,10 @@ body {
 
   background-color: getColor('background');
   color: getColor('textDark');
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,

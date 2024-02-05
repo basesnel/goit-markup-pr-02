@@ -2,7 +2,6 @@
   position: relative;
   margin: 3vh auto;
   width: calc(100% - 2 * 15px);
-  // border-radius: 40px;
   // box-shadow: 0px 1px 3px $box-shadow1, 0px 1px 1px $box-shadow2, 0px 2px 1px $box-shadow3;
   padding: 80px 40px;
   background-color: #ffffff;
@@ -12,6 +11,14 @@
   // transform-origin: 0 0;
   // transition: transform $animation-time $animation-function,
   //   opacity $animation-time $animation-function, visibility $animation-time $animation-function;
+
+  &--absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
 
   @media screen and (min-width: $mobile) {
     width: 450px;
