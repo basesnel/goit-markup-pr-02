@@ -4,3 +4,8 @@
   font-weight: $fw;
   letter-spacing: $ls;
 }
+
+@mixin fitSize($w, $h) {
+  width: $w;
+  height: $h;
+}

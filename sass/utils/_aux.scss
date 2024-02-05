@@ -59,8 +59,7 @@
 
     &::before {
       content: '';
-      width: 60px;
-      height: 1px;
+      @include fitSize(60px, 1px);
       background-color: currentColor;
     }
   }

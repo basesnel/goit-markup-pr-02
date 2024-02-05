@@ -2,8 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  @include fitSize(100vw, 100vh);
   padding: 118px 31px;
   background-color: getColor('background');
   z-index: 999;

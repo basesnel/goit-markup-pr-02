@@ -3,7 +3,7 @@
     display: flex;
     column-gap: 40px;
     row-gap: 10px;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
 
@@ -65,9 +65,8 @@
     &:first-child:before {
       content: '';
 
-      display: block;
-      width: 60px;
-      height: 1px;
+      display: inline-block;
+      @include fitSize(60px, 1px);
 
       background-color: getColor('titleDark');
     }

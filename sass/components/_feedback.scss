@@ -122,8 +122,7 @@
   left: 12px;
   top: 50%;
   translate: 0 -50%;
-  width: 18px;
-  height: 18px;
+  @include fitSize(18px, 18px);
   fill: currentColor;
   // transition: fill $animation-time $animation-function;
 
@@ -163,8 +162,7 @@
 .feedback__icon-checkbox {
   position: relative;
   bottom: 1px;
-  width: 18px;
-  height: 18px;
+  @include fitSize(18px, 18px);
   border: 2px solid currentColor;
   border-radius: 2px;
   margin-right: 7px;
@@ -178,8 +176,7 @@
 }
 
 .feedback__icon-check {
-  width: 14px;
-  height: 14px;
+  @include fitSize(14px, 14px);
   fill: #fff;
   opacity: 0;
   transform: translateY(-1px);

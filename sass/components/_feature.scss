@@ -9,8 +9,7 @@
   color: getColor('titleDark');
 
   @media screen and (min-width: $xs) {
-    width: 194px;
-    height: 133px;
+    @include fitSize(194px, 133px);
     padding: 20px 35px;
   }
 

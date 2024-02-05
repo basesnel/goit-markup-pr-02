@@ -18,8 +18,7 @@
 
   &__input,
   &__textarea {
-    width: 100%;
-    height: 31px;
+    @include fitSize(100%, 31px);
     border: none;
     outline: none;
     border-bottom: 1px solid getColor('elemForm');

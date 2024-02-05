@@ -3,8 +3,7 @@
   padding: 40px 0;
 
   &__image {
-    width: 68.93px;
-    height: 55.46px;
+    @include fitSize(68.93px, 55.46px);
     fill: getColor('background');
   }
 }

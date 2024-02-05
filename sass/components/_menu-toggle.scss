@@ -1,10 +1,9 @@
 .menu-toggle {
-  width: 40px;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @include fitSize(40px, 40px);
   border: none;
   margin: 0;
   padding: 0;
@@ -20,15 +19,13 @@
   }
 
   &__icon {
-    width: 28px;
-    height: 28px;
+    @include fitSize(28px, 28px);
 
     fill: getColor('background');
     transition: fill $tns-time $tns-func;
 
     &--close {
-      width: 40px;
-      height: 40px;
+      @include fitSize(40px, 40px);
 
       fill: getColor('titleDark');
     }
