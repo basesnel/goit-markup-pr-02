@@ -17,6 +17,9 @@
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
   menuItems.forEach(menuItem => menuItem.addEventListener('click', toggleMenu));
+  backdrop.addEventListener('click', event => {
+    if (event.target === event.currentTarget) toggleMenu();
+  });
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
