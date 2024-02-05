@@ -45,34 +45,27 @@
 
     text-decoration: none;
     word-break: break-all;
-  }
-
-  &__text {
-    @include fitFont(18px, 1.6667, null, 0.36px);
-    font-style: normal;
 
     color: getColor('textLight');
 
     transition: color $tns-time $tns-func;
   }
 
+  &__link:hover {
+    color: getColor('background');
+  }
+
+  &__text {
+    @include fitFont(18px, 1.6667, null, 0.36px);
+    font-style: normal;
+
+    color: currentColor;
+  }
+
   &__icon {
     @include fitSize(24px, 24px);
 
-    fill: getColor('textLight');
-    transition: fill $tns-time $tns-func;
-  }
-}
-
-.contacts__text {
-  .contacts__link:hover & {
-    color: getColor('background');
-  }
-}
-
-.contacts__icon {
-  .contacts__link:hover & {
-    fill: getColor('background');
+    fill: currentColor;
   }
 }
 

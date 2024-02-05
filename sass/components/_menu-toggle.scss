@@ -9,31 +9,31 @@
   padding: 0;
 
   background-color: getColor('transparent');
+  color: getColor('background');
+
+  transition: color $tns-time $tns-func;
 
   cursor: pointer;
+
+  &:hover {
+    color: getColor('accent');
+  }
 
   &--close {
     position: absolute;
     top: 48px;
     right: 31px;
+
+    color: getColor('titleDark');
   }
 
   &__icon {
     @include fitSize(28px, 28px);
 
-    fill: getColor('background');
-    transition: fill $tns-time $tns-func;
+    fill: currentColor;
 
     &--close {
       @include fitSize(40px, 40px);
-
-      fill: getColor('titleDark');
     }
-  }
-}
-
-.menu-toggle__icon {
-  .menu-toggle:hover & {
-    fill: getColor('accent');
   }
 }
