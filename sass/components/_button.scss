@@ -3,7 +3,7 @@
 
   max-width: 160px;
   border: 1px solid getColor('accent');
-  border-radius: 25px;
+  @include borderRadius(25px);
   padding: 12px;
 
   font-family: getFont('openSans'), getFont('sansSerif');

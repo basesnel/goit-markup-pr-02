@@ -164,7 +164,6 @@
   bottom: 1px;
   @include fitSize(18px, 18px);
   border: 2px solid currentColor;
-  border-radius: 2px;
   margin-right: 7px;
   transition: border-color $tns-time $tns-func, background-color $tns-time $tns-func;
 

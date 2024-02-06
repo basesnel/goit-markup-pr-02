@@ -15,7 +15,7 @@
     align-items: center;
 
     @include fitSize(44px, 44px);
-    border-radius: 50%;
+    @include borderRadius(50%);
 
     background-color: getColor('background');
     color: getColor('titleDark');
