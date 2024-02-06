@@ -20,24 +20,16 @@
     background-color: getColor('background');
     color: getColor('titleDark');
     transition: color $tns-time $tns-func;
+
+    &:hover,
+    &:focus {
+      color: getColor('accent');
+    }
   }
 
   &__icon {
     @include fitSize(20px, 20px);
 
     fill: currentColor;
-    transition: fill $tns-time $tns-func;
-  }
-
-  &:hover,
-  &:focus {
-    color: getColor('accent');
-  }
-}
-
-.socials__icon {
-  .socials__link:hover &,
-  .socials__link:focus & {
-    fill: getColor('accent');
   }
 }

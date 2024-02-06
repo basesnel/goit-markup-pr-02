@@ -49,10 +49,10 @@
     color: getColor('textLight');
 
     transition: color $tns-time $tns-func;
-  }
 
-  &__link:hover {
-    color: getColor('background');
+    &:hover {
+      color: getColor('background');
+    }
   }
 
   &__text {

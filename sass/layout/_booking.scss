@@ -14,6 +14,12 @@
     position: relative;
     display: block;
     margin-bottom: 36px;
+    color: getColor('elemForm');
+    transition: color $tns-time $tns-func;
+
+    &:hover {
+      color: getColor('background');
+    }
   }
 
   &__input,
@@ -21,11 +27,11 @@
     @include fitSize(100%, 31px);
     border: none;
     outline: none;
-    border-bottom: 1px solid getColor('elemForm');
+    border-bottom: 1px solid currentColor;
 
     background: transparent;
-    color: getColor('elemForm');
-    transition: border-bottom $tns-time $tns-func, color $tns-time $tns-func;
+    color: currentColor;
+    // transition: border-bottom $tns-time $tns-func;
 
     &:focus {
       border-bottom: 1px solid getColor('background');
@@ -47,7 +53,7 @@
     text-transform: uppercase;
     @include fitFont(11px, normal, null, 1.1px);
 
-    color: getColor('elemForm');
+    color: currentColor;
     transition: color $tns-time $tns-func, transform $tns-time $tns-func,
       font-size $tns-time $tns-func;
   }
@@ -58,39 +64,25 @@
 }
 
 .booking__label {
-  .booking__field:hover & {
+  .booking__input:focus + & {
     color: getColor('background');
   }
-}
 
-.booking__label {
   .booking__input:focus + &,
   .booking__input:not(:placeholder-shown) + & {
     transform: translateY(-32px);
     font-size: 8px;
   }
-}
 
-.booking__input {
-  .booking__field:hover & {
-    border-bottom: 1px solid getColor('background');
-  }
-}
-
-.booking__textarea {
-  .booking__field:hover & {
-    border-bottom: 1px solid getColor('background');
-  }
-}
-
-.booking__label {
   .booking__textarea + & {
     top: 4px;
     transform: translateY(0);
   }
-}
 
-.booking__label {
+  .booking__textarea:focus + & {
+    color: getColor('background');
+  }
+
   .booking__textarea:focus + &,
   .booking__textarea:not(:placeholder-shown) + & {
     transform: translateY(-27px);
