@@ -17,10 +17,10 @@
     cursor: pointer;
 
     transition: color $tns-time $tns-func;
-  }
 
-  &__field:hover {
-    color: getColor(accent);
+    &:hover {
+      color: getColor(accent);
+    }
   }
 
   &__label {
@@ -53,12 +53,10 @@
     // transition: border $animation-time $animation-function,
     //   color $animation-time $animation-function;
 
-    // &:hover,
-    // &:focus,
-    // &:not(:placeholder-shown) {
-    //   border: 1px solid $accent-color;
-    //   color: $accent-color;
-    // }
+    &:focus {
+      border-bottom: 1px solid getColor(accent);
+      color: getColor(accent);
+    }
 
     // &--warning,
     // &--warning:hover,
@@ -124,13 +122,10 @@
   translate: 0 -50%;
   @include fitSize(18px, 18px);
   fill: currentColor;
-  // transition: fill $animation-time $animation-function;
 
-  // .feedback__input:hover ~ &,
-  // .feedback__input:focus ~ &,
-  // .feedback__input:not(:placeholder-shown) ~ & {
-  //   fill: $accent-color;
-  // }
+  .feedback__input:focus ~ & {
+    fill: getColor(accent);
+  }
 
   // .feedback__input--warning ~ &,
   // .feedback__input--warning:hover ~ &,

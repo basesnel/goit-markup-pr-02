@@ -587,11 +587,16 @@ button {
 .logo {
   display: block;
   padding: 40px 0;
+  color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo:hover, .logo:focus {
+  color: #ff6c00;
 }
 .logo__image {
   width: 68.93px;
   height: 55.46px;
-  fill: #fff;
+  fill: currentColor;
 }
 
 .menu-toggle {
@@ -859,6 +864,10 @@ button {
   color: currentColor;
   outline: none;
 }
+.feedback__input:focus {
+  border-bottom: 1px solid #ff6c00;
+  color: #ff6c00;
+}
 .feedback__comment {
   resize: none;
   height: 120px;
@@ -902,6 +911,9 @@ button {
   width: 18px;
   height: 18px;
   fill: currentColor;
+}
+.feedback__input:focus ~ .feedback__input-icon {
+  fill: #ff6c00;
 }
 
 .feedback__warning {

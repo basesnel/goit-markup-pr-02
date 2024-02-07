@@ -1,9 +1,16 @@
 .logo {
   display: block;
   padding: 40px 0;
+  color: getColor('background');
+  transition: color $tns-time $tns-func;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
 
   &__image {
     @include fitSize(68.93px, 55.46px);
-    fill: getColor('background');
+    fill: currentColor;
   }
 }
