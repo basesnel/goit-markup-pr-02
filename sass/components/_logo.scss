@@ -1,5 +1,5 @@
 .logo {
-  display: block;
+  display: inline-block;
   padding: 40px 0;
   color: getColor('background');
   transition: color $tns-time $tns-func;
