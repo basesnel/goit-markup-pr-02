@@ -916,15 +916,6 @@ button {
   fill: #ff6c00;
 }
 
-.feedback__warning {
-  position: absolute;
-  top: 41px;
-  left: 4px;
-  font-size: 9px;
-  font-weight: 500;
-  opacity: 0;
-}
-
 .feedback__icon-checkbox {
   position: relative;
   bottom: 1px;
