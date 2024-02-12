@@ -20,11 +20,11 @@ $colors: (
   'box-shadow1': rgba(0, 0, 0, 0.12),
   'box-shadow2': rgba(0, 0, 0, 0.14),
   'box-shadow3': rgba(0, 0, 0, 0.2),
+  'info': #6c6cff,
+  'notification': #ff6c6c,
+  'valid': #6cff6c,
 );
 
 @function getColor($key) {
   @return map-get($colors, $key);
 }
-
-// $servicesGradient: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-$secondGradient: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
