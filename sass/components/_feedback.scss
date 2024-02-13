@@ -10,7 +10,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 
     color: getColor(elemFormInverted);
 
@@ -135,25 +135,6 @@
   // }
 }
 
-// .feedback__warning {
-//   position: absolute;
-//   top: 41px;
-//   left: 4px;
-//   font-size: 9px;
-//   font-weight: 500;
-//   // color: $warning-color;
-//   opacity: 0;
-//   // transition: opacity 500ms $animation-function;
-
-//   // &--coment {
-//   //   top: 140px;
-//   // }
-
-//   // .feedback__input--warning ~ & {
-//   //   opacity: 1;
-//   // }
-// }
-
 .feedback__icon-checkbox {
   position: relative;
   bottom: 1px;
@@ -178,5 +159,53 @@
 
   .feedback__checkbox:checked + .feedback__icon-checkbox > & {
     opacity: 1;
+  }
+}
+
+.alert {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  translate: -50% 0;
+
+  visibility: hidden;
+
+  width: 100%;
+
+  font-size: 10px;
+
+  &--info {
+    visibility: visible;
+    color: getColor('info');
+  }
+
+  &--notification {
+    color: getColor('notification');
+  }
+
+  &--valid {
+    color: getColor('valid');
+  }
+}
+
+.alert-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  translate: 0 -50%;
+
+  visibility: hidden;
+
+  &--info {
+    visibility: visible;
+    fill: getColor('info');
+  }
+
+  &--notification {
+    fill: getColor('notification');
+  }
+
+  &--valid {
+    fill: getColor('valid');
   }
 }
