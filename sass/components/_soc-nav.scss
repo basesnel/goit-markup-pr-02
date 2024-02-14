@@ -17,7 +17,7 @@
 
       margin-bottom: 0;
 
-      @media screen and (min-width: $mobile) {
+      @include mobile {
         align-items: flex-start;
         gap: 24px;
       }
@@ -28,7 +28,7 @@
     @include fitFont(11px, normal, 600, 2.2px);
 
     &--mobmenu {
-      @media screen and (min-width: $mobile) {
+      @include mobile {
         font-size: 14px;
         letter-spacing: 2.8px;
       }
@@ -53,7 +53,7 @@
   gap: 40px;
   align-items: center;
 
-  @media screen and (min-width: $mobile) {
+  @include mobile {
     & {
       padding-left: 100px;
     }

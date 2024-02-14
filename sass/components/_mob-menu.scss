@@ -26,7 +26,7 @@
 
     @include fitFont(14px, normal, 600, 1.8px);
 
-    @media screen and (min-width: $mobile) {
+    @include mobile {
       padding-bottom: 24px;
       font-size: 18px;
     }
@@ -50,7 +50,7 @@
 
     padding: 12px 12px;
 
-    @media screen and (min-width: $mobile) {
+    @include mobile {
       padding: 12px 37px;
     }
   }

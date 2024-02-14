@@ -20,13 +20,13 @@
     width: 100%;
     color: getColor('titleDark');
 
-    @media screen and (min-width: $xs) {
+    @include xs {
       width: inherit;
     }
   }
 
   &__item:nth-child(odd) {
-    @media screen and (min-width: $mobile) {
+    @include mobile {
       transform: translateY(-36px);
     }
   }

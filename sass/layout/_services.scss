@@ -19,7 +19,7 @@
 
     background-image: getColor('servicesGradient');
 
-    @media screen and (min-width: $mobile) {
+    @include mobile {
       padding: 20px 20px 20px 40px;
     }
   }

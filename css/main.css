@@ -71,7 +71,7 @@ button {
   font-size: 42px;
   line-height: 1.17;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 2px;
   word-break: break-all;
   color: #303030;
 }
@@ -524,7 +524,7 @@ button {
   background-color: #f7f7f7;
   color: #303030;
 }
-@media screen and (min-width: 220px) {
+@media screen and (min-width: 480px) {
   .feature {
     width: 194px;
     height: 133px;
@@ -891,12 +891,7 @@ button {
   margin-bottom: 0;
   font-size: 12px;
   line-height: 1;
-  letter-spacing: 0.03em;
-}
-@media screen and (min-width: 1200px) {
-  .feedback__label--check {
-    font-size: 14px;
-  }
+  letter-spacing: 1px;
 }
 .feedback__link {
   color: #ff6c00;
@@ -954,7 +949,7 @@ button {
 }
 .alert--info {
   visibility: visible;
-  color: #6c6cff;
+  color: #ff6c00;
 }
 .alert--notification {
   color: #ff6c6c;
@@ -972,7 +967,7 @@ button {
 }
 .alert-icon--info {
   visibility: visible;
-  fill: #6c6cff;
+  fill: #ff6c00;
 }
 .alert-icon--notification {
   fill: #ff6c6c;

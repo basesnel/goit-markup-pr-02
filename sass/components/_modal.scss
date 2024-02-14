@@ -21,7 +21,7 @@
     margin: 0;
   }
 
-  @media screen and (min-width: $mobile) {
+  @include mobile {
     width: 450px;
   }
 

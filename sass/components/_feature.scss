@@ -8,7 +8,7 @@
   background-color: getColor('foregroundThird');
   color: getColor('titleDark');
 
-  @media screen and (min-width: $xs) {
+  @include mobile {
     @include fitSize(194px, 133px);
     padding: 20px 35px;
   }

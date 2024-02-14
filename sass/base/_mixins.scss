@@ -15,3 +15,27 @@
   -moz-border-radius: $r;
   border-radius: $r;
 }
+
+@mixin xs {
+  @media screen and (min-width: $xs) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding: 0 31px;
 
-  @media screen and (min-width: $mobile) {
+  @include mobile {
     width: $mobile;
   }
 }
@@ -38,7 +38,7 @@
   margin-bottom: 20px;
 
   font-family: getFont('raleWay'), getFont('sansSerif');
-  @include fitFont(42px, 1.17, 700, 0.05em);
+  @include fitFont(42px, 1.17, 700, 2px);
   word-break: break-all;
 
   color: getColor('titleDark');
@@ -52,7 +52,7 @@
 
   color: getColor('titleDark');
 
-  @media screen and (min-width: $mobile) {
+  @include mobile {
     display: flex;
     align-items: center;
     gap: 20px;

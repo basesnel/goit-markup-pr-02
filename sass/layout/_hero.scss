@@ -3,7 +3,7 @@
     padding: 209px 31px 119px;
     background-color: getColor('sliderOverlay');
 
-    @media screen and (min-width: $mobile) {
+    @include mobile {
       padding: 243px 31px 209px;
     }
   }
@@ -13,7 +13,7 @@
     margin-bottom: 20px;
     color: getColor('background');
 
-    @media screen and (min-width: $mobile) {
+    @include mobile {
       font-size: 48px;
     }
   }
