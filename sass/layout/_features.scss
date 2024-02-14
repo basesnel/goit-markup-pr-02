@@ -21,6 +21,10 @@
     color: getColor('titleDark');
 
     @include xs {
+      width: 158px;
+    }
+
+    @include mobile {
       width: inherit;
     }
   }
