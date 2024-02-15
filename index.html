@@ -314,12 +314,28 @@
             <li class="barbers__item">
               <div class="card">
                 <div class="thumb">
-                  <img
-                    src="./images/mobile/barber-2-2x.jpg"
-                    alt="Photo extrime barber Michele Doe"
-                    width="418"
-                    class="image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/barber-2-418.webp   480w,
+                        ./images/mobile/barber-2-836.webp   960w,
+                        ./images/mobile/barber-2-1254.webp 1440w
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      srcset="
+                        ./images/mobile/barber-2-418.jpg   480w,
+                        ./images/mobile/barber-2-836.jpg   960w,
+                        ./images/mobile/barber-2-1254.jpg 1440w
+                      "
+                      src="./images/mobile/barber-2-418.jpg"
+                      alt="Photo extrime barber John Smith"
+                      sizes="100vw"
+                      class="image"
+                    />
+                  </picture>
                 </div>
                 <div class="card__contain">
                   <h4 class="card__title">Michele Doe</h4>
