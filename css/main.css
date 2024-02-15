@@ -381,19 +381,19 @@ button {
 
 .contacts {
   background-color: #111319;
-  background-image: url("../images/mobile/contacts-bg-1x.png");
+  background-image: url("../images/mobile/contacts-bg-480.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .contacts {
-    background-image: url("../images/mobile/contacts-bg-2x.png");
+    background-image: url("../images/mobile/contacts-bg-960.png");
   }
 }
 @media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
   .contacts {
-    background-image: url("../images/mobile/contacts-bg-3x.png");
+    background-image: url("../images/mobile/contacts-bg-1440.png");
   }
 }
 .contacts__title {

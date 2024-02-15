@@ -1,16 +1,16 @@
 .contacts {
   background-color: getColor('foregroundSecond');
-  background-image: url('../images/mobile/contacts-bg-1x.png');
+  background-image: url('../images/mobile/contacts-bg-480.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 
   @include retina-2 {
-    background-image: url('../images/mobile/contacts-bg-2x.png');
+    background-image: url('../images/mobile/contacts-bg-960.png');
   }
 
   @include retina-3 {
-    background-image: url('../images/mobile/contacts-bg-3x.png');
+    background-image: url('../images/mobile/contacts-bg-1440.png');
   }
 
   &__title {
