@@ -245,7 +245,7 @@
                         ./images/mobile/barber-1-1254.jpg 1440w
                       "
                       src="./images/mobile/barber-1-418.jpg"
-                      alt="Photo extrime barber John Smith"
+                      alt="Extrime barber John Smith"
                       sizes="100vw"
                       class="image"
                     />
@@ -333,7 +333,7 @@
                         ./images/mobile/barber-2-1254.jpg 1440w
                       "
                       src="./images/mobile/barber-2-418.jpg"
-                      alt="Photo extrime barber John Smith"
+                      alt="Extrime barber Michele Doe"
                       sizes="100vw"
                       class="image"
                     />
@@ -402,12 +402,29 @@
             <li class="barbers__item">
               <div class="card">
                 <div class="thumb">
-                  <img
-                    src="./images/mobile/barber-3-2x.jpg"
-                    alt="Photo extrime barber Alan Black"
-                    width="418"
-                    class="image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/barber-3-418.webp   480w,
+                        ./images/mobile/barber-3-836.webp   960w,
+                        ./images/mobile/barber-3-1254.webp 1440w
+                      "
+                      sizes="100vw"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      srcset="
+                        ./images/mobile/barber-3-418.jpg   480w,
+                        ./images/mobile/barber-3-836.jpg   960w,
+                        ./images/mobile/barber-3-1254.jpg 1440w
+                      "
+                      src="./images/mobile/barber-3-418.jpg"
+                      alt="Extrime barber Alan Black"
+                      sizes="100vw"
+                      class="image"
+                    />
+                  </picture>
                 </div>
                 <div class="card__contain">
                   <h4 class="card__title">Alan Black</h4>
@@ -483,42 +500,110 @@
           <ul class="portfolio__list list">
             <li class="portfolio__item">
               <div class="thumb">
-                <img
-                  src="./images/mobile/portfolio-1-2x.jpg"
-                  alt="Weekday: haircut services"
-                  width="418"
-                  class="image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-1-418.webp   480w,
+                      ./images/mobile/portfolio-1-836.webp   960w,
+                      ./images/mobile/portfolio-1-1254.webp 1440w
+                    "
+                    sizes="100vw"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    srcset="
+                      ./images/mobile/portfolio-1-418.jpg   480w,
+                      ./images/mobile/portfolio-1-836.jpg   960w,
+                      ./images/mobile/portfolio-1-1254.jpg 1440w
+                    "
+                    src="./images/mobile/portfolio-1-418.jpg"
+                    alt="Weekday: haircut services"
+                    sizes="100vw"
+                    class="image"
+                  />
+                </picture>
               </div>
             </li>
             <li class="portfolio__item">
               <div class="thumb">
-                <img
-                  src="./images/mobile/portfolio-2-2x.jpg"
-                  alt="Weekday: shaving services"
-                  width="418"
-                  class="image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-2-418.webp   480w,
+                      ./images/mobile/portfolio-2-836.webp   960w,
+                      ./images/mobile/portfolio-2-1254.webp 1440w
+                    "
+                    sizes="100vw"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    srcset="
+                      ./images/mobile/portfolio-2-418.jpg   480w,
+                      ./images/mobile/portfolio-2-836.jpg   960w,
+                      ./images/mobile/portfolio-2-1254.jpg 1440w
+                    "
+                    src="./images/mobile/portfolio-2-418.jpg"
+                    alt="Weekday: shaving services"
+                    sizes="100vw"
+                    class="image"
+                  />
+                </picture>
               </div>
             </li>
             <li class="portfolio__item">
               <div class="thumb">
-                <img
-                  src="./images/mobile/portfolio-3-2x.jpg"
-                  alt="Weekday: customer service with care"
-                  width="418"
-                  class="image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-3-418.webp   480w,
+                      ./images/mobile/portfolio-3-836.webp   960w,
+                      ./images/mobile/portfolio-3-1254.webp 1440w
+                    "
+                    sizes="100vw"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    srcset="
+                      ./images/mobile/portfolio-3-418.jpg   480w,
+                      ./images/mobile/portfolio-3-836.jpg   960w,
+                      ./images/mobile/portfolio-3-1254.jpg 1440w
+                    "
+                    src="./images/mobile/portfolio-3-418.jpg"
+                    alt="Weekday: customer service with care"
+                    sizes="100vw"
+                    class="image"
+                  />
+                </picture>
               </div>
             </li>
             <li class="portfolio__item">
-              <div class="thumb">
-                <img
-                  src="./images/mobile/portfolio-4-2x.jpg"
-                  alt="Weekday: jewelry precision"
-                  width="418"
-                  class="image"
-                />
+              <div>
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-4-418.webp   480w,
+                      ./images/mobile/portfolio-4-836.webp   960w,
+                      ./images/mobile/portfolio-4-1254.webp 1440w
+                    "
+                    sizes="100vw"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    srcset="
+                      ./images/mobile/portfolio-4-418.jpg   480w,
+                      ./images/mobile/portfolio-4-836.jpg   960w,
+                      ./images/mobile/portfolio-4-1254.jpg 1440w
+                    "
+                    src="./images/mobile/portfolio-4-418.jpg"
+                    alt="Weekday: jewelry precision"
+                    sizes="100vw"
+                    class="image"
+                  />
+                </picture>
               </div>
             </li>
           </ul>
