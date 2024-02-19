@@ -81,12 +81,35 @@
           <p class="hero__text">We are experts in trendly men&apos;s haircuts.</p>
           <p class="hero__text">We work quickly, carefully and with style.</p>
           <div class="slider">
-            <img
+            <!-- <img
               class="slider__image"
               src="images/mobile/slide-img-3-3x.jpg"
               width="480"
               alt="Slide 1 for hero"
-            />
+            /> -->
+            <picture>
+              <source
+                srcset="
+                  ./images/mobile/slide-img-3-480.webp   480w,
+                  ./images/mobile/slide-img-3-960.webp   960w,
+                  ./images/mobile/slide-img-3-1440.webp 1440w
+                "
+                sizes="100vw"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                srcset="
+                  ./images/mobile/slide-img-3-480.jpg   480w,
+                  ./images/mobile/slide-img-3-960.jpg   960w,
+                  ./images/mobile/slide-img-3-1440.jpg 1440w
+                "
+                src="./images/mobile/slide-img-3-480.jpg"
+                alt="Slide 1 for hero"
+                sizes="100vw"
+                class="image slider__image"
+              />
+            </picture>
           </div>
         </div>
       </section>
