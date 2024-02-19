@@ -639,15 +639,27 @@
           <h2 class="booking__title title">Online-booking</h2>
           <form class="booking__form" autocomplete="off">
             <label class="booking__field">
-              <input type="text" name="name" class="booking__input" placeholder=" " />
+              <input
+                type="text"
+                name="name"
+                class="booking__input"
+                placeholder=" "
+                autocomplete="off"
+              />
               <span class="booking__label booking__label--req">name</span>
             </label>
             <label class="booking__field">
-              <input type="tel" name="tel" class="booking__input" placeholder=" " />
+              <input
+                type="tel"
+                name="tel"
+                class="booking__input"
+                placeholder=" "
+                autocomplete="off"
+              />
               <span class="booking__label booking__label--req">phone</span>
             </label>
             <label class="booking__field">
-              <textarea class="booking__textarea" placeholder=" "></textarea>
+              <textarea name="comment" class="booking__textarea" placeholder=" "></textarea>
               <span class="booking__label">message</span>
             </label>
             <button class="btn btn--light" type="submit">send</button>
@@ -828,6 +840,7 @@
                   id="name"
                   class="feedback__input"
                   placeholder="Your name"
+                  autocomplete="off"
                   autofocus
                 />
                 <svg class="feedback__input-icon">
@@ -858,6 +871,7 @@
                   id="tel"
                   class="feedback__input"
                   placeholder="+38 (0_ _) _ _ _-_ _-_ _"
+                  autocomplete="off"
                 />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#feedback-phone"></use>
@@ -887,6 +901,7 @@
                   id="email"
                   class="feedback__input"
                   placeholder="example@mail.com"
+                  autocomplete="off"
                 />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#feedback-envelop"></use>
