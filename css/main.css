@@ -958,12 +958,11 @@ button {
   top: 105%;
   left: 50%;
   translate: -50% 0;
-  visibility: hidden;
+  opacity: 0;
   width: 100%;
   font-size: 10px;
 }
 .alert--info {
-  visibility: visible;
   color: #ff6c00;
 }
 .alert--notification {
@@ -978,10 +977,9 @@ button {
   right: 12px;
   top: 50%;
   translate: 0 -50%;
-  visibility: hidden;
+  opacity: 0;
 }
 .alert-icon--info {
-  visibility: visible;
   fill: #ff6c00;
 }
 .alert-icon--notification {
@@ -989,4 +987,48 @@ button {
 }
 .alert-icon--valid {
   fill: #6cff6c;
+}
+
+.feedback__input:focus ~ .alert--info,
+.feedback__input:focus ~ .alert-icon--info {
+  opacity: 1;
+}
+
+.feedback__input:not(:-moz-placeholder-shown) ~ .alert--info, .feedback__input:not(:-moz-placeholder-shown) ~ .alert-icon--info {
+  opacity: 0;
+}
+
+.feedback__input:not(:-ms-input-placeholder) ~ .alert--info, .feedback__input:not(:-ms-input-placeholder) ~ .alert-icon--info {
+  opacity: 0;
+}
+
+.feedback__input:not(:placeholder-shown) ~ .alert--info,
+.feedback__input:not(:placeholder-shown) ~ .alert-icon--info {
+  opacity: 0;
+}
+
+.feedback__input:invalid:not(:-moz-placeholder-shown) ~ .alert--notification, .feedback__input:invalid:not(:-moz-placeholder-shown) ~ .alert-icon--notification {
+  opacity: 1;
+}
+
+.feedback__input:invalid:not(:-ms-input-placeholder) ~ .alert--notification, .feedback__input:invalid:not(:-ms-input-placeholder) ~ .alert-icon--notification {
+  opacity: 1;
+}
+
+.feedback__input:invalid:not(:placeholder-shown) ~ .alert--notification,
+.feedback__input:invalid:not(:placeholder-shown) ~ .alert-icon--notification {
+  opacity: 1;
+}
+
+.feedback__input:valid:not(:-moz-placeholder-shown) ~ .alert--valid, .feedback__input:valid:not(:-moz-placeholder-shown) ~ .alert-icon--valid {
+  opacity: 1;
+}
+
+.feedback__input:valid:not(:-ms-input-placeholder) ~ .alert--valid, .feedback__input:valid:not(:-ms-input-placeholder) ~ .alert-icon--valid {
+  opacity: 1;
+}
+
+.feedback__input:valid:not(:placeholder-shown) ~ .alert--valid,
+.feedback__input:valid:not(:placeholder-shown) ~ .alert-icon--valid {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
