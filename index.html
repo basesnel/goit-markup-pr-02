@@ -875,17 +875,20 @@
                   class="feedback__input"
                   placeholder="+38 (0_ _) _ _ _-_ _-_ _"
                   autocomplete="off"
+                  pattern="^\+\d{2}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
                 />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#feedback-phone"></use>
                 </svg>
                 <span class="alert alert--info">
-                  Enter your telephone number in the format +38 099 123 45 67
+                  Enter your telephone number in the format +38 (012) 345-67-89
                 </span>
                 <svg class="alert-icon alert-icon--info" width="16" height="16">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
-                <span class="alert alert--notification">Your phone number is not correct</span>
+                <span class="alert alert--notification">
+                  Your phone number is not correct (format is: +38 (012) 345-67-89)
+                </span>
                 <svg class="alert-icon alert-icon--notification" width="16" height="16">
                   <use href="./images/icons.svg#alert-notification"></use>
                 </svg>
