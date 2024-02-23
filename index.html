@@ -842,17 +842,19 @@
                   placeholder="Your name"
                   autocomplete="off"
                   autofocus
-                  pattern="[^\s][a-z0-9A-Z\s]{2,24}"
+                  pattern="^[a-zA-Z][a-z0-9A-Z-\s]{2,24}$"
                 />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#feedback-user"></use>
                 </svg>
-                <span class="alert alert--info">The name must contain at least 3 characters</span>
+                <span class="alert alert--info">
+                  The name contains from 3 to 25 characters and begins with the letter
+                </span>
                 <svg class="alert-icon alert-icon--info" width="16" height="16">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
                 <span class="alert alert--notification">
-                  Your name is not valid: please enter at least 3 characters
+                  Your name is incorrect: enter 3 to 25 characters and start with a letter
                 </span>
                 <svg class="alert-icon alert-icon--notification" width="16" height="16">
                   <use href="./images/icons.svg#alert-notification"></use>
