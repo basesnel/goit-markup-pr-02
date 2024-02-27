@@ -955,6 +955,7 @@ button {
 
 .alert {
   position: absolute;
+  display: none;
   top: 105%;
   left: 50%;
   translate: -50% 0;
@@ -991,44 +992,54 @@ button {
 
 .feedback__input:focus ~ .alert--info,
 .feedback__input:focus ~ .alert-icon--info {
+  display: inline;
   opacity: 1;
 }
 
 .feedback__input:not(:-moz-placeholder-shown) ~ .alert--info, .feedback__input:not(:-moz-placeholder-shown) ~ .alert-icon--info {
+  display: none;
   opacity: 0;
 }
 
 .feedback__input:not(:-ms-input-placeholder) ~ .alert--info, .feedback__input:not(:-ms-input-placeholder) ~ .alert-icon--info {
+  display: none;
   opacity: 0;
 }
 
 .feedback__input:not(:placeholder-shown) ~ .alert--info,
 .feedback__input:not(:placeholder-shown) ~ .alert-icon--info {
+  display: none;
   opacity: 0;
 }
 
 .feedback__input:invalid:not(:-moz-placeholder-shown) ~ .alert--notification, .feedback__input:invalid:not(:-moz-placeholder-shown) ~ .alert-icon--notification {
+  display: inline;
   opacity: 1;
 }
 
 .feedback__input:invalid:not(:-ms-input-placeholder) ~ .alert--notification, .feedback__input:invalid:not(:-ms-input-placeholder) ~ .alert-icon--notification {
+  display: inline;
   opacity: 1;
 }
 
 .feedback__input:invalid:not(:placeholder-shown) ~ .alert--notification,
 .feedback__input:invalid:not(:placeholder-shown) ~ .alert-icon--notification {
+  display: inline;
   opacity: 1;
 }
 
 .feedback__input:valid:not(:-moz-placeholder-shown) ~ .alert--valid, .feedback__input:valid:not(:-moz-placeholder-shown) ~ .alert-icon--valid {
+  display: inline;
   opacity: 1;
 }
 
 .feedback__input:valid:not(:-ms-input-placeholder) ~ .alert--valid, .feedback__input:valid:not(:-ms-input-placeholder) ~ .alert-icon--valid {
+  display: inline;
   opacity: 1;
 }
 
 .feedback__input:valid:not(:placeholder-shown) ~ .alert--valid,
 .feedback__input:valid:not(:placeholder-shown) ~ .alert-icon--valid {
+  display: inline;
   opacity: 1;
 }/*# sourceMappingURL=main.css.map */
