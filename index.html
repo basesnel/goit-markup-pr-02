@@ -937,31 +937,32 @@
                 </svg>
               </div>
             </div>
-            <label class="feedback__field feedback__field--comment">
-              <span class="feedback__label">Leave a comment</span>
+            <div class="feedback__field feedback__field--comment">
+              <label class="feedback__label" for="comment">Leave a comment</label>
               <textarea
                 name="comment"
+                id="comment"
                 class="feedback__comment"
                 cols="30"
                 rows="7"
                 placeholder="Enter a text"
               ></textarea>
-              <span class="feedback__warning feedback__warning--coment">
+              <!-- <span class="feedback__warning feedback__warning--coment">
                 ! - Please write something in the comment field!
-              </span>
-            </label>
-            <label class="feedback__field feedback__field--check">
-              <input type="checkbox" name="policy" class="feedback__checkbox" />
+              </span> -->
+            </div>
+            <div class="feedback__field feedback__field--check">
+              <input type="checkbox" name="policy" id="policy" class="feedback__checkbox" />
               <span class="feedback__icon-checkbox">
                 <svg class="feedback__icon-check">
                   <use href="./images/icons.svg#feedback-checkmark"></use>
                 </svg>
               </span>
-              <span class="feedback__label feedback__label--check">
+              <label class="feedback__label feedback__label--check" for="policy">
                 I agree to the newsletter and accept
                 <a href="#" class="feedback__link">the terms of the agreement</a>
-              </span>
-            </label>
+              </label>
+            </div>
             <button type="submit" class="btn">Send</button>
           </form>
         </div>
