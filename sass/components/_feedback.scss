@@ -14,7 +14,7 @@
 
     color: getColor(elemFormInverted);
 
-    cursor: pointer;
+    // cursor: pointer;
 
     transition: color $tns-time $tns-func;
 
@@ -29,7 +29,7 @@
     text-align: left;
     @include fitFont(12px, 1.17, null, 0.01em);
 
-    cursor: pointer;
+    // cursor: pointer;
   }
 
   &__wrap-input {
