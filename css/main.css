@@ -954,7 +954,6 @@ label {
 
 .alert {
   position: absolute;
-  display: none;
   top: 105%;
   left: 50%;
   translate: -50% 0;
@@ -966,9 +965,11 @@ label {
   color: #ff6c00;
 }
 .alert--notification {
+  display: none;
   color: #ff6c6c;
 }
 .alert--valid {
+  display: none;
   color: #6cff6c;
 }
 
@@ -991,23 +992,19 @@ label {
 
 .feedback__input:focus ~ .alert--info,
 .feedback__input:focus ~ .alert-icon--info {
-  display: inline;
   opacity: 1;
 }
 
 .feedback__input:not(:-moz-placeholder-shown) ~ .alert--info, .feedback__input:not(:-moz-placeholder-shown) ~ .alert-icon--info {
-  display: none;
   opacity: 0;
 }
 
 .feedback__input:not(:-ms-input-placeholder) ~ .alert--info, .feedback__input:not(:-ms-input-placeholder) ~ .alert-icon--info {
-  display: none;
   opacity: 0;
 }
 
 .feedback__input:not(:placeholder-shown) ~ .alert--info,
 .feedback__input:not(:placeholder-shown) ~ .alert-icon--info {
-  display: none;
   opacity: 0;
 }
 

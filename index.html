@@ -847,24 +847,30 @@
                   autofocus
                   pattern="^[a-zA-Z][a-z0-9A-Z-\s]{2,24}$"
                   aria-required="true"
+                  aria-describedby="nameHint"
                 />
-                <svg class="feedback__input-icon">
+                <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-user"></use>
                 </svg>
-                <span class="alert alert--info">
+                <span id="nameHint" class="alert alert--info">
                   The name contains from 3 to 25 characters and begins with the letter
                 </span>
-                <svg class="alert-icon alert-icon--info" width="16" height="16">
+                <svg class="alert-icon alert-icon--info" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
                 <span class="alert alert--notification">
                   Your name is incorrect: enter 3 to 25 characters and start with a letter
                 </span>
-                <svg class="alert-icon alert-icon--notification" width="16" height="16">
+                <svg
+                  class="alert-icon alert-icon--notification"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
                   <use href="./images/icons.svg#alert-notification"></use>
                 </svg>
                 <span class="alert alert--valid">Congratulations, your name is valid</span>
-                <svg class="alert-icon alert-icon--valid" width="16" height="16">
+                <svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-checkmark"></use>
                 </svg>
               </div>
