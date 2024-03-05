@@ -963,6 +963,8 @@ label {
 }
 .alert--info {
   color: #ff6c00;
+  transform: translateY(-100%);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .alert--notification {
   display: none;
@@ -982,6 +984,7 @@ label {
 }
 .alert-icon--info {
   fill: #ff6c00;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .alert-icon--notification {
   fill: #ff6c6c;
@@ -993,6 +996,10 @@ label {
 .feedback__input:focus ~ .alert--info,
 .feedback__input:focus ~ .alert-icon--info {
   opacity: 1;
+}
+
+.feedback__input:focus ~ .alert--info {
+  transform: translateY(0);
 }
 
 .feedback__input:not(:-moz-placeholder-shown) ~ .alert--info, .feedback__input:not(:-moz-placeholder-shown) ~ .alert-icon--info {

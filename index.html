@@ -891,26 +891,32 @@
                   autocomplete="off"
                   pattern="^\+\d{2}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
                   aria-required="true"
+                  aria-describedby="telHint"
                 />
-                <svg class="feedback__input-icon">
+                <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-phone"></use>
                 </svg>
-                <span class="alert alert--info">
+                <span id="telHint" class="alert alert--info">
                   Enter your telephone number in the format +38 (012) 345-67-89
                 </span>
-                <svg class="alert-icon alert-icon--info" width="16" height="16">
+                <svg class="alert-icon alert-icon--info" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
                 <span class="alert alert--notification">
                   Your phone number is not correct (format is: +38 (012) 345-67-89)
                 </span>
-                <svg class="alert-icon alert-icon--notification" width="16" height="16">
+                <svg
+                  class="alert-icon alert-icon--notification"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
                   <use href="./images/icons.svg#alert-notification"></use>
                 </svg>
                 <span class="alert alert--valid">
                   Congratulations, your phone number is valid
                 </span>
-                <svg class="alert-icon alert-icon--valid" width="16" height="16">
+                <svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-checkmark"></use>
                 </svg>
               </div>
