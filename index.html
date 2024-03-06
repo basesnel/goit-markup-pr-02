@@ -937,20 +937,28 @@
                   autocomplete="off"
                   pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
                   aria-required="true"
+                  aria-describedby="emailHint"
                 />
-                <svg class="feedback__input-icon">
+                <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-envelop"></use>
                 </svg>
-                <span class="alert alert--info">Enter email in the format example@mail.com</span>
-                <svg class="alert-icon alert-icon--info" width="16" height="16">
+                <span id="emailHint" class="alert alert--info">
+                  Enter email in the format example@mail.com
+                </span>
+                <svg class="alert-icon alert-icon--info" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
                 <span class="alert alert--notification">Your email is not correct</span>
-                <svg class="alert-icon alert-icon--notification" width="16" height="16">
+                <svg
+                  class="alert-icon alert-icon--notification"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
                   <use href="./images/icons.svg#alert-notification"></use>
                 </svg>
                 <span class="alert alert--valid">Congratulations, your email is valid</span>
-                <svg class="alert-icon alert-icon--valid" width="16" height="16">
+                <svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-checkmark"></use>
                 </svg>
               </div>
