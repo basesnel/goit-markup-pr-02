@@ -830,8 +830,8 @@
 
         <div class="feedback">
           <p class="feedback__title">Leave your details and we will call you back</p>
-          <form class="feedback__form js-speaker-form" data-modal autocomplete="off">
-            <div class="feedback__field">
+          <form class="feedback__form jsForm" data-modal autocomplete="off">
+            <div class="feedback__field field">
               <label class="feedback__label" for="name">
                 Name
                 <span aria-hidden="true">*</span>
@@ -841,7 +841,7 @@
                   type="text"
                   name="name"
                   id="name"
-                  class="feedback__input"
+                  class="feedback__input jsFieldName"
                   placeholder="Your name"
                   autocomplete="off"
                   autofocus
@@ -852,15 +852,13 @@
                 <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-user"></use>
                 </svg>
-                <span id="nameHint" class="alert alert--info">
+                <span id="nameHint" class="hint">
                   The name contains from 3 to 25 characters and begins with the letter
                 </span>
-                <!-- <svg class="alert-icon alert-icon--info" width="16" height="16" aria-hidden="true">
+                <svg class="hint-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
-                </svg> -->
-                <span class="alert alert--notification">
-                  Your name is incorrect: enter 3 to 25 characters and start with a letter
-                </span>
+                </svg>
+                <span class="alert" aria-live="assertive"></span>
                 <!-- <svg
                   class="alert-icon alert-icon--notification"
                   width="16"
@@ -869,7 +867,7 @@
                 >
                   <use href="./images/icons.svg#alert-notification"></use>
                 </svg> -->
-                <span class="alert alert--valid">Congratulations, your name is valid</span>
+                <!-- <span class="alert alert--valid">Congratulations, your name is valid</span> -->
                 <!-- <svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-checkmark"></use>
                 </svg> -->

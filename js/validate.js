@@ -1,4 +1,12 @@
-const forms = document.getElementsByClassName('js-speaker-form');
+const nameRegex = /^[a-zA-Z][a-z0-9A-Z\-\s]{2,24}$/;
+
+const forms = document.getElementsByClassName('jsForm');
+const elName = document.getElementsByClassName('jsFieldName')[0];
+
+validateField({
+  elField: elName,
+  validateFn: validateFieldName,
+});
 
 function validateField({ elField, validateFn }) {
   let touched = false;
@@ -20,19 +28,34 @@ function validateField({ elField, validateFn }) {
   });
 }
 
-function validate(el, isValid, errorMessage, opts) {
+function validateFieldName(el, opts) {
+  const isEmpty = el.value === '';
+  const isName = nameRegex.test(el.value);
+
+  validate(
+    el,
+    isEmpty || isName,
+    'Your name is incorrect: enter 3 to 25 characters and start with a letter',
+    'Congratulations, your name is valid',
+    opts,
+  );
+}
+
+function validate(el, isValid, invalidMessage, validMessage, opts) {
   const removeOnly = opts?.removeOnly;
   const elField = el.closest('.field');
-  const elError = elField.querySelector('.field-error');
+  const elAlert = elField.querySelector('.alert');
 
   if (isValid && !opts.addOnly) {
-    elField.classList.remove('isInvalid');
-    elError.innerText = '';
+    elAlert.classList.add('alert--valid');
+    elAlert.classList.remove('alert--invalid');
+    elAlert.innerText = validMessage;
     el.removeAttribute('aria-invalid');
     return true;
   } else if (!removeOnly) {
-    elField.classList.add('isInvalid');
-    elError.innerText = errorMessage;
+    elAlert.classList.add('alert--invalid');
+    elAlert.classList.remove('alert--valid');
+    elAlert.innerText = invalidMessage;
     el.setAttribute('aria-invalid', 'true');
     return false;
   }
