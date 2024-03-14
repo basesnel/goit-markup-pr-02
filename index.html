@@ -847,7 +847,7 @@
                   autofocus
                   pattern="^[a-zA-Z][a-z0-9A-Z\-\s]{2,24}$"
                   aria-required="true"
-                  aria-describedby="nameHint"
+                  aria-describedby="nameHint nameAlert"
                 />
                 <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-user"></use>
@@ -858,7 +858,7 @@
                 <svg class="hint-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
-                <span class="alert" aria-live="assertive"></span>
+                <span id="nameAlert" class="alert" aria-live="assertive"></span>
                 <!-- <svg
                   class="alert-icon alert-icon--notification"
                   width="16"
