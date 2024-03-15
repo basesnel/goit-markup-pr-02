@@ -874,7 +874,7 @@
               </div>
             </div>
 
-            <div class="feedback__field">
+            <div class="feedback__field field">
               <label class="feedback__label" for="tel">
                 Phone
                 <span aria-hidden="true">*</span>
@@ -884,39 +884,37 @@
                   type="tel"
                   name="tel"
                   id="tel"
-                  class="feedback__input"
+                  class="feedback__input jsFieldPhone"
                   placeholder="+38 (0_ _) _ _ _-_ _-_ _"
                   autocomplete="off"
                   pattern="^\+\d{2}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
                   aria-required="true"
-                  aria-describedby="telHint"
+                  aria-describedby="telHint telAlert"
                 />
                 <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-phone"></use>
                 </svg>
-                <span id="telHint" class="alert alert--info">
+                <span id="telHint" class="hint">
                   Enter your telephone number in the format +38 (012) 345-67-89
                 </span>
-                <svg class="alert-icon alert-icon--info" width="16" height="16" aria-hidden="true">
+                <svg class="hint-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
-                <span class="alert alert--notification">
-                  Your phone number is not correct (format is: +38 (012) 345-67-89)
-                </span>
-                <svg
+                <span id="telAlert" class="alert" aria-live="assertive"></span>
+                <!-- <svg
                   class="alert-icon alert-icon--notification"
                   width="16"
                   height="16"
                   aria-hidden="true"
                 >
                   <use href="./images/icons.svg#alert-notification"></use>
-                </svg>
-                <span class="alert alert--valid">
+                </svg> -->
+                <!-- <span class="alert alert--valid">
                   Congratulations, your phone number is valid
-                </span>
-                <svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
+                </span> -->
+                <!-- <svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-checkmark"></use>
-                </svg>
+                </svg> -->
               </div>
             </div>
 
@@ -940,10 +938,10 @@
                 <svg class="feedback__input-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#feedback-envelop"></use>
                 </svg>
-                <span id="emailHint" class="alert alert--info">
+                <span id="emailHint" class="hint">
                   Enter email in the format example@mail.com
                 </span>
-                <svg class="alert-icon alert-icon--info" width="16" height="16" aria-hidden="true">
+                <svg class="hint-icon" width="16" height="16" aria-hidden="true">
                   <use href="./images/icons.svg#alert-info"></use>
                 </svg>
                 <span class="alert alert--notification">Your email is not correct</span>
