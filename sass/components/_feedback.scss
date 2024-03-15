@@ -217,19 +217,14 @@
 
   font-size: 10px;
 
-  &--info {
-    color: getColor('accent');
-    transform: translateY(-100%);
-    transition: opacity $tns-time $tns-func, transform $tns-time $tns-func;
-  }
+  transform: translateY(-100%);
+  transition: opacity $tns-time $tns-func, transform $tns-time $tns-func;
 
   &--invalid {
-    display: none;
     color: getColor('invalid');
   }
 
   &--valid {
-    display: none;
     color: getColor('valid');
   }
 }
@@ -258,12 +253,12 @@
 
 .feedback__input:invalid:not(:placeholder-shown) ~ .alert--invalid,
 .feedback__input:invalid:not(:placeholder-shown) ~ .alert-icon--invalid {
-  display: inline;
   opacity: 1;
+  transform: translateY(0);
 }
 
 .feedback__input:valid:not(:placeholder-shown) ~ .alert--valid,
 .feedback__input:valid:not(:placeholder-shown) ~ .alert-icon--valid {
-  display: inline;
   opacity: 1;
+  transform: translateY(0);
 }
