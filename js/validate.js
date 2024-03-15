@@ -38,7 +38,7 @@ function validateField({ elField, validateFn }) {
   elField.addEventListener('blur', e => {
     if (!touched) return;
     // show error if touched
-    validateFn(e.target, { live: true });
+    validateFn(e.target, { live: true, isEmpty: e.target.value === '' });
   });
 }
 
@@ -105,15 +105,19 @@ function validate(el, isValid, invalidMessage, validMessage, opts) {
     elAlert.classList.add('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = validMessage;
-    elHint.classList.add('hint-hidden');
-    elHintIcon.classList.add('hint-hidden');
+    opts.isEmpty ? elHint.classList.remove('hint-hidden') : elHint.classList.add('hint-hidden');
+    opts.isEmpty
+      ? elHintIcon.classList.remove('hint-hidden')
+      : elHintIcon.classList.add('hint-hidden');
     el.removeAttribute('aria-invalid');
     return true;
   } else if (!isValid && opts.live) {
     elAlert.classList.add('alert--invalid');
     elAlert.classList.remove('alert--valid');
-    elHint.classList.add('hint-hidden');
-    elHintIcon.classList.add('hint-hidden');
+    opts.isEmpty ? elHint.classList.remove('hint-hidden') : elHint.classList.add('hint-hidden');
+    opts.isEmpty
+      ? elHintIcon.classList.remove('hint-hidden')
+      : elHintIcon.classList.add('hint-hidden');
     elAlert.innerText = invalidMessage;
     el.setAttribute('aria-invalid', 'true');
     return true;
