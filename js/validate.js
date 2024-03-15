@@ -1,9 +1,11 @@
 const nameRegex = /^[a-zA-Z][a-z0-9A-Z\-\s]{2,24}$/;
 const phoneRegex = /^\+\d{2}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
+const emailRegex = /^\w+([\.\-]?\w+)*@\w+([\.\-]?\w+)*(\.\w{2,3})+$/;
 
 const forms = document.getElementsByClassName('jsForm');
 const elName = document.getElementsByClassName('jsFieldName')[0];
 const elPhone = document.getElementsByClassName('jsFieldPhone')[0];
+const elEmail = document.getElementsByClassName('jsFieldEmail')[0];
 
 validateField({
   elField: elName,
@@ -13,6 +15,11 @@ validateField({
 validateField({
   elField: elPhone,
   validateFn: validateFieldPhone,
+});
+
+validateField({
+  elField: elEmail,
+  validateFn: validateFieldEmail,
 });
 
 function validateField({ elField, validateFn }) {
@@ -57,6 +64,32 @@ function validateFieldPhone(el, opts) {
     isEmpty || isPhoneValid,
     'Your phone number is not correct (format is: +38 (012) 345-67-89)',
     'Congratulations, your phone number is valid',
+    opts,
+  );
+}
+
+function validateFieldPhone(el, opts) {
+  const isEmpty = el.value === '';
+  const isPhoneValid = phoneRegex.test(el.value);
+
+  validate(
+    el,
+    isEmpty || isPhoneValid,
+    'Your phone number is not correct (format is: +38 (012) 345-67-89)',
+    'Congratulations, your phone number is valid',
+    opts,
+  );
+}
+
+function validateFieldEmail(el, opts) {
+  const isEmpty = el.value === '';
+  const isEmailValid = emailRegex.test(el.value);
+
+  validate(
+    el,
+    isEmpty || isEmailValid,
+    'Your email is not correct',
+    'Congratulations, your email is valid',
     opts,
   );
 }

@@ -1,5 +1,5 @@
 // Phone-input initialization:
-const phoneInput = document.querySelector('#tel');
+const phoneInput = document.querySelector('#phone');
 
 phoneInput.addEventListener('keydown', e => {
   console.log(e.target.value.length);
