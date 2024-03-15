@@ -98,18 +98,31 @@ function validate(el, isValid, invalidMessage, validMessage, opts) {
   const removeOnly = opts?.removeOnly;
   const elField = el.closest('.field');
   const elAlert = elField.querySelector('.alert');
+  const elHint = elField.querySelector('.hint');
+  const elHintIcon = elField.querySelector('.hint-icon');
 
-  if (isValid && !opts.addOnly) {
+  if (isValid && opts.live) {
     elAlert.classList.add('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = validMessage;
+    elHint.classList.add('hint-hidden');
+    elHintIcon.classList.add('hint-hidden');
     el.removeAttribute('aria-invalid');
     return true;
-  } else if (!removeOnly) {
+  } else if (!isValid && opts.live) {
     elAlert.classList.add('alert--invalid');
     elAlert.classList.remove('alert--valid');
+    elHint.classList.add('hint-hidden');
+    elHintIcon.classList.add('hint-hidden');
     elAlert.innerText = invalidMessage;
     el.setAttribute('aria-invalid', 'true');
+    return true;
+  } else if (removeOnly) {
+    elHint.classList.remove('hint-hidden');
+    elHintIcon.classList.remove('hint-hidden');
+    elAlert.classList.remove('alert--valid');
+    elAlert.classList.remove('alert--invalid');
+    elAlert.innerText = '';
     return false;
   }
 }

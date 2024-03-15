@@ -200,8 +200,13 @@
   transform: translateY(0);
 }
 
-.feedback__input:not(:placeholder-shown) ~ .hint,
-.feedback__input:not(:placeholder-shown) ~ .hint-icon {
+// .feedback__input:not(:placeholder-shown) ~ .hint,
+// .feedback__input:not(:placeholder-shown) ~ .hint-icon {
+//   opacity: 0;
+// }
+
+.hint-hidden,
+.feedback__input:focus ~ .hint-hidden {
   opacity: 0;
 }
 

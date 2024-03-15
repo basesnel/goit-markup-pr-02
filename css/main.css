@@ -984,16 +984,8 @@ label {
   transform: translateY(0);
 }
 
-.feedback__input:not(:-moz-placeholder-shown) ~ .hint, .feedback__input:not(:-moz-placeholder-shown) ~ .hint-icon {
-  opacity: 0;
-}
-
-.feedback__input:not(:-ms-input-placeholder) ~ .hint, .feedback__input:not(:-ms-input-placeholder) ~ .hint-icon {
-  opacity: 0;
-}
-
-.feedback__input:not(:placeholder-shown) ~ .hint,
-.feedback__input:not(:placeholder-shown) ~ .hint-icon {
+.hint-hidden,
+.feedback__input:focus ~ .hint-hidden {
   opacity: 0;
 }
 
