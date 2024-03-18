@@ -43,16 +43,37 @@ function validateField({ elField, validateFn }) {
 }
 
 function validateFieldName(el, opts) {
-  const isEmpty = el.value === '';
-  const isName = nameRegex.test(el.value);
+  // const isEmpty = el.value === '';
+  // const isName = nameRegex.test(el.value);
 
-  validate(
-    el,
-    isEmpty || isName,
-    'Your name is incorrect: enter 3 to 25 characters and start with a letter',
-    'Congratulations, your name is valid',
-    opts,
-  );
+  // validate(
+  //   el,
+  //   isEmpty || isName,
+  //   'Your name is incorrect: enter 3 to 25 characters and start with a letter',
+  //   'Congratulations, your name is valid',
+  //   opts,
+  // );
+  const isEmpty = opts.isEmpty;
+  console.log(opts);
+
+  if (isEmpty) {
+    validate(
+      el,
+      !isEmpty,
+      'Your name cannot be empty',
+      'Congratulations, your name is valid',
+      opts,
+    );
+  } else {
+    const isName = nameRegex.test(el.value);
+    validate(
+      el,
+      isName,
+      'Your name is incorrect: enter 3 to 25 characters and start with a letter',
+      'Congratulations, your name is valid',
+      opts,
+    );
+  }
 }
 
 function validateFieldPhone(el, opts) {
@@ -101,29 +122,35 @@ function validate(el, isValid, invalidMessage, validMessage, opts) {
   const elHint = elField.querySelector('.hint');
   const elHintIcon = elField.querySelector('.hint-icon');
 
+  console.log('validate :', isValid, opts);
+
   if (isValid && opts.live) {
     elAlert.classList.add('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = validMessage;
-    opts.isEmpty ? elHint.classList.remove('hint-hidden') : elHint.classList.add('hint-hidden');
-    opts.isEmpty
-      ? elHintIcon.classList.remove('hint-hidden')
-      : elHintIcon.classList.add('hint-hidden');
+    // opts.isEmpty ? elHint.classList.remove('hint--hidden') : elHint.classList.add('hint--hidden');
+    // opts.isEmpty
+    //   ? elHintIcon.classList.remove('hint-icon--hidden')
+    //   : elHintIcon.classList.add('hint-icon--hidden');
+    elHint.classList.add('hint--hidden');
+    elHintIcon.classList.add('hint-icon--hidden');
     el.removeAttribute('aria-invalid');
     return true;
   } else if (!isValid && opts.live) {
     elAlert.classList.add('alert--invalid');
     elAlert.classList.remove('alert--valid');
-    opts.isEmpty ? elHint.classList.remove('hint-hidden') : elHint.classList.add('hint-hidden');
-    opts.isEmpty
-      ? elHintIcon.classList.remove('hint-hidden')
-      : elHintIcon.classList.add('hint-hidden');
+    // opts.isEmpty ? elHint.classList.remove('hint--hidden') : elHint.classList.add('hint--hidden');
+    // opts.isEmpty
+    //   ? elHintIcon.classList.remove('hint-icon--hidden')
+    //   : elHintIcon.classList.add('hint-icon--hidden');
+    elHint.classList.add('hint--hidden');
+    elHintIcon.classList.add('hint-icon--hidden');
     elAlert.innerText = invalidMessage;
     el.setAttribute('aria-invalid', 'true');
     return true;
   } else if (removeOnly) {
-    elHint.classList.remove('hint-hidden');
-    elHintIcon.classList.remove('hint-hidden');
+    elHint.classList.remove('hint--hidden');
+    elHintIcon.classList.remove('hint-icon--hidden');
     elAlert.classList.remove('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = '';
