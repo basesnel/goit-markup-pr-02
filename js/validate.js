@@ -43,18 +43,7 @@ function validateField({ elField, validateFn }) {
 }
 
 function validateFieldName(el, opts) {
-  // const isEmpty = el.value === '';
-  // const isName = nameRegex.test(el.value);
-
-  // validate(
-  //   el,
-  //   isEmpty || isName,
-  //   'Your name is incorrect: enter 3 to 25 characters and start with a letter',
-  //   'Congratulations, your name is valid',
-  //   opts,
-  // );
   const isEmpty = opts.isEmpty;
-  console.log(opts);
 
   if (isEmpty) {
     validate(
@@ -77,29 +66,26 @@ function validateFieldName(el, opts) {
 }
 
 function validateFieldPhone(el, opts) {
-  const isEmpty = el.value === '';
-  const isPhoneValid = phoneRegex.test(el.value);
+  const isEmpty = opts.isEmpty || el.value === '+38 (___) ___-__-__';
 
-  validate(
-    el,
-    isEmpty || isPhoneValid,
-    'Your phone number is not correct (format is: +38 (012) 345-67-89)',
-    'Congratulations, your phone number is valid',
-    opts,
-  );
-}
-
-function validateFieldPhone(el, opts) {
-  const isEmpty = el.value === '';
-  const isPhoneValid = phoneRegex.test(el.value);
-
-  validate(
-    el,
-    isEmpty || isPhoneValid,
-    'Your phone number is not correct (format is: +38 (012) 345-67-89)',
-    'Congratulations, your phone number is valid',
-    opts,
-  );
+  if (isEmpty) {
+    validate(
+      el,
+      !isEmpty,
+      'Your phone number cannot be empty or blank',
+      'Congratulations, your phone number is valid',
+      opts,
+    );
+  } else {
+    const isPhoneValid = phoneRegex.test(el.value);
+    validate(
+      el,
+      isPhoneValid,
+      'Your phone number is not correct (format is: +38 (012) 345-67-89)',
+      'Congratulations, your phone number is valid',
+      opts,
+    );
+  }
 }
 
 function validateFieldEmail(el, opts) {
@@ -122,16 +108,12 @@ function validate(el, isValid, invalidMessage, validMessage, opts) {
   const elHint = elField.querySelector('.hint');
   const elHintIcon = elField.querySelector('.hint-icon');
 
-  console.log('validate :', isValid, opts);
+  // console.log('validate: ', isValid, opts);
 
   if (isValid && opts.live) {
     elAlert.classList.add('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = validMessage;
-    // opts.isEmpty ? elHint.classList.remove('hint--hidden') : elHint.classList.add('hint--hidden');
-    // opts.isEmpty
-    //   ? elHintIcon.classList.remove('hint-icon--hidden')
-    //   : elHintIcon.classList.add('hint-icon--hidden');
     elHint.classList.add('hint--hidden');
     elHintIcon.classList.add('hint-icon--hidden');
     el.removeAttribute('aria-invalid');
@@ -139,13 +121,9 @@ function validate(el, isValid, invalidMessage, validMessage, opts) {
   } else if (!isValid && opts.live) {
     elAlert.classList.add('alert--invalid');
     elAlert.classList.remove('alert--valid');
-    // opts.isEmpty ? elHint.classList.remove('hint--hidden') : elHint.classList.add('hint--hidden');
-    // opts.isEmpty
-    //   ? elHintIcon.classList.remove('hint-icon--hidden')
-    //   : elHintIcon.classList.add('hint-icon--hidden');
+    elAlert.innerText = invalidMessage;
     elHint.classList.add('hint--hidden');
     elHintIcon.classList.add('hint-icon--hidden');
-    elAlert.innerText = invalidMessage;
     el.setAttribute('aria-invalid', 'true');
     return true;
   } else if (removeOnly) {
