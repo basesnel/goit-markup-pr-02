@@ -46,21 +46,15 @@ function validateFieldName(el, opts) {
   const isEmpty = opts.isEmpty;
 
   if (isEmpty) {
-    validate(
-      el,
-      !isEmpty,
-      'Your name cannot be empty',
-      'Congratulations, your name is valid',
-      opts,
-    );
+    validate(el, !isEmpty, opts, 'Your name cannot be empty');
   } else {
-    const isName = nameRegex.test(el.value);
+    const isNameValid = nameRegex.test(el.value);
     validate(
       el,
-      isName,
+      isNameValid,
+      opts,
       'Your name is incorrect: enter 3 to 25 characters and start with a letter',
       'Congratulations, your name is valid',
-      opts,
     );
   }
 }
@@ -69,46 +63,42 @@ function validateFieldPhone(el, opts) {
   const isEmpty = opts.isEmpty || el.value === '+38 (___) ___-__-__';
 
   if (isEmpty) {
-    validate(
-      el,
-      !isEmpty,
-      'Your phone number cannot be empty or blank',
-      'Congratulations, your phone number is valid',
-      opts,
-    );
+    validate(el, !isEmpty, opts, 'Your phone number cannot be empty or blank');
   } else {
     const isPhoneValid = phoneRegex.test(el.value);
     validate(
       el,
       isPhoneValid,
+      opts,
       'Your phone number is not correct (format is: +38 (012) 345-67-89)',
       'Congratulations, your phone number is valid',
-      opts,
     );
   }
 }
 
 function validateFieldEmail(el, opts) {
-  const isEmpty = el.value === '';
-  const isEmailValid = emailRegex.test(el.value);
+  const isEmpty = opts.isEmpty;
 
-  validate(
-    el,
-    isEmpty || isEmailValid,
-    'Your email is not correct',
-    'Congratulations, your email is valid',
-    opts,
-  );
+  if (isEmpty) {
+    validate(el, !isEmpty, opts, 'Your email is cannot be empty');
+  } else {
+    const isEmailValid = emailRegex.test(el.value);
+    validate(
+      el,
+      isEmailValid,
+      opts,
+      'Your email is not correct',
+      'Congratulations, your email is valid',
+    );
+  }
 }
 
-function validate(el, isValid, invalidMessage, validMessage, opts) {
+function validate(el, isValid, opts, invalidMessage, validMessage = '') {
   const removeOnly = opts?.removeOnly;
   const elField = el.closest('.field');
   const elAlert = elField.querySelector('.alert');
   const elHint = elField.querySelector('.hint');
   const elHintIcon = elField.querySelector('.hint-icon');
-
-  // console.log('validate: ', isValid, opts);
 
   if (isValid && opts.live) {
     elAlert.classList.add('alert--valid');
