@@ -80,7 +80,7 @@ function validateFieldEmail(el, opts) {
   const isEmpty = opts.isEmpty;
 
   if (isEmpty) {
-    validate(el, !isEmpty, opts, 'Your email is cannot be empty');
+    validate(el, !isEmpty, opts, 'Your email cannot be empty');
   } else {
     const isEmailValid = emailRegex.test(el.value);
     validate(
@@ -99,6 +99,7 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
   const elAlert = elField.querySelector('.alert');
   const elHint = elField.querySelector('.hint');
   const elHintIcon = elField.querySelector('.hint-icon');
+  const wrap = elField.querySelector('.feedback__wrap-input');
 
   if (isValid && opts.live) {
     elAlert.classList.add('alert--valid');
@@ -107,6 +108,7 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
     elHint.classList.add('hint--hidden');
     elHintIcon.classList.add('hint-icon--hidden');
     el.removeAttribute('aria-invalid');
+    addIconToMessage(wrap, 'valid');
     return true;
   } else if (!isValid && opts.live) {
     elAlert.classList.add('alert--invalid');
@@ -115,6 +117,7 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
     elHint.classList.add('hint--hidden');
     elHintIcon.classList.add('hint-icon--hidden');
     el.setAttribute('aria-invalid', 'true');
+    addIconToMessage(wrap, 'invalid');
     return true;
   } else if (removeOnly) {
     elHint.classList.remove('hint--hidden');
@@ -122,7 +125,41 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
     elAlert.classList.remove('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = '';
+    addIconToMessage(wrap, 'hint');
     return false;
+  }
+}
+
+function addIconToMessage(el, icon) {
+  const iconHint = `<svg class="hint-icon hint-icon--hidden" width="16" height="16" aria-hidden="true">
+                  <use href="./images/icons.svg#alert-info"></use>
+                </svg>`;
+  const iconInvalid = `<svg
+                  class="alert-icon alert-icon--notification"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <use href="./images/icons.svg#alert-notification"></use>
+                </svg>`;
+  const iconValid = `<svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
+                  <use href="./images/icons.svg#alert-checkmark"></use>
+                </svg>`;
+  switch (icon) {
+    case 'hint':
+      console.log(el, iconHint);
+      break;
+
+    case 'invalid':
+      console.log(el, iconInvalid);
+      break;
+
+    case 'valid':
+      console.log(el, iconValid);
+      break;
+
+    default:
+      console.log(el);
   }
 }
 
