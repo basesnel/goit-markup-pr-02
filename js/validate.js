@@ -25,7 +25,7 @@ validateField({
 function validateField({ elField, validateFn }) {
   let touched = false;
 
-  elField.addEventListener('change', e => {
+  elField.addEventListener('input', e => {
     // mark it as touched so that on blur it shows the error.
     touched = true;
   });
@@ -60,7 +60,7 @@ function validateFieldName(el, opts) {
 }
 
 function validateFieldPhone(el, opts) {
-  const isEmpty = opts.isEmpty || el.value === '+38 (___) ___-__-__';
+  const isEmpty = opts.isEmpty || el.value === '+38 (0__) ___-__-__';
 
   if (isEmpty) {
     validate(el, !isEmpty, opts, 'Your phone number cannot be empty or blank');

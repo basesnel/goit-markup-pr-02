@@ -4,7 +4,7 @@ const phoneInput = document.querySelector('#phone');
 phoneInput.addEventListener('keydown', e => {
   // console.log(e.target.value.length);
 
-  if (!e.target.value.length) e.target.value = '+38 (___) ___-__-__';
+  if (!e.target.value.length) e.target.value = '+38 (0__) ___-__-__';
 
   // process event only key is a number
 });
