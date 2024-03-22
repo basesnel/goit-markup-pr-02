@@ -7,6 +7,13 @@ const elName = document.getElementsByClassName('jsFieldName')[0];
 const elPhone = document.getElementsByClassName('jsFieldPhone')[0];
 const elEmail = document.getElementsByClassName('jsFieldEmail')[0];
 
+const alertIcon = document.createElement('svg');
+alertIcon.setAttribute('width', '16');
+alertIcon.setAttribute('height', '16');
+alertIcon.setAttribute('aria-hidden', 'true');
+alertIcon.classList.add('alert-icon');
+console.log(alertIcon);
+
 validateField({
   elField: elName,
   validateFn: validateFieldName,
@@ -131,36 +138,33 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
 }
 
 function addIconToMessage(el, icon) {
-  const iconHint = `<svg class="hint-icon hint-icon--hidden" width="16" height="16" aria-hidden="true">
-                  <use href="./images/icons.svg#alert-info"></use>
-                </svg>`;
-  const iconInvalid = `<svg
-                  class="alert-icon alert-icon--notification"
-                  width="16"
-                  height="16"
-                  aria-hidden="true"
-                >
-                  <use href="./images/icons.svg#alert-notification"></use>
-                </svg>`;
-  const iconValid = `<svg class="alert-icon alert-icon--valid" width="16" height="16" aria-hidden="true">
-                  <use href="./images/icons.svg#alert-checkmark"></use>
-                </svg>`;
+  // const iconHint = `<svg class="hint-icon hint-icon--hidden" width="16" height="16" aria-hidden="true">
+  //                 <use href="./images/icons.svg#alert-info"></use>
+  //               </svg>`;
+
   switch (icon) {
-    case 'hint':
-      console.log(el, iconHint);
-      break;
+    // case 'hint':
+    //   console.log(el, iconHint);
+    //   break;
 
     case 'invalid':
-      console.log(el, iconInvalid);
+      alertIcon.classList.remove('alert-icon--valid');
+      alertIcon.classList.add('alert-icon--notification');
+      alertIcon.innerHTML = '<use href="./images/icons.svg#alert-notification"></use>';
+      console.log(el, alertIcon);
       break;
 
     case 'valid':
-      console.log(el, iconValid);
+      alertIcon.classList.remove('alert-icon--notification');
+      alertIcon.classList.add('alert-icon--valid');
+      alertIcon.innerHTML = '<use href="./images/icons.svg#alert-checkmark"></use>';
+      console.log(el, alertIcon);
       break;
 
     default:
-      console.log(el);
+      return;
   }
+  // !el.contains(alertIcon) && el.append(alertIcon);
 }
 
 [...forms].forEach(elForm => {
