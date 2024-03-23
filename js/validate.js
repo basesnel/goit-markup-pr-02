@@ -7,12 +7,11 @@ const elName = document.getElementsByClassName('jsFieldName')[0];
 const elPhone = document.getElementsByClassName('jsFieldPhone')[0];
 const elEmail = document.getElementsByClassName('jsFieldEmail')[0];
 
-const alertIcon = document.createElement('svg');
+const alertIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 alertIcon.setAttribute('width', '16');
 alertIcon.setAttribute('height', '16');
 alertIcon.setAttribute('aria-hidden', 'true');
 alertIcon.classList.add('alert-icon');
-console.log(alertIcon);
 
 validateField({
   elField: elName,
@@ -105,7 +104,7 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
   const elField = el.closest('.field');
   const elAlert = elField.querySelector('.alert');
   const elHint = elField.querySelector('.hint');
-  const elHintIcon = elField.querySelector('.hint-icon');
+  // const elHintIcon = elField.querySelector('.hint-icon');
   const wrap = elField.querySelector('.feedback__wrap-input');
 
   if (isValid && opts.live) {
@@ -113,7 +112,7 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = validMessage;
     elHint.classList.add('hint--hidden');
-    elHintIcon.classList.add('hint-icon--hidden');
+    // elHintIcon.classList.add('hint-icon--hidden');
     el.removeAttribute('aria-invalid');
     addIconToMessage(wrap, 'valid');
     return true;
@@ -122,13 +121,13 @@ function validate(el, isValid, opts, invalidMessage, validMessage = '') {
     elAlert.classList.remove('alert--valid');
     elAlert.innerText = invalidMessage;
     elHint.classList.add('hint--hidden');
-    elHintIcon.classList.add('hint-icon--hidden');
+    // elHintIcon.classList.add('hint-icon--hidden');
     el.setAttribute('aria-invalid', 'true');
     addIconToMessage(wrap, 'invalid');
     return true;
   } else if (removeOnly) {
     elHint.classList.remove('hint--hidden');
-    elHintIcon.classList.remove('hint-icon--hidden');
+    // elHintIcon.classList.remove('hint-icon--hidden');
     elAlert.classList.remove('alert--valid');
     elAlert.classList.remove('alert--invalid');
     elAlert.innerText = '';
@@ -142,29 +141,38 @@ function addIconToMessage(el, icon) {
   //                 <use href="./images/icons.svg#alert-info"></use>
   //               </svg>`;
 
+  const alertIconCopy = el.getElementsByClassName('alert-icon')[0]
+    ? el.getElementsByClassName('alert-icon')[0]
+    : alertIcon.cloneNode(true);
+
   switch (icon) {
-    // case 'hint':
-    //   console.log(el, iconHint);
-    //   break;
+    case 'hint':
+      alertIconCopy.classList.remove('alert-icon--valid');
+      alertIconCopy.classList.remove('alert-icon--invalid');
+      alertIconCopy.classList.add('alert-icon--hint');
+      alertIconCopy.innerHTML = '<use href="./images/icons.svg#alert-info"></use>';
+      break;
 
     case 'invalid':
-      alertIcon.classList.remove('alert-icon--valid');
-      alertIcon.classList.add('alert-icon--notification');
-      alertIcon.innerHTML = '<use href="./images/icons.svg#alert-notification"></use>';
-      console.log(el, alertIcon);
+      alertIconCopy.classList.remove('alert-icon--valid');
+      alertIconCopy.classList.remove('alert-icon--hint');
+      alertIconCopy.classList.add('alert-icon--invalid');
+      alertIconCopy.innerHTML = '<use href="./images/icons.svg#alert-notification"></use>';
+      // console.log(el, alertIconCopy);
       break;
 
     case 'valid':
-      alertIcon.classList.remove('alert-icon--notification');
-      alertIcon.classList.add('alert-icon--valid');
-      alertIcon.innerHTML = '<use href="./images/icons.svg#alert-checkmark"></use>';
-      console.log(el, alertIcon);
+      alertIconCopy.classList.remove('alert-icon--invalid');
+      alertIconCopy.classList.remove('alert-icon--hint');
+      alertIconCopy.classList.add('alert-icon--valid');
+      alertIconCopy.innerHTML = '<use href="./images/icons.svg#alert-checkmark"></use>';
+      // console.log(el, alertIconCopy);
       break;
 
     default:
       return;
   }
-  // !el.contains(alertIcon) && el.append(alertIcon);
+  !el.contains(alertIconCopy) && el.appendChild(alertIconCopy);
 }
 
 [...forms].forEach(elForm => {
