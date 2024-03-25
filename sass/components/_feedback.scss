@@ -126,13 +126,6 @@
   .feedback__input:focus ~ & {
     fill: getColor(accent);
   }
-
-  // .feedback__input--warning ~ &,
-  // .feedback__input--warning:hover ~ &,
-  // .feedback__input--warning:focus ~ &,
-  // .feedback__input--warning:not(:placeholder-shown) ~ & {
-  //   fill: $warning-color;
-  // }
 }
 
 .feedback__icon-checkbox {
@@ -184,41 +177,6 @@
   transform: translateY(-100%);
 }
 
-// .hint-icon {
-//   position: absolute;
-//   right: 12px;
-//   top: 50%;
-//   translate: 0 -50%;
-
-//   opacity: 1;
-
-//   fill: getColor('accent');
-//   transition: opacity $tns-time $tns-func;
-// }
-
-// .hint-icon--hidden {
-//   opacity: 0;
-// }
-
-// .feedback__input:focus ~ .hint,
-// .feedback__input:focus ~ .hint-icon {
-//   opacity: 1;
-// }
-
-// .feedback__input:focus ~ .hint {
-//   transform: translateY(0);
-// }
-
-// .feedback__input:not(:placeholder-shown) ~ .hint,
-// .feedback__input:not(:placeholder-shown) ~ .hint-icon {
-//   opacity: 0;
-// }
-
-// .hint-hidden,
-// .feedback__input:focus ~ .hint-hidden {
-//   opacity: 0;
-// }
-
 .alert {
   position: absolute;
   top: 105%;
@@ -253,7 +211,7 @@
   top: 50%;
   translate: 0 -50%;
 
-  // opacity: 0;
+  animation: alertIconAnimation 3000ms infinite alternate $tns-func 1000ms;
 
   &--hint {
     fill: getColor('accent');
@@ -268,14 +226,20 @@
   }
 }
 
-// .feedback__input:invalid:not(:placeholder-shown) ~ .alert-icon--invalid,
-// .feedback__input:invalid:not(:placeholder-shown) ~ .alert--invalid {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
+@keyframes alertIconAnimation {
+  0% {
+    transform: perspective(24px) rotateY(0deg);
+  }
 
-// .feedback__input:valid:not(:placeholder-shown) ~ .alert--valid,
-// .feedback__input:valid:not(:placeholder-shown) ~ .alert-icon--valid {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
+  33% {
+    transform: perspective(24px) rotateY(0deg);
+  }
+
+  67% {
+    transform: perspective(24px) rotateY(180deg);
+  }
+
+  100% {
+    transform: perspective(24px) rotateY(180deg);
+  }
+}

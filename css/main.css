@@ -997,6 +997,8 @@ label {
   right: 12px;
   top: 50%;
   translate: 0 -50%;
+  -webkit-animation: alertIconAnimation 3000ms infinite alternate cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+          animation: alertIconAnimation 3000ms infinite alternate cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
 }
 .alert-icon--hint {
   fill: #ff6c00;
@@ -1006,4 +1008,34 @@ label {
 }
 .alert-icon--valid {
   fill: #6cff6c;
+}
+
+@-webkit-keyframes alertIconAnimation {
+  0% {
+    transform: perspective(24px) rotateY(0deg);
+  }
+  33% {
+    transform: perspective(24px) rotateY(0deg);
+  }
+  67% {
+    transform: perspective(24px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(24px) rotateY(180deg);
+  }
+}
+
+@keyframes alertIconAnimation {
+  0% {
+    transform: perspective(24px) rotateY(0deg);
+  }
+  33% {
+    transform: perspective(24px) rotateY(0deg);
+  }
+  67% {
+    transform: perspective(24px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(24px) rotateY(180deg);
+  }
 }/*# sourceMappingURL=main.css.map */
