@@ -211,7 +211,7 @@
   top: 50%;
   translate: 0 -50%;
 
-  animation: alertIconAnimation 3000ms infinite alternate $tns-func 1000ms;
+  animation: alertIconAnimation 5000ms $tns-func 1000ms alternate 5;
 
   &--hint {
     fill: getColor('accent');
@@ -231,11 +231,11 @@
     transform: perspective(24px) rotateY(0deg);
   }
 
-  33% {
+  40% {
     transform: perspective(24px) rotateY(0deg);
   }
 
-  67% {
+  60% {
     transform: perspective(24px) rotateY(180deg);
   }
 

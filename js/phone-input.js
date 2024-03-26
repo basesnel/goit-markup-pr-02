@@ -1,13 +1,51 @@
 // Phone-input initialization:
-const phoneInput = document.querySelector('#phone');
+const phoneEl = document.querySelector('#phone');
 
-phoneInput.addEventListener('keydown', e => {
-  // console.log(e.target.value.length);
+phoneEl.addEventListener('keydown', e => setPhoneMask(e));
 
-  if (!e.target.value.length) e.target.value = '+38 (0__) ___-__-__';
+let caretPosition = 6;
+let maskType = '+38 (0__) ___-__-__';
 
-  // process event only key is a number
-});
+function setPhoneMask(e) {
+  if (!phoneEl.value.length) {
+    phoneEl.value = maskType;
+  }
+
+  const currentArrayValue = phoneEl.value.split('');
+
+  setCaretPosition(phoneEl, caretPosition);
+
+  // console.log(phoneEl.selectionStart);
+  // console.log(e.key);
+
+  currentArrayValue[phoneEl.selectionStart] = e.key;
+  console.log(currentArrayValue);
+
+  phoneEl.value = currentArrayValue.join('');
+
+  // maskType.replace("_", e.key);
+  // phoneEl.value =
+  //   currentValue.substring(0, caretPosition) + e.key + currentValue.substring(caretPosition + 1);
+  // currentValue.replace('_', '');
+  setCaretPosition(phoneEl, caretPosition++);
+}
+
+function setCaretPosition(elem, caretPos) {
+  // var elem = document.getElementById(elemId);
+
+  if (elem != null) {
+    if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.move('character', caretPos);
+      range.select();
+    } else {
+      if (elem.selectionStart) {
+        elem.focus();
+        elem.setSelectionRange(caretPos, caretPos);
+      } else elem.focus();
+    }
+  }
+}
 
 // //Функция маски инпута
 // function setMask(event) {
