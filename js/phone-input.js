@@ -19,6 +19,8 @@ function setPhoneMask(e) {
   // console.log(e.key);
 
   currentArrayValue[phoneEl.selectionStart] = e.key;
+  currentArrayValue.splice(phoneEl.selectionStart, 1, e.key);
+  currentArrayValue.splice(phoneEl.selectionStart, 1);
   console.log(currentArrayValue);
 
   phoneEl.value = currentArrayValue.join('');
