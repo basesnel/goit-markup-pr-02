@@ -7,29 +7,22 @@ let caretPosition = 6;
 let maskType = '+38 (0__) ___-__-__';
 
 function setPhoneMask(e) {
+  e.preventDefault();
+
   if (!phoneEl.value.length) {
     phoneEl.value = maskType;
+    setCaretPosition(phoneEl, caretPosition++);
   }
 
-  const currentArrayValue = phoneEl.value.split('');
+  pressedKey = e.key;
 
-  setCaretPosition(phoneEl, caretPosition);
-
-  // console.log(phoneEl.selectionStart);
-  // console.log(e.key);
-
-  currentArrayValue[phoneEl.selectionStart] = e.key;
-  currentArrayValue.splice(phoneEl.selectionStart, 1, e.key);
-  currentArrayValue.splice(phoneEl.selectionStart, 1);
-  console.log(currentArrayValue);
-
-  phoneEl.value = currentArrayValue.join('');
-
-  // maskType.replace("_", e.key);
-  // phoneEl.value =
-  //   currentValue.substring(0, caretPosition) + e.key + currentValue.substring(caretPosition + 1);
-  // currentValue.replace('_', '');
-  setCaretPosition(phoneEl, caretPosition++);
+  if (/^([0-9])$/.test(pressedKey)) {
+    const changedValue = phoneEl.value.split('');
+    changedValue[phoneEl.selectionStart] = pressedKey;
+    console.log(changedValue);
+    phoneEl.value = changedValue.join('');
+    setCaretPosition(phoneEl, caretPosition++);
+  }
 }
 
 function setCaretPosition(elem, caretPos) {
