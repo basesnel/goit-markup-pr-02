@@ -2,18 +2,32 @@
 const phoneEl = document.querySelector('#phone');
 
 phoneEl.addEventListener('keydown', e => setPhoneMask(e));
+phoneEl.addEventListener('focus', handlePhoneFocus);
+phoneEl.addEventListener('blur', handlePhoneBlur);
 
-let maskType = '+38 (0__) ___-__-__';
+const maskType = '+38 (0__) ___-__-__';
 const initPosition = 6;
 const caretPositions = [6, 7, 10, 11, 12, 14, 15, 17, 18];
 
+function handlePhoneFocus() {
+  setTimeout(() => {
+    if (!phoneEl.value.length) {
+      phoneEl.value = maskType;
+      setCaretPosition(phoneEl, initPosition);
+    }
+  }, 250);
+}
+
+function handlePhoneBlur() {
+  setTimeout(() => {
+    if (phoneEl.value === maskType) {
+      phoneEl.value = '';
+    }
+  }, 250);
+}
+
 function setPhoneMask(e) {
   e.preventDefault();
-
-  if (!phoneEl.value.length) {
-    phoneEl.value = maskType;
-    setCaretPosition(phoneEl, initPosition);
-  }
 
   const pressedKey = e.key;
 
