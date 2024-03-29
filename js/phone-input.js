@@ -3,25 +3,36 @@ const phoneEl = document.querySelector('#phone');
 
 phoneEl.addEventListener('keydown', e => setPhoneMask(e));
 
-let caretPosition = 6;
 let maskType = '+38 (0__) ___-__-__';
+const initPosition = 6;
+const caretPositions = [6, 7, 10, 11, 12, 14, 15, 17, 18];
 
 function setPhoneMask(e) {
   e.preventDefault();
 
   if (!phoneEl.value.length) {
     phoneEl.value = maskType;
-    setCaretPosition(phoneEl, caretPosition++);
+    setCaretPosition(phoneEl, initPosition);
   }
 
-  pressedKey = e.key;
+  const pressedKey = e.key;
 
   if (/^([0-9])$/.test(pressedKey)) {
+    const caretPosition = phoneEl.selectionStart;
     const changedValue = phoneEl.value.split('');
     changedValue[phoneEl.selectionStart] = pressedKey;
-    console.log(changedValue);
     phoneEl.value = changedValue.join('');
-    setCaretPosition(phoneEl, caretPosition++);
+    setCaretPosition(phoneEl, caretPosition + 1);
+  }
+
+  if (pressedKey === 'ArrowRight') {
+    idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
+    if (!!~idxOfPosition) setCaretPosition(phoneEl, caretPositions[idxOfPosition + 1]);
+  }
+
+  if (pressedKey === 'ArrowLeft') {
+    idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
+    if (!!~idxOfPosition) setCaretPosition(phoneEl, caretPositions[idxOfPosition - 1]);
   }
 }
 
