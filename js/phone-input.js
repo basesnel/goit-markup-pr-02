@@ -7,7 +7,7 @@ phoneEl.addEventListener('blur', handlePhoneBlur);
 
 const maskType = '+38 (0__) ___-__-__';
 const initPosition = 6;
-const caretPositions = [6, 7, 10, 11, 12, 14, 15, 17, 18];
+const caretPositions = [6, 7, 10, 11, 12, 14, 15, 17, 18, 19];
 
 function handlePhoneFocus() {
   setTimeout(() => {
@@ -39,14 +39,27 @@ function setPhoneMask(e) {
     setCaretPosition(phoneEl, caretPosition + 1);
   }
 
+  const idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
+  const countOfPositions = caretPositions.length;
+
   if (pressedKey === 'ArrowRight') {
-    idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
-    if (!!~idxOfPosition) setCaretPosition(phoneEl, caretPositions[idxOfPosition + 1]);
+    if (!!~idxOfPosition) {
+      if (idxOfPosition === countOfPositions - 1) {
+        setCaretPosition(phoneEl, caretPositions[0]);
+      } else {
+        setCaretPosition(phoneEl, caretPositions[idxOfPosition + 1]);
+      }
+    }
   }
 
   if (pressedKey === 'ArrowLeft') {
-    idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
-    if (!!~idxOfPosition) setCaretPosition(phoneEl, caretPositions[idxOfPosition - 1]);
+    if (!!~idxOfPosition) {
+      if (idxOfPosition === 0) {
+        setCaretPosition(phoneEl, caretPositions[countOfPositions - 1]);
+      } else {
+        setCaretPosition(phoneEl, caretPositions[idxOfPosition - 1]);
+      }
+    }
   }
 }
 
