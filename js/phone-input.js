@@ -6,14 +6,13 @@ phoneEl.addEventListener('focus', handlePhoneFocus);
 phoneEl.addEventListener('blur', handlePhoneBlur);
 
 const maskType = '+38 (0__) ___-__-__';
-const initPosition = 6;
-const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
 function handlePhoneFocus() {
   setTimeout(() => {
     if (!phoneEl.value.length) {
       phoneEl.value = maskType;
-      setCaretPosition(phoneEl, initPosition);
+      setCaretPosition(phoneEl, caretPositions[0]);
     }
   }, 250);
 }
@@ -27,16 +26,46 @@ function handlePhoneBlur() {
 }
 
 function setPhoneMask(e) {
-  e.preventDefault();
+  e.preventDefault(); // this prevent validation on input-phone. Try to fix it
 
   const pressedKey = e.key;
 
   if (/^([0-9])$/.test(pressedKey)) {
     const caretPosition = phoneEl.selectionStart;
-    const changedValue = phoneEl.value.split('');
-    changedValue[phoneEl.selectionStart] = pressedKey;
-    phoneEl.value = changedValue.join('');
-    setCaretPosition(phoneEl, caretPosition + 1);
+
+    if (caretPositions.includes(caretPosition)) {
+      const changedValue = phoneEl.value.split('');
+      changedValue[phoneEl.selectionStart] = pressedKey;
+      phoneEl.value = changedValue.join('');
+
+      if (![7, 12, 15, 19].includes(caretPosition)) {
+        setCaretPosition(phoneEl, caretPosition + 1);
+      } else {
+        switch (caretPosition) {
+          case 7:
+            setCaretPosition(phoneEl, 10);
+            break;
+
+          case 12:
+            setCaretPosition(phoneEl, 14);
+            break;
+
+          case 15:
+            setCaretPosition(phoneEl, 17);
+            break;
+
+          case 19:
+            setCaretPosition(phoneEl, 6);
+            break;
+        }
+      }
+    } else {
+      setCaretPosition(phoneEl, caretPositions[0]);
+      const changedValue = phoneEl.value.split('');
+      changedValue[phoneEl.selectionStart] = pressedKey;
+      phoneEl.value = changedValue.join('');
+      setCaretPosition(phoneEl, caretPositions[1]);
+    }
   }
 
   const idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
@@ -72,7 +101,7 @@ function setCaretPosition(elem, caretPos) {
       range.move('character', caretPos);
       range.select();
     } else {
-      if (elem.selectionStart) {
+      if (elem.selectionStart + 1) {
         elem.focus();
         elem.setSelectionRange(caretPos, caretPos);
       } else elem.focus();
