@@ -34,9 +34,7 @@ function setPhoneMask(e) {
     const caretPosition = phoneEl.selectionStart;
 
     if (caretPositions.includes(caretPosition)) {
-      const changedValue = phoneEl.value.split('');
-      changedValue[phoneEl.selectionStart] = pressedKey;
-      phoneEl.value = changedValue.join('');
+      changePhoneValue(phoneEl, pressedKey);
 
       if (![7, 12, 15, 19].includes(caretPosition)) {
         setCaretPosition(phoneEl, caretPosition + 1);
@@ -61,9 +59,7 @@ function setPhoneMask(e) {
       }
     } else {
       setCaretPosition(phoneEl, caretPositions[0]);
-      const changedValue = phoneEl.value.split('');
-      changedValue[phoneEl.selectionStart] = pressedKey;
-      phoneEl.value = changedValue.join('');
+      changePhoneValue(phoneEl, pressedKey);
       setCaretPosition(phoneEl, caretPositions[1]);
     }
   }
@@ -107,6 +103,12 @@ function setCaretPosition(elem, caretPos) {
       } else elem.focus();
     }
   }
+}
+
+function changePhoneValue(el, key) {
+  const changedValue = el.value.split('');
+  changedValue[el.selectionStart] = key;
+  el.value = changedValue.join('');
 }
 
 // //Функция маски инпута
