@@ -6,7 +6,7 @@ phoneEl.addEventListener('focus', handlePhoneFocus);
 phoneEl.addEventListener('blur', handlePhoneBlur);
 
 const maskType = '+38 (0__) ___-__-__';
-const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 
 function handlePhoneFocus() {
   setTimeout(() => {
@@ -31,29 +31,36 @@ function setPhoneMask(e) {
   const pressedKey = e.key;
 
   if (/^([0-9])$/.test(pressedKey)) {
-    const caretPosition = phoneEl.selectionStart;
+    let caretPosition = phoneEl.selectionStart;
 
     if (caretPositions.includes(caretPosition)) {
-      changePhoneValue(phoneEl, pressedKey);
-
-      if (![7, 12, 15, 19].includes(caretPosition)) {
+      if (![8, 13, 16, 19].includes(caretPosition)) {
+        changePhoneValue(phoneEl, pressedKey);
         setCaretPosition(phoneEl, caretPosition + 1);
       } else {
         switch (caretPosition) {
-          case 7:
+          case 8:
             setCaretPosition(phoneEl, 10);
+            changePhoneValue(phoneEl, pressedKey);
+            setCaretPosition(phoneEl, 11);
             break;
 
-          case 12:
+          case 13:
             setCaretPosition(phoneEl, 14);
+            changePhoneValue(phoneEl, pressedKey);
+            setCaretPosition(phoneEl, 15);
             break;
 
-          case 15:
+          case 16:
             setCaretPosition(phoneEl, 17);
+            changePhoneValue(phoneEl, pressedKey);
+            setCaretPosition(phoneEl, 18);
             break;
 
           case 19:
-            setCaretPosition(phoneEl, 6);
+            caretPosition = setCaretPosition(phoneEl, 6);
+            changePhoneValue(phoneEl, pressedKey);
+            setCaretPosition(phoneEl, 7);
             break;
         }
       }
