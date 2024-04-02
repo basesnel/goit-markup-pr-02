@@ -30,6 +30,14 @@ function setPhoneMask(e) {
 
   const pressedKey = e.key;
 
+  if (pressedKey === 'Delete') {
+    console.log('Pressed key:', pressedKey);
+  }
+
+  if (pressedKey === 'Backspace') {
+    console.log('Pressed key:', pressedKey);
+  }
+
   if (/^([0-9])$/.test(pressedKey)) {
     let caretPosition = phoneEl.selectionStart;
 
