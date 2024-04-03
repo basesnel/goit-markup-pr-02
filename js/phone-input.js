@@ -35,7 +35,6 @@ function setPhoneMask(e) {
 
   if (pressedKey === 'Delete') {
     let caretPosition = phoneEl.selectionStart;
-    const readValue = phoneEl.value;
 
     if (caretPositions.includes(caretPosition)) {
       if (![8, 13, 16, 19].includes(caretPosition)) {
@@ -76,7 +75,45 @@ function setPhoneMask(e) {
   }
 
   if (pressedKey === 'Backspace') {
-    console.log('Pressed key:', pressedKey);
+    let caretPosition = phoneEl.selectionStart;
+
+    if (caretPositions.includes(caretPosition)) {
+      if (![10, 14, 17, 6].includes(caretPosition)) {
+        setCaretPosition(phoneEl, caretPosition - 1);
+        changePhoneValue(phoneEl, maskChar);
+        setCaretPosition(phoneEl, caretPosition - 1);
+      } else {
+        switch (caretPosition) {
+          case 10:
+            setCaretPosition(phoneEl, 7);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 7);
+            break;
+
+          case 14:
+            setCaretPosition(phoneEl, 12);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 12);
+            break;
+
+          case 17:
+            setCaretPosition(phoneEl, 15);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 15);
+            break;
+
+          case 6:
+            caretPosition = setCaretPosition(phoneEl, 18);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 18);
+            break;
+        }
+      }
+    } else {
+      setCaretPosition(phoneEl, caretPositions[18]);
+      changePhoneValue(phoneEl, maskChar);
+      setCaretPosition(phoneEl, caretPositions[18]);
+    }
   }
 
   if (/^([0-9])$/.test(pressedKey)) {
