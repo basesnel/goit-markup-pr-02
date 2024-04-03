@@ -6,6 +6,7 @@ phoneEl.addEventListener('focus', handlePhoneFocus);
 phoneEl.addEventListener('blur', handlePhoneBlur);
 
 const maskType = '+38 (0__) ___-__-__';
+const maskChar = '_';
 const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 
 function handlePhoneFocus() {
@@ -29,9 +30,49 @@ function setPhoneMask(e) {
   e.preventDefault(); // this prevent validation on input-phone. Try to fix it
 
   const pressedKey = e.key;
+  const idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
+  const countOfPositions = caretPositions.length;
 
   if (pressedKey === 'Delete') {
-    console.log('Pressed key:', pressedKey);
+    let caretPosition = phoneEl.selectionStart;
+    const readValue = phoneEl.value;
+
+    if (caretPositions.includes(caretPosition)) {
+      if (![8, 13, 16, 19].includes(caretPosition)) {
+        changePhoneValue(phoneEl, maskChar);
+        setCaretPosition(phoneEl, caretPosition + 1);
+      } else {
+        switch (caretPosition) {
+          case 8:
+            setCaretPosition(phoneEl, 10);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 11);
+            break;
+
+          case 13:
+            setCaretPosition(phoneEl, 14);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 15);
+            break;
+
+          case 16:
+            setCaretPosition(phoneEl, 17);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 18);
+            break;
+
+          case 19:
+            caretPosition = setCaretPosition(phoneEl, 6);
+            changePhoneValue(phoneEl, maskChar);
+            setCaretPosition(phoneEl, 7);
+            break;
+        }
+      }
+    } else {
+      setCaretPosition(phoneEl, caretPositions[0]);
+      changePhoneValue(phoneEl, maskChar);
+      setCaretPosition(phoneEl, caretPositions[1]);
+    }
   }
 
   if (pressedKey === 'Backspace') {
@@ -78,9 +119,6 @@ function setPhoneMask(e) {
       setCaretPosition(phoneEl, caretPositions[1]);
     }
   }
-
-  const idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
-  const countOfPositions = caretPositions.length;
 
   if (pressedKey === 'ArrowRight') {
     if (!!~idxOfPosition) {
