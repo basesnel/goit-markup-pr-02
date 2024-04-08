@@ -53,6 +53,10 @@
     // transition: border $animation-time $animation-function,
     //   color $animation-time $animation-function;
 
+    &[type='tel'] {
+      letter-spacing: 0.1rem;
+    }
+
     &:focus {
       border-bottom: 1px solid getColor(accent);
       color: getColor(accent);

@@ -878,6 +878,9 @@ label {
   color: currentColor;
   outline: none;
 }
+.feedback__input[type=tel] {
+  letter-spacing: 0.1rem;
+}
 .feedback__input:focus {
   border-bottom: 1px solid #ff6c00;
   color: #ff6c00;
