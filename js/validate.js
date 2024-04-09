@@ -7,7 +7,7 @@ const elName = document.getElementsByClassName('jsFieldName')[0];
 const elPhone = document.getElementsByClassName('jsFieldPhone')[0];
 const elEmail = document.getElementsByClassName('jsFieldEmail')[0];
 
-const alertIcon = creaceAlertIcon();
+const alertIcon = createAlertIcon();
 
 validateField({
   elField: elName,
@@ -162,7 +162,7 @@ function addIconToMessage(el, icon) {
   !el.contains(alertIconClone) && el.appendChild(alertIconClone);
 }
 
-function creaceAlertIcon() {
+function createAlertIcon() {
   const xmlns = 'http://www.w3.org/2000/svg';
   const icon = document.createElementNS(xmlns, 'svg');
   icon.setAttribute('width', '16');
