@@ -10,6 +10,16 @@ const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 const rightMargins = [8, 13, 16, 19];
 const leftMargins = [10, 14, 17, 6];
 const maskType = `+38 (0${maskChar}${maskChar}) ${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}-${maskChar}${maskChar}`;
+const caretPositions2 = getPositions(maskType, maskChar);
+console.log(caretPositions, caretPositions2);
+
+function getPositions(str, char) {
+  const positions = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) positions.push(i);
+  }
+  return positions;
+}
 
 function handlePhoneFocus() {
   setTimeout(() => {
