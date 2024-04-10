@@ -8,9 +8,9 @@ const maskType = `+38 (0${maskChar}${maskChar}) ${maskChar}${maskChar}${maskChar
 // III format
 // const maskType = '${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}${maskChar}';
 
-fitPhoneField(phoneEl, maskType);
+phoneInput(phoneEl, maskType);
 
-function fitPhoneField(el, phoneMask) {
+function phoneInput(el, phoneMask) {
   const { caretPositions, leftMargins, rightMargins } = getPositions(maskType, maskChar);
   // const positions = getPositions(maskType, maskChar);
 
