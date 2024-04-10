@@ -1,7 +1,12 @@
 const phoneEl = document.querySelector('#phone');
 
 const maskChar = '_';
+// I format:
 const maskType = `+38 (0${maskChar}${maskChar}) ${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}-${maskChar}${maskChar}`;
+// II format:
+// const maskType = '+${maskChar}-${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}${maskChar}';
+// III format
+// const maskType = '${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}${maskChar}';
 
 const positions = getPositions(maskType, maskChar);
 
@@ -39,10 +44,20 @@ function getPositions(str, char) {
 fitPhoneField(phoneEl, maskType);
 
 function fitPhoneField(el, phoneMask) {
+  // I format positions
   const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
   const rightMargins = [8, 13, 16, 19];
   const leftMargins = [10, 14, 17, 6];
-  // const leftMargins = [6, 10, 14, 17];
+
+  // II format positions
+  // const caretPositions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  // const rightMargins = [2, 6, 10, 15];
+  // const leftMargins = [3, 7, 11, 1];
+
+  // III format positions
+  // const caretPositions = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  // const rightMargins = [3, 8];
+  // const leftMargins = [4, 0];
 
   console.log(caretPositions, positions.caretPositions);
   console.log(leftMargins, positions.leftMargins);
