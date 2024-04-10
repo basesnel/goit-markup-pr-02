@@ -1,81 +1,71 @@
+// Phone-input initialization:
 const phoneEl = document.querySelector('#phone');
 
+phoneEl.addEventListener('keydown', e => setPhoneMask(e));
+phoneEl.addEventListener('focus', handlePhoneFocus);
+phoneEl.addEventListener('blur', handlePhoneBlur);
+
 const maskChar = '_';
+const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+const rightMargins = [8, 13, 16, 19];
+const leftMargins = [10, 14, 17, 6];
 const maskType = `+38 (0${maskChar}${maskChar}) ${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}-${maskChar}${maskChar}`;
+const caretPositions2 = getPositions(maskType, maskChar);
+console.log(caretPositions, caretPositions2);
 
-fitPhoneField(phoneEl, maskType);
-
-function fitPhoneField(el, phoneMask) {
-  const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
-  const rightMargins = [8, 13, 16, 19];
-  const leftMargins = [10, 14, 17, 6];
-
-  // const caretPositions2 = getPositions(maskType, maskChar);
-
-  // function getPositions(str, char) {
-  //   const positions = [];
-  //   for (let i = 0; i < str.length; i++) {
-  //     if (str[i] === char) positions.push(i);
-  //   }
-  //   return positions;
-  // }
-
-  el.addEventListener('keydown', e => {
-    setPhoneMask(e, e.target, caretPositions, rightMargins, leftMargins);
-  });
-  el.addEventListener('focus', e => {
-    handlePhoneFocus(e.target, phoneMask, caretPositions);
-  });
-  el.addEventListener('blur', e => {
-    handlePhoneBlur(e.target, phoneMask);
-  });
+function getPositions(str, char) {
+  const positions = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) positions.push(i);
+  }
+  return positions;
 }
 
-function handlePhoneFocus(el, maskType, caretPositions) {
+function handlePhoneFocus() {
   setTimeout(() => {
-    if (!el.value.length) {
-      el.value = maskType;
-      setCaretPosition(el, caretPositions[0]);
+    if (!phoneEl.value.length) {
+      phoneEl.value = maskType;
+      setCaretPosition(phoneEl, caretPositions[0]);
     }
   }, 100);
 }
 
-function handlePhoneBlur(el, maskType) {
+function handlePhoneBlur() {
   setTimeout(() => {
-    if (el.value === maskType) {
-      el.value = '';
+    if (phoneEl.value === maskType) {
+      phoneEl.value = '';
     }
   }, 100);
 }
 
-function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
+function setPhoneMask(e) {
   e.preventDefault(); // this prevent validation on input-phone. Try to fix it
 
   const pressedKey = e.key;
-  const idxOfPosition = caretPositions.indexOf(el.selectionStart);
+  const idxOfPosition = caretPositions.indexOf(phoneEl.selectionStart);
   const countOfPositions = caretPositions.length;
 
   if (pressedKey === 'Delete') {
-    let caretPosition = el.selectionStart;
-    editPhoneNumber(maskChar, caretPosition, caretPositions, rightMargins, leftMargins);
+    let caretPosition = phoneEl.selectionStart;
+    editPhoneNumber(maskChar, caretPosition);
   }
 
   if (pressedKey === 'Backspace') {
-    let caretPosition = el.selectionStart;
-    editPhoneNumber(maskChar, caretPosition, caretPositions, rightMargins, leftMargins, true);
+    let caretPosition = phoneEl.selectionStart;
+    editPhoneNumber(maskChar, caretPosition, true);
   }
 
   if (/^([0-9])$/.test(pressedKey)) {
-    let caretPosition = el.selectionStart;
-    editPhoneNumber(pressedKey, caretPosition, caretPositions, rightMargins, leftMargins);
+    let caretPosition = phoneEl.selectionStart;
+    editPhoneNumber(pressedKey, caretPosition);
   }
 
   if (pressedKey === 'ArrowRight') {
     if (!!~idxOfPosition) {
       if (idxOfPosition === countOfPositions - 1) {
-        setCaretPosition(el, caretPositions[0]);
+        setCaretPosition(phoneEl, caretPositions[0]);
       } else {
-        setCaretPosition(el, caretPositions[idxOfPosition + 1]);
+        setCaretPosition(phoneEl, caretPositions[idxOfPosition + 1]);
       }
     }
   }
@@ -83,9 +73,9 @@ function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
   if (pressedKey === 'ArrowLeft') {
     if (!!~idxOfPosition) {
       if (idxOfPosition === 0) {
-        setCaretPosition(el, caretPositions[countOfPositions - 1]);
+        setCaretPosition(phoneEl, caretPositions[countOfPositions - 1]);
       } else {
-        setCaretPosition(el, caretPositions[idxOfPosition - 1]);
+        setCaretPosition(phoneEl, caretPositions[idxOfPosition - 1]);
       }
     }
   }
@@ -112,14 +102,7 @@ function changePhoneValue(el, key) {
   el.value = changedValue.join('');
 }
 
-function editPhoneNumber(
-  pressedKey,
-  caretPosition,
-  caretPositions,
-  rightMargins,
-  leftMargins,
-  backspace = false,
-) {
+function editPhoneNumber(pressedKey, caretPosition, backspace = false) {
   if (!backspace) {
     if (caretPositions.includes(caretPosition)) {
       if (!rightMargins.includes(caretPosition)) {
