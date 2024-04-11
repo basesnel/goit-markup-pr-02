@@ -1,33 +1,54 @@
 const phoneEl = document.querySelector('#phone');
 
-const maskChar = '_';
+const mc = '_';
 // I format:
-const maskType = `+38 (0${maskChar}${maskChar}) ${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}-${maskChar}${maskChar}`;
+const maskType = `+38 (0${mc}${mc}) ${mc}${mc}${mc}-${mc}${mc}-${mc}${mc}`;
 // II format:
-// const maskType = '+${maskChar}-${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}${maskChar}';
+// const maskType = `+${mc}-${mc}${mc}${mc}-${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`;
 // III format
-// const maskType = '${maskChar}${maskChar}${maskChar}-${maskChar}${maskChar}${maskChar}${maskChar}';
+// const maskType = '${mc}${mc}${mc}-${mc}${mc}${mc}${mc}';
+// IV format
+// const maskType = `(${mc}${mc}${mc}) ${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`;
+// V format
+// const maskType = `${mc}${mc}${mc} ${mc}${mc}${mc}${mc} ${mc}${mc}${mc}${mc}`;
+// IV format
+// const maskType = `+${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}`;
 
 phoneInput(phoneEl, maskType);
 
 function phoneInput(el, phoneMask) {
-  const { caretPositions, leftMargins, rightMargins } = getPositions(maskType, maskChar);
-  // const positions = getPositions(maskType, maskChar);
+  const { caretPositions, leftMargins, rightMargins } = getPositions(maskType, mc);
+  // const positions = getPositions(maskType, mc);
 
   // I format positions
   // const caretPositions = [6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
-  // const rightMargins = [8, 13, 16, 19];
   // const leftMargins = [10, 14, 17, 6];
+  // const rightMargins = [8, 13, 16, 19];
 
   // II format positions
   // const caretPositions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-  // const rightMargins = [2, 6, 10, 15];
   // const leftMargins = [3, 7, 11, 1];
+  // const rightMargins = [2, 6, 10, 15];
 
   // III format positions
   // const caretPositions = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-  // const rightMargins = [3, 8];
   // const leftMargins = [4, 0];
+  // const rightMargins = [3, 8];
+
+  // IV format positions
+  // const caretPositions = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  // const leftMargins = [6, 10, 1];
+  // const rightMargins = [4, 9, 14];
+
+  // V format positions
+  // const caretPositions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  // const leftMargins = [4, 9, 0];
+  // const rightMargins = [3, 8, 13];
+
+  // VI format positions
+  // const caretPositions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  // const leftMargins = [1];
+  // const rightMargins = [13];
 
   // console.log(caretPositions, positions.caretPositions);
   // console.log(leftMargins, positions.leftMargins);
@@ -101,12 +122,12 @@ function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
 
   if (pressedKey === 'Delete') {
     let caretPosition = el.selectionStart;
-    editPhoneNumber(maskChar, caretPosition, caretPositions, rightMargins, leftMargins);
+    editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins);
   }
 
   if (pressedKey === 'Backspace') {
     let caretPosition = el.selectionStart;
-    editPhoneNumber(maskChar, caretPosition, caretPositions, rightMargins, leftMargins, true);
+    editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins, true);
   }
 
   if (/^([0-9])$/.test(pressedKey)) {
@@ -192,7 +213,7 @@ function editPhoneNumber(
     if (caretPositions.includes(caretPosition)) {
       if (!leftMargins.includes(caretPosition)) {
         setCaretPosition(phoneEl, caretPosition - 1);
-        changePhoneValue(phoneEl, maskChar);
+        changePhoneValue(phoneEl, mc);
         setCaretPosition(phoneEl, caretPosition - 1);
       } else {
         const iom = leftMargins.indexOf(caretPosition);
@@ -209,7 +230,7 @@ function editPhoneNumber(
       }
     } else {
       setCaretPosition(phoneEl, caretPositions[length - 2]);
-      changePhoneValue(phoneEl, maskChar);
+      changePhoneValue(phoneEl, mc);
       setCaretPosition(phoneEl, caretPositions[length - 2]);
     }
   }
