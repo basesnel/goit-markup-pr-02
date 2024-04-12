@@ -39,9 +39,22 @@ const maskTypes = [
     name: 'Australian International format',
     format: `+61 ${mc}${mc}${mc}-${mc}${mc}${mc}-${mc}${mc}${mc}`,
   },
+  {
+    name: 'French International format',
+    format: `+33 ${mc}-${mc}${mc}-${mc}${mc}-${mc}${mc}-${mc}${mc}`,
+  },
+  {
+    name: 'German International format',
+    format: `+49 ${mc}${mc}-${mc}${mc}${mc}${mc}-${mc}${mc}${mc}${mc}${mc}`,
+  },
+  {
+    name: 'Brazilian International format',
+    format: `+55 ${mc}${mc}-${mc}${mc}${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`,
+  },
 ];
 
-const maskType = maskTypes[8].format;
+// const maskType = maskTypes[11].format;
+const maskType = maskTypes[0].format;
 
 phoneInput(phoneEl, maskType);
 
