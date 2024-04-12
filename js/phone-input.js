@@ -16,8 +16,16 @@ const maskTypes = [
     format: `${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`,
   },
   {
+    name: 'US international format',
+    format: `+1 (${mc}${mc}${mc}) ${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`,
+  },
+  {
     name: 'US local format',
     format: `(${mc}${mc}${mc}) ${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`,
+  },
+  {
+    name: 'UK international format',
+    format: `+44 ${mc}${mc}${mc}${mc}-${mc}${mc}${mc}-${mc}${mc}${mc}`,
   },
   {
     name: 'UK local format',
@@ -27,9 +35,13 @@ const maskTypes = [
     name: 'UK E.164 format',
     format: `+${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}${mc}`,
   },
+  {
+    name: 'Australian International format',
+    format: `+61 ${mc}${mc}${mc}-${mc}${mc}${mc}-${mc}${mc}${mc}`,
+  },
 ];
 
-const maskType = maskTypes[0].format;
+const maskType = maskTypes[8].format;
 
 phoneInput(phoneEl, maskType);
 
