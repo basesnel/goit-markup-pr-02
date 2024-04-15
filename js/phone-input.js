@@ -51,10 +51,14 @@ const maskTypes = [
     name: 'Brazilian International format',
     format: `+55 ${mc}${mc}-${mc}${mc}${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`,
   },
+  {
+    name: 'Experimental format',
+    format: `+38 (0${mc}${mc}) - ${mc}${mc}${mc} - ${mc}${mc} - ${mc}${mc}`,
+  },
 ];
 
-// const maskType = maskTypes[11].format;
-const maskType = maskTypes[0].format;
+const maskType = maskTypes[12].format;
+// const maskType = maskTypes[0].format;
 
 phoneInput(phoneEl, maskType);
 
@@ -133,10 +137,33 @@ function handlePhoneClick(el, caretPositions) {
       if (caretPositions.includes(caretPosition)) {
         return;
       }
-      setCaretPosition(el, caretPositions[0]);
-      console.log(caretPosition);
+      const foundPosition = binarySearch(caretPosition, caretPositions);
+      setCaretPosition(el, foundPosition);
     }
   }, 100);
+}
+
+function binarySearch(elem, positions) {
+  let idxFirst = 0;
+  let idxLast = positions.length - 1;
+  let idxMiddle = Number.parseInt(idxLast / 2);
+
+  while (idxFirst < idxLast) {
+    if (elem < positions[idxMiddle]) {
+      if (idxLast === idxMiddle) {
+        break;
+      }
+      idxLast = idxMiddle;
+    } else {
+      if (idxFirst === idxMiddle) {
+        break;
+      }
+      idxFirst = idxMiddle;
+    }
+    idxMiddle = Number.parseInt((idxLast + idxFirst) / 2);
+  }
+
+  return positions[idxMiddle];
 }
 
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
