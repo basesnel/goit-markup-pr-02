@@ -64,11 +64,17 @@ function phoneInput(el, phoneMask) {
   el.addEventListener('keydown', e => {
     setPhoneMask(e, e.target, caretPositions, rightMargins, leftMargins);
   });
+
   el.addEventListener('focus', e => {
     handlePhoneFocus(e.target, phoneMask, caretPositions);
   });
+
   el.addEventListener('blur', e => {
     handlePhoneBlur(e.target, phoneMask);
+  });
+
+  el.addEventListener('click', e => {
+    handlePhoneClick(e.target, caretPositions);
   });
 }
 
@@ -120,25 +126,36 @@ function handlePhoneBlur(el, maskType) {
   }, 100);
 }
 
+function handlePhoneClick(el, caretPositions) {
+  setTimeout(() => {
+    if (el.value.length) {
+      const caretPosition = el.selectionStart;
+      if (caretPositions.includes(caretPosition)) {
+        return;
+      }
+      setCaretPosition(el, caretPositions[0]);
+      console.log(caretPosition);
+    }
+  }, 100);
+}
+
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
   e.preventDefault(); // this prevent validation on input-phone. Try to fix it
 
   const pressedKey = e.key;
   const idxOfPosition = caretPositions.indexOf(el.selectionStart);
   const countOfPositions = caretPositions.length;
+  const caretPosition = el.selectionStart;
 
   if (pressedKey === 'Delete') {
-    let caretPosition = el.selectionStart;
     editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins);
   }
 
   if (pressedKey === 'Backspace') {
-    let caretPosition = el.selectionStart;
     editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins, true);
   }
 
   if (/^([0-9])$/.test(pressedKey)) {
-    let caretPosition = el.selectionStart;
     editPhoneNumber(pressedKey, caretPosition, caretPositions, rightMargins, leftMargins);
   }
 
