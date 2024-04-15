@@ -63,10 +63,18 @@ const maskTypes = [
     name: 'international call to Odesa',
     format: `+38 48 ${mc}${mc}${mc}-${mc}${mc}-${mc}${mc}`,
   },
+  {
+    name: 'Belgium',
+    format: `+32 4${mc}${mc} ${mc}${mc} ${mc}${mc} ${mc}${mc}`,
+  },
+  {
+    name: 'Brazil mobile',
+    format: `+55 ${mc}${mc} 9${mc}${mc}${mc}${mc}-${mc}${mc}${mc}${mc}`,
+  },
 ];
 
-const maskType = maskTypes[14].format;
-// const maskType = maskTypes[0].format;
+// const maskType = maskTypes[16].format;
+const maskType = maskTypes[0].format;
 
 phoneInput(phoneEl, maskType);
 
