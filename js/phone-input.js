@@ -55,9 +55,17 @@ const maskTypes = [
     name: 'Experimental format',
     format: `+38 (0${mc}${mc}) - ${mc}${mc}${mc} - ${mc}${mc} - ${mc}${mc}`,
   },
+  {
+    name: 'international call to Kyiv',
+    format: `+38 44 ${mc}${mc}${mc}-${mc}${mc}-${mc}${mc}`,
+  },
+  {
+    name: 'international call to Odesa',
+    format: `+38 48 ${mc}${mc}${mc}-${mc}${mc}-${mc}${mc}`,
+  },
 ];
 
-const maskType = maskTypes[12].format;
+const maskType = maskTypes[14].format;
 // const maskType = maskTypes[0].format;
 
 phoneInput(phoneEl, maskType);
