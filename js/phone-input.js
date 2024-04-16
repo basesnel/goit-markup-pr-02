@@ -73,8 +73,8 @@ const maskTypes = [
   },
 ];
 
-// const maskType = maskTypes[16].format;
-const maskType = maskTypes[0].format;
+const maskType = maskTypes[12].format;
+// const maskType = maskTypes[0].format;
 
 phoneInput(phoneEl, maskType);
 
@@ -178,8 +178,10 @@ function binarySearch(elem, positions) {
     }
     idxMiddle = Number.parseInt((idxLast + idxFirst) / 2);
   }
+  const mid1 = Math.abs(positions[idxMiddle] - elem);
+  const mid2 = Math.abs(positions[idxMiddle + 1] - elem);
 
-  return positions[idxMiddle];
+  return mid1 < mid2 ? positions[idxMiddle] : positions[idxMiddle + 1];
 }
 
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
