@@ -160,6 +160,10 @@ function handlePhoneClick(el, caretPositions) {
 }
 
 function binarySearch(elem, positions) {
+  if (elem < positions[0]) {
+    return positions[0];
+  }
+
   let idxFirst = 0;
   let idxLast = positions.length - 1;
   let idxMiddle = Number.parseInt(idxLast / 2);
@@ -178,10 +182,11 @@ function binarySearch(elem, positions) {
     }
     idxMiddle = Number.parseInt((idxLast + idxFirst) / 2);
   }
-  const mid1 = Math.abs(positions[idxMiddle] - elem);
-  const mid2 = Math.abs(positions[idxMiddle + 1] - elem);
 
-  return mid1 < mid2 ? positions[idxMiddle] : positions[idxMiddle + 1];
+  const left = Math.abs(positions[idxMiddle] - elem);
+  const right = Math.abs(positions[idxMiddle + 1] - elem);
+
+  return left <= right ? positions[idxMiddle] : positions[idxMiddle + 1];
 }
 
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
