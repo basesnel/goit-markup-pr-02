@@ -83,7 +83,7 @@ function phoneInput(el, phoneMask) {
 
   el.onkeydown = e => handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins);
 
-  el.addEventListener('input', e => {
+  el.addEventListener('beforeinput', e => {
     setPhoneMask(e, e.target, caretPositions, rightMargins, leftMargins);
   });
 
@@ -172,35 +172,29 @@ function getPositions(str, char) {
 }
 
 function handlePhoneFocus(el, maskType, caretPositions) {
-  setTimeout(() => {
-    if (!el.value.length) {
-      el.value = maskType;
-      setCaretPosition(el, caretPositions[0]);
-      return;
-    }
+  if (!el.value.length) {
+    el.value = maskType;
     setCaretPosition(el, caretPositions[0]);
-  }, 100);
+    return;
+  }
+  setCaretPosition(el, caretPositions[0]);
 }
 
 function handlePhoneBlur(el, maskType) {
-  setTimeout(() => {
-    if (el.value === maskType) {
-      el.value = '';
-    }
-  }, 100);
+  if (el.value === maskType) {
+    el.value = '';
+  }
 }
 
 function handlePhoneClick(el, caretPositions) {
-  setTimeout(() => {
-    if (el.value.length) {
-      const caretPosition = el.selectionStart;
-      if (caretPositions.includes(caretPosition)) {
-        return;
-      }
-      const foundPosition = binarySearch(caretPosition, caretPositions);
-      setCaretPosition(el, foundPosition);
+  if (el.value.length) {
+    const caretPosition = el.selectionStart;
+    if (caretPositions.includes(caretPosition)) {
+      return;
     }
-  }, 100);
+    const foundPosition = binarySearch(caretPosition, caretPositions);
+    setCaretPosition(el, foundPosition);
+  }
 }
 
 function binarySearch(elem, positions) {
@@ -234,6 +228,7 @@ function binarySearch(elem, positions) {
 }
 
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
+  // e.preventDefault();
   const pressedKey = e.data;
   const caretPosition = el.selectionStart;
 
@@ -258,9 +253,14 @@ function setCaretPosition(elem, caretPos) {
 }
 
 function changePhoneValue(el, key) {
-  const changedValue = el.value.split('');
-  changedValue[el.selectionStart] = key;
-  el.value = changedValue.join('');
+  // const changedValue = el.value.split('');
+  // changedValue[el.selectionStart] = key;
+  // el.value = changedValue.join('');
+  const changedValue = el.value;
+  console.log(changedValue);
+  const changedValueArray = el.value.split('');
+  changedValueArray[el.selectionStart] = key;
+  el.value = changedValueArray.join('');
 }
 
 function editPhoneNumber(
