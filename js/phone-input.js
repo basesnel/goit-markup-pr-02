@@ -257,7 +257,6 @@ function changePhoneValue(el, key) {
   // changedValue[el.selectionStart] = key;
   // el.value = changedValue.join('');
   const changedValue = el.value;
-  console.log(changedValue);
   const changedValueArray = el.value.split('');
   changedValueArray[el.selectionStart] = key;
   el.value = changedValueArray.join('');
