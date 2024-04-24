@@ -81,9 +81,7 @@ phoneInput(phoneEl, maskType);
 function phoneInput(el, phoneMask) {
   const { caretPositions, leftMargins, rightMargins } = getPositions(maskType, mc);
 
-  el.onkeydown = e => handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins);
-
-  el.addEventListener('input', e => {
+  el.addEventListener('keydown', e => {
     setPhoneMask(e, e.target, caretPositions, rightMargins, leftMargins);
   });
 
@@ -98,49 +96,6 @@ function phoneInput(el, phoneMask) {
   el.addEventListener('click', e => {
     handlePhoneClick(e.target, caretPositions);
   });
-}
-
-function checkPhoneKey(key) {
-  return (key >= '0' && key <= '9') || key == 'Tab' || key == 'Enter';
-}
-
-function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
-  const idxOfPosition = caretPositions.indexOf(el.selectionStart);
-  const countOfPositions = caretPositions.length;
-  const caretPosition = el.selectionStart;
-
-  if (e.key === 'ArrowRight') {
-    e.preventDefault();
-
-    if (!!~idxOfPosition) {
-      if (idxOfPosition === countOfPositions - 1) {
-        setCaretPosition(el, caretPositions[0]);
-      } else {
-        setCaretPosition(el, caretPositions[idxOfPosition + 1]);
-      }
-    }
-  }
-
-  if (e.key === 'ArrowLeft') {
-    e.preventDefault();
-    if (!!~idxOfPosition) {
-      if (idxOfPosition === 0) {
-        setCaretPosition(el, caretPositions[countOfPositions - 1]);
-      } else {
-        setCaretPosition(el, caretPositions[idxOfPosition - 1]);
-      }
-    }
-  }
-
-  if (e.key === 'Delete') {
-    editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins);
-  }
-
-  if (e.key === 'Backspace') {
-    editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins, true);
-  }
-
-  return checkPhoneKey(e.key);
 }
 
 function getPositions(str, char) {
@@ -235,11 +190,43 @@ function binarySearch(elem, positions) {
 }
 
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
-  const pressedKey = e.data;
+  e.preventDefault(); // this prevent validation on input-phone. Try to fix it
+
+  const pressedKey = e.key;
+  const idxOfPosition = caretPositions.indexOf(el.selectionStart);
+  const countOfPositions = caretPositions.length;
   const caretPosition = el.selectionStart;
+
+  if (pressedKey === 'Delete') {
+    editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins);
+  }
+
+  if (pressedKey === 'Backspace') {
+    editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins, true);
+  }
 
   if (/^([0-9])$/.test(pressedKey)) {
     editPhoneNumber(pressedKey, caretPosition, caretPositions, rightMargins, leftMargins);
+  }
+
+  if (pressedKey === 'ArrowRight') {
+    if (!!~idxOfPosition) {
+      if (idxOfPosition === countOfPositions - 1) {
+        setCaretPosition(el, caretPositions[0]);
+      } else {
+        setCaretPosition(el, caretPositions[idxOfPosition + 1]);
+      }
+    }
+  }
+
+  if (pressedKey === 'ArrowLeft') {
+    if (!!~idxOfPosition) {
+      if (idxOfPosition === 0) {
+        setCaretPosition(el, caretPositions[countOfPositions - 1]);
+      } else {
+        setCaretPosition(el, caretPositions[idxOfPosition - 1]);
+      }
+    }
   }
 }
 
