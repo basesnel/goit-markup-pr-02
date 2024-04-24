@@ -110,8 +110,6 @@ function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
   const caretPosition = el.selectionStart;
 
   if (e.key === 'ArrowRight') {
-    e.preventDefault();
-
     if (!!~idxOfPosition) {
       if (idxOfPosition === countOfPositions - 1) {
         setCaretPosition(el, caretPositions[0]);
@@ -122,7 +120,6 @@ function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
   }
 
   if (e.key === 'ArrowLeft') {
-    e.preventDefault();
     if (!!~idxOfPosition) {
       if (idxOfPosition === 0) {
         setCaretPosition(el, caretPositions[countOfPositions - 1]);
@@ -179,7 +176,9 @@ function handlePhoneFocus(el, maskType, caretPositions) {
     if (!el.value.length) {
       el.value = maskType;
       setCaretPosition(el, caretPositions[0]);
+      return;
     }
+    setCaretPosition(el, caretPositions[0]);
   }, 100);
 }
 
