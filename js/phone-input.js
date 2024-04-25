@@ -280,6 +280,7 @@ function changePhoneValue(el, key) {
   if (key === mc) {
     changedValueArray[el.selectionStart] = key;
   } else {
+    console.log('position: ', el.selectionStart);
     changedValueArray.splice(el.selectionStart, 1);
   }
   el.value = changedValueArray.join('');
@@ -329,11 +330,11 @@ function editPhoneNumber(
             const iop = caretPositions.indexOf(caretPosition);
             setCaretPosition(phoneEl, caretPositions[iop + 1]);
             changePhoneValue(phoneEl, pressedKey);
-            setCaretPosition(phoneEl, caretPositions[iop + 2]);
+            setCaretPosition(phoneEl, caretPositions[iop + 1]);
           } else {
             setCaretPosition(phoneEl, caretPositions[0]);
             changePhoneValue(phoneEl, pressedKey);
-            setCaretPosition(phoneEl, caretPositions[1]);
+            setCaretPosition(phoneEl, caretPositions[0]);
           }
         }
       } else {
