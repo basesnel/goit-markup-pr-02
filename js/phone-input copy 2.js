@@ -101,23 +101,7 @@ function phoneInput(el, phoneMask) {
 }
 
 function checkPhoneKey(key) {
-  return (
-    (key >= '0' && key <= '9') ||
-    key == 'F1' ||
-    key == 'F2' ||
-    key == 'F3' ||
-    key == 'F4' ||
-    key == 'F5' ||
-    key == 'F6' ||
-    key == 'F7' ||
-    key == 'F8' ||
-    key == 'F9' ||
-    key == 'F10' ||
-    key == 'F11' ||
-    key == 'F12' ||
-    key == 'Tab' ||
-    key == 'Enter'
-  );
+  return (key >= '0' && key <= '9') || key == 'Tab' || key == 'Enter';
 }
 
 function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
@@ -274,14 +258,8 @@ function changePhoneValue(el, key) {
   // const changedValue = el.value.split('');
   // changedValue[el.selectionStart] = key;
   // el.value = changedValue.join('');
-  console.log(el.value);
-  console.log('position: ', el.selectionStart);
   const changedValueArray = el.value.split('');
-  if (key === mc) {
-    changedValueArray[el.selectionStart] = key;
-  } else {
-    changedValueArray.splice(el.selectionStart, 1);
-  }
+  changedValueArray[el.selectionStart] = key;
   el.value = changedValueArray.join('');
 }
 
@@ -294,60 +272,34 @@ function editPhoneNumber(
   backspace = false,
 ) {
   if (!backspace) {
-    if (pressedKey === mc) {
-      if (caretPositions.includes(caretPosition)) {
-        if (!rightMargins.includes(caretPosition)) {
-          changePhoneValue(phoneEl, pressedKey);
-          setCaretPosition(phoneEl, caretPosition + 1);
-        } else {
-          const iom = rightMargins.indexOf(caretPosition);
-          if (iom !== rightMargins.length - 1) {
-            const iop = caretPositions.indexOf(caretPosition);
-            setCaretPosition(phoneEl, caretPositions[iop + 1]);
-            changePhoneValue(phoneEl, pressedKey);
-            setCaretPosition(phoneEl, caretPositions[iop + 2]);
-          } else {
-            setCaretPosition(phoneEl, caretPositions[0]);
-            changePhoneValue(phoneEl, pressedKey);
-            setCaretPosition(phoneEl, caretPositions[1]);
-          }
-        }
-      } else {
-        setCaretPosition(phoneEl, caretPositions[0]);
+    if (caretPositions.includes(caretPosition)) {
+      if (!rightMargins.includes(caretPosition)) {
         changePhoneValue(phoneEl, pressedKey);
-        setCaretPosition(phoneEl, caretPositions[1]);
+        setCaretPosition(phoneEl, caretPosition + 1);
+      } else {
+        const iom = rightMargins.indexOf(caretPosition);
+        if (iom !== rightMargins.length - 1) {
+          const iop = caretPositions.indexOf(caretPosition);
+          setCaretPosition(phoneEl, caretPositions[iop + 1]);
+          changePhoneValue(phoneEl, pressedKey);
+          setCaretPosition(phoneEl, caretPositions[iop + 2]);
+        } else {
+          setCaretPosition(phoneEl, caretPositions[0]);
+          changePhoneValue(phoneEl, pressedKey);
+          setCaretPosition(phoneEl, caretPositions[1]);
+        }
       }
     } else {
-      // numbers
-      if (caretPositions.includes(caretPosition)) {
-        if (!rightMargins.includes(caretPosition)) {
-          changePhoneValue(phoneEl, pressedKey);
-          setCaretPosition(phoneEl, caretPosition);
-        } else {
-          const iom = rightMargins.indexOf(caretPosition);
-          if (iom !== rightMargins.length - 1) {
-            const iop = caretPositions.indexOf(caretPosition);
-            setCaretPosition(phoneEl, caretPositions[iop + 1]);
-            changePhoneValue(phoneEl, pressedKey);
-            setCaretPosition(phoneEl, caretPositions[iop + 2]);
-          } else {
-            setCaretPosition(phoneEl, caretPositions[0]);
-            changePhoneValue(phoneEl, pressedKey);
-            setCaretPosition(phoneEl, caretPositions[1]);
-          }
-        }
-      } else {
-        setCaretPosition(phoneEl, caretPositions[0]);
-        changePhoneValue(phoneEl, pressedKey);
-        setCaretPosition(phoneEl, caretPositions[1]);
-      }
+      setCaretPosition(phoneEl, caretPositions[0]);
+      changePhoneValue(phoneEl, pressedKey);
+      setCaretPosition(phoneEl, caretPositions[1]);
     }
   } else {
     const length = caretPositions.length;
     if (caretPositions.includes(caretPosition)) {
       if (!leftMargins.includes(caretPosition)) {
         setCaretPosition(phoneEl, caretPosition - 1);
-        changePhoneValue(phoneEl, pressedKey);
+        changePhoneValue(phoneEl, mc);
         setCaretPosition(phoneEl, caretPosition - 1);
       } else {
         const iom = leftMargins.indexOf(caretPosition);
@@ -364,7 +316,7 @@ function editPhoneNumber(
       }
     } else {
       setCaretPosition(phoneEl, caretPositions[length - 2]);
-      changePhoneValue(phoneEl, pressedKey);
+      changePhoneValue(phoneEl, mc);
       setCaretPosition(phoneEl, caretPositions[length - 2]);
     }
   }
