@@ -1,11 +1,7 @@
 .hero {
   &__container {
-    padding: 209px 31px 119px;
+    padding: 209px 31px;
     background-color: getColor('sliderOverlay');
-
-    @include mobile {
-      padding: 243px 31px 209px;
-    }
   }
 
   &__title {

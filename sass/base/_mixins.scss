@@ -40,6 +40,12 @@
   }
 }
 
+@mixin slide-mob {
+  @media screen and (min-width: $slide-mob) {
+    @content;
+  }
+}
+
 @mixin retina-2 {
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
