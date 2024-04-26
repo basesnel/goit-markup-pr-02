@@ -73,8 +73,9 @@ const maskTypes = [
   },
 ];
 
-const maskType = maskTypes[12].format;
-// const maskType = maskTypes[0].format;
+// const maskType = maskTypes[12].format;
+// const maskType = maskTypes[4].format;
+const maskType = maskTypes[0].format;
 
 phoneInput(phoneEl, maskType);
 
@@ -121,7 +122,6 @@ function checkPhoneKey(key) {
 }
 
 function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
-  console.log('pressed key okeydown:', e.key);
   const idxOfPosition = caretPositions.indexOf(el.selectionStart);
   const countOfPositions = caretPositions.length;
   const caretPosition = el.selectionStart;
@@ -245,8 +245,6 @@ function binarySearch(elem, positions) {
 }
 
 function setPhoneMask(e, el, caretPositions, rightMargins, leftMargins) {
-  // e.preventDefault();
-  console.log('pressed key onbeforeinput:', e.data);
   const pressedKey = e.data;
   const caretPosition = el.selectionStart;
 
@@ -274,13 +272,10 @@ function changePhoneValue(el, key) {
   // const changedValue = el.value.split('');
   // changedValue[el.selectionStart] = key;
   // el.value = changedValue.join('');
-  console.log(el.value);
-  console.log('position: ', el.selectionStart);
   const changedValueArray = el.value.split('');
   if (key === mc) {
     changedValueArray[el.selectionStart] = key;
   } else {
-    console.log('position: ', el.selectionStart);
     changedValueArray.splice(el.selectionStart, 1);
   }
   el.value = changedValueArray.join('');
@@ -296,6 +291,7 @@ function editPhoneNumber(
 ) {
   if (!backspace) {
     if (pressedKey === mc) {
+      // delete
       if (caretPositions.includes(caretPosition)) {
         if (!rightMargins.includes(caretPosition)) {
           changePhoneValue(phoneEl, pressedKey);
@@ -344,6 +340,7 @@ function editPhoneNumber(
       }
     }
   } else {
+    // backspace
     const length = caretPositions.length;
     if (caretPositions.includes(caretPosition)) {
       if (!leftMargins.includes(caretPosition)) {
