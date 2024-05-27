@@ -101,10 +101,9 @@ function phoneInput(el, phoneMask) {
   });
 }
 
-function checkPhoneKey(key, keyCode) {
+function checkPhoneKey(key) {
   return (
     (key >= '0' && key <= '9') ||
-    (keyCode >= 96 && keyCode <= 105) ||
     key == 'F1' ||
     key == 'F2' ||
     key == 'F3' ||
@@ -117,17 +116,12 @@ function checkPhoneKey(key, keyCode) {
     key == 'F10' ||
     key == 'F11' ||
     key == 'F12' ||
-    (keyCode >= 112 && keyCode <= 123) ||
     key == 'Tab' ||
-    keyCode == 9 ||
-    key == 'Enter' ||
-    keyCode == 13
+    key == 'Enter'
   );
 }
 
 function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
-  console.log('key: ', e.key, 'keyCode: ', e.keyCode);
-
   const idxOfPosition = caretPositions.indexOf(el.selectionStart);
   const countOfPositions = caretPositions.length;
   const caretPosition = el.selectionStart;
@@ -160,7 +154,7 @@ function handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins) {
     editPhoneNumber(mc, caretPosition, caretPositions, rightMargins, leftMargins, true);
   }
 
-  return checkPhoneKey(e.key, e.keyCode);
+  return checkPhoneKey(e.key);
 }
 
 function getPositions(str, char) {
@@ -275,8 +269,10 @@ function setCaretPosition(elem, caretPos) {
 }
 
 function changePhoneValue(el, key) {
+  // const changedValue = el.value.split('');
+  // changedValue[el.selectionStart] = key;
+  // el.value = changedValue.join('');
   const changedValueArray = el.value.split('');
-
   if (key === mc) {
     changedValueArray[el.selectionStart] = key;
   } else {
