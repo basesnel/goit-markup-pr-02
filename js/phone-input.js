@@ -84,7 +84,7 @@ function phoneInput(el, phoneMask) {
 
   el.onkeydown =
     el.onkeypress =
-    el.onklick =
+    el.onclick =
       e => handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins);
 
   el.addEventListener('beforeinput', e => {
