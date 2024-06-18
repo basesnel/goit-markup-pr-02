@@ -82,7 +82,10 @@ phoneInput(phoneEl, maskType);
 function phoneInput(el, phoneMask) {
   const { caretPositions, leftMargins, rightMargins } = getPositions(maskType, mc);
 
-  el.onkeydown = e => handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins);
+  el.onkeydown =
+    el.onkeypress =
+    el.onklick =
+      e => handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins);
 
   el.addEventListener('beforeinput', e => {
     setPhoneMask(e, e.target, caretPositions, rightMargins, leftMargins);
