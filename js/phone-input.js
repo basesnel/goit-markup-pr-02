@@ -83,6 +83,7 @@ function phoneInput(el, phoneMask) {
   const { caretPositions, leftMargins, rightMargins } = getPositions(maskType, mc);
 
   el.onkeydown =
+    el.onkeyup =
     el.onkeypress =
     el.onclick =
       e => handlePhoneKey(e, el, caretPositions, rightMargins, leftMargins);
