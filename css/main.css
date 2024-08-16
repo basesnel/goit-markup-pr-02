@@ -334,7 +334,7 @@ label {
   line-height: normal;
   letter-spacing: 1.1px;
   color: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .booking__label--req::after {
   content: "*";
