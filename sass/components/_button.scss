@@ -19,7 +19,8 @@
     color: getColor('background');
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: getColor('background');
     background-color: getColor('accent');
   }

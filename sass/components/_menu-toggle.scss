@@ -6,7 +6,7 @@
   @include fitSize(40px, 40px);
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0;
 
   background-color: getColor('transparent');
   color: getColor('background');
@@ -15,7 +15,8 @@
 
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: getColor('accent');
   }
 
