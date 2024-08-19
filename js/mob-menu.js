@@ -8,6 +8,11 @@
 
   function toggleMenu() {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    if (!isMenuOpen) {
+      document.addEventListener('keydown', escFunction);
+    } else {
+      document.removeEventListener('keydown', escFunction);
+    }
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
     backdrop.classList.toggle('backdrop--is-hidden');
@@ -34,6 +39,4 @@
       toggleMenu();
     }
   }
-
-  document.addEventListener('keydown', escFunction);
 })();
