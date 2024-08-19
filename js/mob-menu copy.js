@@ -25,15 +25,10 @@
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     if (mobileMenu.classList.contains('is-open')) {
-      toggleMenu();
+      mobileMenu.classList.remove('is-open');
+      bodyScrollLock.classList.remove('no-scroll');
+      backdrop.classList.add('backdrop--is-hidden');
+      openMenuBtn.setAttribute('aria-expanded', false);
     }
   });
-
-  function escFunction(e) {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
-      toggleMenu();
-    }
-  }
-
-  document.addEventListener('keydown', escFunction);
 })();
