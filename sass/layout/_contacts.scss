@@ -5,9 +5,9 @@
 
   background-image: url('../images/mobile/contacts-bg-480.png');
   background-repeat: no-repeat;
-  background-position: right 0 bottom 0;
-  // background-size: cover;
-  background-size: 100% 50%;
+  background-position: right 0 top 555px;
+  background-size: contain;
+  // background-size: 100% 50%;
 
   @include retina-2 {
     background-image: url('../images/mobile/contacts-bg-960.png');
