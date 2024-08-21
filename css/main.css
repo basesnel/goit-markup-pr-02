@@ -289,8 +289,12 @@ label {
 }
 
 .booking {
+  padding: 0;
   text-align: center;
   background-color: #111319;
+}
+.booking__container {
+  padding: 84px 24px;
 }
 .booking__title {
   margin-bottom: 44px;
@@ -375,7 +379,8 @@ label {
   font-size: 8px;
 }
 
-.contacts {
+.contacts__container {
+  padding: 84px 24px;
   background-color: #111319;
   background-image: url("../images/mobile/contacts-bg-480.png");
   background-repeat: no-repeat;
@@ -383,12 +388,12 @@ label {
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .contacts {
+  .contacts__container {
     background-image: url("../images/mobile/contacts-bg-960.png");
   }
 }
 @media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-  .contacts {
+  .contacts__container {
     background-image: url("../images/mobile/contacts-bg-1440.png");
   }
 }
