@@ -5,9 +5,18 @@
 
   background-image: url('../images/mobile/contacts-bg-480.png');
   background-repeat: no-repeat;
-  background-position: right 0 top 555px;
+
+  background-position: right 0 top 654px;
   background-size: contain;
-  // background-size: 100% 50%;
+
+  @media screen and (min-width: 226px) {
+    background-position: right 0 top 604px;
+  }
+
+  @media screen and (min-width: 390px) {
+    background-position: right 0 top 555px;
+    // background-size: contain;
+  }
 
   @include retina-2 {
     background-image: url('../images/mobile/contacts-bg-960.png');

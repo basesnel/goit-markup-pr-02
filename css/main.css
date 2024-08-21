@@ -382,8 +382,18 @@ label {
   background-color: #111319;
   background-image: url("../images/mobile/contacts-bg-480.png");
   background-repeat: no-repeat;
-  background-position: right 0 top 555px;
+  background-position: right 0 top 654px;
   background-size: contain;
+}
+@media screen and (min-width: 226px) {
+  .contacts {
+    background-position: right 0 top 604px;
+  }
+}
+@media screen and (min-width: 390px) {
+  .contacts {
+    background-position: right 0 top 555px;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .contacts {
