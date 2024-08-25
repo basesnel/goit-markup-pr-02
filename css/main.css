@@ -288,11 +288,9 @@ label {
   margin-bottom: 0;
 }
 
-.booking__form {
+.booking {
   text-align: center;
-}
-.booking__container {
-  padding: 84px 24px;
+  background-color: #111319;
 }
 .booking__title {
   margin-bottom: 44px;
@@ -378,22 +376,11 @@ label {
 }
 
 .contacts {
-  padding: 0;
   background-color: #111319;
   background-image: url("../images/mobile/contacts-bg-480.png");
   background-repeat: no-repeat;
-  background-position: right 0 top 654px;
-  background-size: contain;
-}
-@media screen and (min-width: 226px) {
-  .contacts {
-    background-position: right 0 top 604px;
-  }
-}
-@media screen and (min-width: 390px) {
-  .contacts {
-    background-position: right 0 top 555px;
-  }
+  background-position: 50% 50%;
+  background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .contacts {
@@ -404,9 +391,6 @@ label {
   .contacts {
     background-image: url("../images/mobile/contacts-bg-1440.png");
   }
-}
-.contacts__container {
-  padding: 84px 24px;
 }
 .contacts__title {
   margin-bottom: 40px;

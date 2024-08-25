@@ -1,12 +1,6 @@
 .booking {
-  &__form {
-    text-align: center;
-  }
-  // background-color: getColor('foregroundSecond');
-
-  &__container {
-    padding: 84px 24px;
-  }
+  text-align: center;
+  background-color: getColor('foregroundSecond');
 
   &__title {
     margin-bottom: 44px;
