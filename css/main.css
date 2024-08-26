@@ -109,7 +109,7 @@ label {
   height: auto;
 }
 
-.feedback__checkbox, .portfolio__title {
+.feedback__checkbox, .contact-us__title, .portfolio__title {
   position: absolute;
   white-space: nowrap;
   width: 1px;
