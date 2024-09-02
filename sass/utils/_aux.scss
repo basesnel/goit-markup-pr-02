@@ -16,6 +16,11 @@
     width: $tablet;
     padding: 0 39px;
   }
+
+  @include desktop {
+    width: $desktop;
+    padding: 0 15px;
+  }
 }
 
 .list {
