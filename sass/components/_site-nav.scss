@@ -16,6 +16,10 @@
   &__list {
     display: flex;
     gap: 16px;
+
+    @include desktop {
+      gap: 30px;
+    }
   }
 
   &__link {
@@ -29,27 +33,21 @@
     transition: color $tns-time $tns-func;
   }
 
-  &-contacts {
-    &__list {
-      display: flex;
-      gap: 20px;
-      flex-direction: column-reverse;
-      align-items: flex-end;
+  &__list:last-child {
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+    align-items: flex-end;
 
-      @include desktop {
-        flex-direction: row;
-        gap: 40px;
-        align-items: center;
-      }
+    @include desktop {
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
     }
 
-    &__link {
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1.33;
-      letter-spacing: 0.1em;
-      color: getColor('background');
-      transition: color $tns-time $tns-func;
+    & .site-nav__link {
+      display: inline;
+      padding: 0;
 
       @include desktop {
         display: block;
