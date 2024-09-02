@@ -11,6 +11,11 @@
   @include mobile {
     width: $mobile;
   }
+
+  @include tablet {
+    width: $tablet;
+    padding: 0 39px;
+  }
 }
 
 .list {
@@ -20,9 +25,9 @@
 .link {
   text-decoration: none;
 
-  &:visited {
-    color: getColor('visited');
-  }
+  // &:visited {
+  //   color: getColor('visited');
+  // }
 
   &:hover,
   &:focus {

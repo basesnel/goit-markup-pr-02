@@ -13,4 +13,9 @@
     @include fitSize(68.93px, 55.46px);
     fill: currentColor;
   }
+
+  @include tablet {
+    padding: 32px 0;
+    color: getColor('titleDark');
+  }
 }

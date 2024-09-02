@@ -37,4 +37,8 @@
       @include fitSize(40px, 40px);
     }
   }
+
+  @include tablet {
+    display: none;
+  }
 }

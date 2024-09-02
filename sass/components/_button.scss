@@ -24,4 +24,8 @@
     color: getColor('background');
     background-color: getColor('accent');
   }
+
+  @include mobile {
+    width: 160px;
+  }
 }

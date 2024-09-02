@@ -1,4 +1,44 @@
 .site-nav {
   position: relative;
   display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 37px;
+    align-items: flex-end;
+  }
+
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link {
+    display: block;
+    padding: 52px 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: getColor('background');
+    transition: color $tns-time $tns-func;
+  }
+
+  &-contacts {
+    &__list {
+      display: flex;
+      gap: 20px;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+
+    &__link {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.33;
+      letter-spacing: 0.1em;
+      color: getColor('background');
+      transition: color $tns-time $tns-func;
+    }
+  }
 }
