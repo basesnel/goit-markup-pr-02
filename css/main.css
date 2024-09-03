@@ -189,6 +189,7 @@ label {
 @media screen and (min-width: 768px) {
   .hero .soc-nav {
     display: flex;
+    justify-content: center;
     align-items: flex-end;
     width: 90px;
   }
@@ -818,7 +819,9 @@ label {
   }
 }
 .soc-nav__list--aside {
-  transform: rotate(-90deg);
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+  transform: rotate(-90deg) translateX(148px);
 }
 .soc-nav__item {
   font-size: 11px;

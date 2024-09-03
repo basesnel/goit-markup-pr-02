@@ -24,7 +24,9 @@
     }
 
     &--aside {
-      transform: rotate(-90deg);
+      flex-wrap: nowrap;
+      margin-bottom: 0;
+      transform: rotate(-90deg) translateX(148px);
     }
   }
 

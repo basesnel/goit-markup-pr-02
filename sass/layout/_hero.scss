@@ -51,6 +51,7 @@
 
     @include tablet {
       display: flex;
+      justify-content: center;
       align-items: flex-end;
       width: 90px;
     }
