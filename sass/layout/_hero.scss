@@ -1,6 +1,12 @@
 .hero {
   &__container {
     padding: 0;
+
+    @include tablet {
+      display: flex;
+      gap: 30px;
+      padding: 0 39px;
+    }
   }
 
   &__content {
@@ -40,7 +46,13 @@
     color: getColor('textLight');
   }
 
-  & .list {
+  & .soc-nav {
     display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: flex-end;
+      width: 90px;
+    }
   }
 }

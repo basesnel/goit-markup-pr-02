@@ -22,6 +22,10 @@
         gap: 24px;
       }
     }
+
+    &--aside {
+      transform: rotate(-90deg);
+    }
   }
 
   &__item {

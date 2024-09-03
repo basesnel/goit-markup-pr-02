@@ -148,6 +148,13 @@ label {
 .hero__container {
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .hero__container {
+    display: flex;
+    gap: 30px;
+    padding: 0 39px;
+  }
+}
 .hero__content {
   position: relative;
   padding: 209px 31px;
@@ -176,8 +183,15 @@ label {
   line-height: 1.62;
   color: #9da4bd;
 }
-.hero .list {
+.hero .soc-nav {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero .soc-nav {
+    display: flex;
+    align-items: flex-end;
+    width: 90px;
+  }
 }
 
 .about__title {
@@ -802,6 +816,9 @@ label {
     align-items: flex-start;
     gap: 24px;
   }
+}
+.soc-nav__list--aside {
+  transform: rotate(-90deg);
 }
 .soc-nav__item {
   font-size: 11px;
