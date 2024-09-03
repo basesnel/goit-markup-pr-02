@@ -4,13 +4,17 @@
   }
 
   &__content {
+    position: relative;
+
     padding: 209px 31px;
     background-color: getColor('sliderOverlay');
   }
 
   &__title {
-    font-size: 28px;
     margin-bottom: 20px;
+
+    font-size: 28px;
+
     color: getColor('background');
 
     @include mobile {
@@ -20,7 +24,9 @@
 
   &__subtitle {
     margin-bottom: 20px;
+
     letter-spacing: 0.1em;
+
     color: getColor('titleLight');
 
     &::before {
