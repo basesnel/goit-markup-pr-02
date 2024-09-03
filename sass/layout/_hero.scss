@@ -1,7 +1,10 @@
 .hero {
   &__container {
-    padding-top: 209px;
-    padding-bottom: 209px;
+    padding: 0;
+  }
+
+  &__content {
+    padding: 209px 31px;
     background-color: getColor('sliderOverlay');
   }
 
