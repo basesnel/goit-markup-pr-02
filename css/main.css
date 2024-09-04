@@ -154,7 +154,7 @@ label {
     padding: 0 59px 0 50px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .page-header__container {
     padding: 0 35px 0 15px;
   }
