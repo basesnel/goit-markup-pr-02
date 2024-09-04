@@ -27,6 +27,10 @@
       flex-wrap: nowrap;
       margin-bottom: 0;
       transform: rotate(-90deg) translateX(148px);
+
+      @include desktop {
+        transform: rotate(-90deg) translateX(148px) translateY(-17px);
+      }
     }
   }
 

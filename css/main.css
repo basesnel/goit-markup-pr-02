@@ -871,6 +871,11 @@ label {
   margin-bottom: 0;
   transform: rotate(-90deg) translateX(148px);
 }
+@media screen and (min-width: 1200px) {
+  .soc-nav__list--aside {
+    transform: rotate(-90deg) translateX(148px) translateY(-17px);
+  }
+}
 .soc-nav__item {
   font-size: 11px;
   line-height: 1.363;
