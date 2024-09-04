@@ -5,6 +5,7 @@
     @include tablet {
       display: flex;
       gap: 30px;
+      flex-direction: row-reverse;
       padding: 0 39px;
     }
   }
