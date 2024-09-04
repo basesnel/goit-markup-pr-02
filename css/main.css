@@ -78,9 +78,9 @@ label {
   margin-bottom: 20px;
   font-family: "Raleway", "sans-serif";
   font-size: 42px;
-  line-height: 1.17;
+  line-height: 1.178;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
   word-break: break-all;
   color: #303030;
 }
@@ -88,7 +88,7 @@ label {
 .subtitle {
   margin-bottom: 20px;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: 1.363;
   font-weight: 600;
   text-transform: uppercase;
   color: #303030;
@@ -104,6 +104,11 @@ label {
     width: 60px;
     height: 1px;
     background-color: currentColor;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subtitle {
+    letter-spacing: 0;
   }
 }
 
@@ -168,11 +173,13 @@ label {
 @media screen and (min-width: 768px) {
   .hero__content {
     flex-grow: 1;
+    padding: 272px 31px 237px 120px;
   }
 }
 .hero__title {
   margin-bottom: 20px;
   font-size: 28px;
+  line-height: 1.166;
   color: #fff;
 }
 @media screen and (min-width: 480px) {
@@ -188,10 +195,23 @@ label {
 .hero__subtitle::before {
   background-color: rgba(157, 164, 189, 0.6);
 }
+@media screen and (min-width: 768px) {
+  .hero__subtitle {
+    letter-spacing: 0;
+  }
+}
 .hero__text {
+  max-width: 336px;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   color: #9da4bd;
+}
+@media screen and (min-width: 768px) {
+  .hero__text {
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 1.666;
+  }
 }
 .hero .soc-nav {
   display: none;

@@ -48,7 +48,7 @@
   margin-bottom: 20px;
 
   font-family: getFont('raleWay'), getFont('sansSerif');
-  @include fitFont(42px, 1.17, 700, 2px);
+  @include fitFont(42px, 1.178, 700, 0.05em);
   word-break: break-all;
 
   color: getColor('titleDark');
@@ -57,7 +57,7 @@
 .subtitle {
   margin-bottom: 20px;
 
-  @include fitFont(11px, 1.36, 600);
+  @include fitFont(11px, 1.363, 600);
   text-transform: uppercase;
 
   color: getColor('titleDark');
@@ -72,6 +72,10 @@
       @include fitSize(60px, 1px);
       background-color: currentColor;
     }
+  }
+
+  @include tablet {
+    letter-spacing: 0;
   }
 }
 

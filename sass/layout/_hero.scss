@@ -17,6 +17,7 @@
 
     @include tablet {
       flex-grow: 1;
+      padding: 272px 31px 237px 120px;
     }
   }
 
@@ -24,6 +25,7 @@
     margin-bottom: 20px;
 
     font-size: 28px;
+    line-height: 1.166;
 
     color: getColor('background');
 
@@ -42,12 +44,22 @@
     &::before {
       background-color: getColor('titleLight');
     }
+
+    @include tablet {
+      letter-spacing: 0;
+    }
   }
 
   &__text {
-    @include fitFont(16px, 1.62);
+    max-width: 336px;
+    @include fitFont(16px, 1.625);
 
     color: getColor('textLight');
+
+    @include tablet {
+      max-width: 360px;
+      @include fitFont(18px, 1.666);
+    }
   }
 
   & .soc-nav {
