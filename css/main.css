@@ -166,6 +166,12 @@ label {
     padding: 0 39px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    gap: 0;
+    padding: 0 15px;
+  }
+}
 .hero__content {
   position: relative;
   padding: 209px 31px;
@@ -557,6 +563,11 @@ label {
     justify-content: center;
     align-items: flex-end;
     width: 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aside {
+    width: 100px;
   }
 }
 
