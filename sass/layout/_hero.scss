@@ -61,15 +61,4 @@
       @include fitFont(18px, 1.666);
     }
   }
-
-  & .soc-nav {
-    display: none;
-
-    @include tablet {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      width: 90px;
-    }
-  }
 }

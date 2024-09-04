@@ -31,12 +31,12 @@
   }
 
   &__item {
-    @include fitFont(11px, normal, 600, 2.2px);
+    @include fitFont(11px, 1.363, 600, 0.2em);
 
     &--mobmenu {
       @include mobile {
         font-size: 14px;
-        letter-spacing: 2.8px;
+        line-height: 1.357;
       }
     }
   }
