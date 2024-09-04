@@ -11,5 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+      padding: 0 59px 0 50px;
+    }
   }
 }

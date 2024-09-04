@@ -4,10 +4,10 @@
   max-width: 160px;
   border: 1px solid getColor('accent');
   @include borderRadius(25px);
-  padding: 12px;
+  padding: 11px;
 
   font-family: getFont('openSans'), getFont('sansSerif');
-  @include fitFont(12px, 1.33, 600, 1.08px);
+  @include fitFont(12px, 1.333, 600, 0.09em);
   text-transform: uppercase;
 
   color: getColor('titleDark');
