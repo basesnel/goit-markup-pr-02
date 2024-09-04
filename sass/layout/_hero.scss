@@ -25,6 +25,10 @@
       flex-grow: 1;
       padding: 272px 31px 237px 120px;
     }
+
+    @include desktop {
+      padding: 272px 31px 208px 100px;
+    }
   }
 
   &__title {
@@ -37,6 +41,11 @@
 
     @include mobile {
       font-size: 48px;
+    }
+
+    @include desktop {
+      font-size: 72px;
+      line-height: 1.18;
     }
   }
 
