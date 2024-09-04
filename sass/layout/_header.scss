@@ -15,5 +15,9 @@
     @include tablet {
       padding: 0 59px 0 50px;
     }
+
+    @include tablet {
+      padding: 0 35px 0 15px;
+    }
   }
 }
