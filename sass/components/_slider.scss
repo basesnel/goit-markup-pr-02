@@ -2,10 +2,74 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -100;
+  // z-index: -100;
 
   width: 100%;
   height: 100%;
+
+  text-align: center;
+
+  &__next,
+  &__prev,
+  &__wrapper,
+  &__dot {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__wrapper {
+    width: 346px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 2px grey;
+    overflow: hidden;
+  }
+
+  &__line {
+    display: flex;
+    position: relative;
+    left: 0;
+  }
+
+  &__next,
+  &__prev {
+    padding: 5px 10px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 2px grey;
+  }
+
+  &__next:hover,
+  &__prev:hover {
+    background-color: orange;
+  }
+
+  &__next:active,
+  &__prev:active {
+    background-color: chocolate;
+  }
+
+  &__dot {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: grey;
+    border-radius: 50%;
+  }
+
+  &__dot:hover {
+    background-color: orange;
+  }
+
+  &__dot:active {
+    background-color: chocolate;
+  }
+
+  &__dot--active {
+    background-color: orange;
+  }
 
   &__slide {
     width: 100%;

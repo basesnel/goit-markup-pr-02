@@ -1,0 +1,25 @@
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+
+  width: 100%;
+  height: 100%;
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    @extend .image;
+
+    height: 100%;
+    object-fit: cover;
+
+    @include slide-mob {
+      height: auto;
+    }
+  }
+}
