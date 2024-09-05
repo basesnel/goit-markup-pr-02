@@ -179,7 +179,7 @@ label {
 }
 .hero__content {
   position: relative;
-  padding: 209px 31px;
+  padding: 208px 31px 209px;
   background-color: rgba(25, 28, 38, 0.2);
 }
 @media screen and (min-width: 768px) {

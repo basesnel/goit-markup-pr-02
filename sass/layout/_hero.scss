@@ -18,7 +18,7 @@
   &__content {
     position: relative;
 
-    padding: 209px 31px;
+    padding: 208px 31px 209px;
     background-color: getColor('sliderOverlay');
 
     @include tablet {
