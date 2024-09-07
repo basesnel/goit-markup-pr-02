@@ -822,6 +822,7 @@ label {
   display: flex;
   position: relative;
   left: 0;
+  transition: 250ms;
 }
 .slider__next, .slider__prev {
   padding: 5px 10px;
