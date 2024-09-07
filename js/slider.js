@@ -42,14 +42,23 @@ const thisSlide = index => {
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
 
-dots.forEach((dot, index) => {
+// dots.forEach((dot, index) => {
+//   dot.addEventListener('click', () => {
+//     position = 346 * index;
+//     sliderLine.style.left = -position + 'px';
+//     dotIndex = index;
+//     thisSlide(dotIndex);
+//   });
+// });
+
+for (const [index, dot] of dots.entries()) {
   dot.addEventListener('click', () => {
     position = 346 * index;
     sliderLine.style.left = -position + 'px';
     dotIndex = index;
     thisSlide(dotIndex);
   });
-});
+}
 
 setInterval(() => {
   nextSlide();
