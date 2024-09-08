@@ -32,14 +32,6 @@
     transition: 250ms;
   }
 
-  &__buttons {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    display: inline-flex;
-    gap: 5px;
-  }
-
   &__next,
   &__prev {
     padding: 5px 10px;
@@ -58,16 +50,6 @@
   &__next:active,
   &__prev:active {
     background-color: chocolate;
-  }
-
-  &__dots {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: rotate(90deg);
-    transform: translateY(-50%) rotate(90deg);
-    transform: translateY(-50%) translateX(30px) rotate(90deg);
-    display: inline-flex;
   }
 
   &__dot {
@@ -91,8 +73,8 @@
   }
 
   &__slide {
-    min-width: 100%;
-    // height: 100%;
+    width: 100%;
+    height: 100%;
   }
 
   &__image {
