@@ -41,6 +41,7 @@
   }
 
   &__button {
+    position: relative;
     width: 60px;
     height: 24px;
     border: none;
@@ -60,6 +61,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      width: 100%;
       height: 1px;
       background-color: currentColor;
     }
@@ -80,32 +82,45 @@
 
   &__dots {
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 50%;
-    transform: rotate(90deg);
-    transform: translateY(-50%) rotate(90deg);
-    transform: translateY(-50%) translateX(30px) rotate(90deg);
     display: inline-flex;
+    flex-direction: column;
   }
 
   &__dot {
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-    background-color: grey;
-    border-radius: 50%;
+    position: relative;
+    width: 18px;
+    height: 14px;
+    color: getColor('titleLightPoor');
+    background-color: transparent;
+    transition: color $tns-time $tns-func;
+    cursor: pointer;
+
+    &:hover {
+      color: getColor('background');
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 2px;
+      background-color: currentColor;
+      transition: width $tns-time $tns-func;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
-  &__dot:hover {
-    background-color: orange;
-  }
-
-  &__dot:active {
-    background-color: chocolate;
-  }
-
-  &__dot--active {
-    background-color: orange;
+  &__dot--active::after {
+    width: 100%;
+    background-color: getColor('background');
   }
 
   &__slide {
