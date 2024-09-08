@@ -52,8 +52,17 @@
     line-height: 1.363;
     letter-spacing: 0.1em;
     text-transform: capitalize;
-    color: getColor(titleLight);
+    color: getColor('titleLight');
     transition: color $tns-time $tns-func;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: currentColor;
+    }
 
     &--prev {
       text-align: left;
@@ -65,13 +74,8 @@
 
     &:hover,
     &:focus {
-      color: getColor(background);
+      color: getColor('background');
     }
-  }
-
-  &__next:active,
-  &__prev:active {
-    background-color: chocolate;
   }
 
   &__dots {
