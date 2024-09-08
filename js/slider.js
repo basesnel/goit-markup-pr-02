@@ -1,6 +1,6 @@
 const sliderLine = document.querySelector('.slider__line');
-const prevButton = document.querySelector('.slider__prev');
-const nextButton = document.querySelector('.slider__next');
+const prevButton = document.querySelector('.slider__button--prev');
+const nextButton = document.querySelector('.slider__button--next');
 const dots = document.querySelectorAll('.slider__dot');
 
 let position = 0;
