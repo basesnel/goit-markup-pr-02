@@ -828,6 +828,7 @@ label {
   z-index: -50;
   display: flex;
   height: 100%;
+  background-color: #111319;
   transition: 250ms;
 }
 .slider__buttons {
