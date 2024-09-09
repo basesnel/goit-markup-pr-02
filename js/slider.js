@@ -7,6 +7,11 @@ const dots = document.querySelectorAll('.slider__dot');
 let dotIndex = 0;
 let itemWidth;
 
+const rollSlider = () => {
+  sliderLine.style.transform = `translateX(-${dotIndex * itemWidth}px)`;
+  thisSlide(dotIndex);
+};
+
 const nextSlide = () => {
   dotIndex++;
 
@@ -14,8 +19,7 @@ const nextSlide = () => {
     dotIndex = 0;
   }
 
-  sliderLine.style.transform = `translateX(-${dotIndex * itemWidth}px)`;
-  thisSlide(dotIndex);
+  rollSlider();
 };
 
 const prevSlide = () => {
@@ -25,8 +29,7 @@ const prevSlide = () => {
     dotIndex = dots.length - 1;
   }
 
-  sliderLine.style.transform = `translateX(-${dotIndex * itemWidth}px)`;
-  thisSlide(dotIndex);
+  rollSlider();
 };
 
 const thisSlide = index => {
@@ -43,8 +46,7 @@ const init = () => {
     item.style.width = itemWidth + 'px';
   });
 
-  sliderLine.style.transform = `translateX(-${dotIndex * itemWidth}px)`;
-  thisSlide(dotIndex);
+  rollSlider();
 };
 
 window.addEventListener('resize', init);
@@ -54,21 +56,19 @@ init();
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
 
-// dots.forEach((dot, index) => {
-//   dot.addEventListener('click', () => {
-//     dotIndex = index;
-//     sliderLine.style.transform = `translateX(-${dotIndex * itemWidth}px)`;
-//     thisSlide(dotIndex);
-//   });
-// });
-
-for (const [index, dot] of dots.entries()) {
+dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
     dotIndex = index;
-    sliderLine.style.transform = `translateX(-${dotIndex * itemWidth}px)`;
-    thisSlide(dotIndex);
+    rollSlider();
   });
-}
+});
+
+// for (const [index, dot] of dots.entries()) {
+//   dot.addEventListener('click', () => {
+//     dotIndex = index;
+//     rollSlider();
+//   });
+// }
 
 setInterval(() => {
   nextSlide();
