@@ -19,7 +19,7 @@
     position: relative;
 
     padding: 208px 31px 209px;
-    background-color: getColor('sliderOverlay');
+    // background-color: getColor('sliderOverlay');
 
     @include tablet {
       flex-grow: 1;

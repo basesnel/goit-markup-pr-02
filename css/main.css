@@ -180,7 +180,6 @@ label {
 .hero__content {
   position: relative;
   padding: 208px 31px 209px;
-  background-color: rgba(25, 28, 38, 0.2);
 }
 @media screen and (min-width: 768px) {
   .hero__content {
@@ -807,21 +806,20 @@ label {
   height: 100%;
   text-align: center;
 }
-.slider__next, .slider__prev, .slider__wrapper, .slider__dot {
+.slider__next, .slider__prev, .slider__dot {
   display: inline-block;
   vertical-align: middle;
 }
 .slider__wrapper {
-  width: 346px;
-  margin: 5px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px 2px grey;
+  width: 100%;
+  background-color: rgba(25, 28, 38, 0.2);
   overflow: hidden;
 }
 .slider__line {
-  display: flex;
   position: relative;
   left: 0;
+  z-index: -100;
+  display: flex;
   transition: 250ms;
 }
 .slider__buttons {
