@@ -15,7 +15,8 @@ const nextSlide = () => {
     dotIndex = 0;
   }
 
-  sliderLine.style.left = -position + 'px';
+  // sliderLine.style.left = -position + 'px';
+  sliderLine.style.transform = `translateX(${-position}px)`;
   thisSlide(dotIndex);
 };
 
@@ -28,7 +29,8 @@ const prevSlide = () => {
     dotIndex = dots.length - 1;
   }
 
-  sliderLine.style.left = -position + 'px';
+  // sliderLine.style.left = -position + 'px';
+  sliderLine.style.transform = `translateX(${-position}px)`;
   thisSlide(dotIndex);
 };
 
@@ -54,7 +56,8 @@ prevButton.addEventListener('click', prevSlide);
 for (const [index, dot] of dots.entries()) {
   dot.addEventListener('click', () => {
     position = 346 * index;
-    sliderLine.style.left = -position + 'px';
+    // sliderLine.style.left = -position + 'px';
+    sliderLine.style.transform = `translateX(${-position}px)`;
     dotIndex = index;
     thisSlide(dotIndex);
   });
