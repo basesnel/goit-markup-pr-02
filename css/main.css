@@ -193,6 +193,8 @@ label {
   }
 }
 .hero__title {
+  position: relative;
+  z-index: 10;
   margin-bottom: 20px;
   font-size: 28px;
   line-height: 1.166;
@@ -210,6 +212,8 @@ label {
   }
 }
 .hero__subtitle {
+  position: relative;
+  z-index: 10;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
   color: rgba(157, 164, 189, 0.6);
@@ -223,6 +227,8 @@ label {
   }
 }
 .hero__text {
+  position: relative;
+  z-index: 10;
   max-width: 336px;
   font-size: 16px;
   line-height: 1.625;
@@ -818,7 +824,7 @@ label {
 .slider__line {
   position: relative;
   left: 0;
-  z-index: -100;
+  z-index: -50;
   display: flex;
   transition: 250ms;
 }

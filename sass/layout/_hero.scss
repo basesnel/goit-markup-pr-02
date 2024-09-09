@@ -32,6 +32,9 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 10;
+
     margin-bottom: 20px;
 
     font-size: 28px;
@@ -50,6 +53,9 @@
   }
 
   &__subtitle {
+    position: relative;
+    z-index: 10;
+
     margin-bottom: 20px;
 
     letter-spacing: 0.1em;
@@ -66,6 +72,9 @@
   }
 
   &__text {
+    position: relative;
+    z-index: 10;
+
     max-width: 336px;
     @include fitFont(16px, 1.625);
 
