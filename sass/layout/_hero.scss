@@ -38,18 +38,16 @@
 
     margin-bottom: 20px;
 
-    font-size: 28px;
-    line-height: 1.166;
+    @include fitFont(28px, 1.166);
 
     color: getColor('background');
 
     @include mobile {
-      font-size: 48px;
+      @include fitFont(48px);
     }
 
     @include desktop {
-      font-size: 72px;
-      line-height: 1.18;
+      @include fitFont(72px, 1.18);
     }
   }
 
@@ -77,12 +75,14 @@
     z-index: 10;
 
     max-width: 336px;
+
     @include fitFont(16px, 1.625);
 
     color: getColor('textLight');
 
     @include tablet {
       max-width: 360px;
+
       @include fitFont(18px, 1.666);
     }
   }
