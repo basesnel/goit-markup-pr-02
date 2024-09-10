@@ -95,11 +95,17 @@
 
   &__dots {
     position: absolute;
-    right: 20px;
+    right: 31px;
     top: 50%;
 
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+
+    transform: translateY(-50%);
+
+    @include tablet {
+      right: 20px;
+    }
   }
 
   &__dot {

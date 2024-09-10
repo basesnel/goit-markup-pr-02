@@ -877,10 +877,16 @@ label {
 }
 .slider__dots {
   position: absolute;
-  right: 20px;
+  right: 31px;
   top: 50%;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 768px) {
+  .slider__dots {
+    right: 20px;
+  }
 }
 .slider__dot {
   position: relative;
