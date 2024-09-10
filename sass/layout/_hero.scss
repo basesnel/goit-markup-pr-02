@@ -86,4 +86,20 @@
       @include fitFont(18px, 1.666);
     }
   }
+
+  &__aside {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      width: 90px;
+    }
+
+    @include desktop {
+      width: 100px;
+    }
+  }
 }

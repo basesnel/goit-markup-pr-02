@@ -1,4 +1,16 @@
 .about {
+  &__container {
+    @include tablet {
+      display: flex;
+      gap: 30px;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__content {
+    width: 330px;
+  }
+
   &__title {
     max-width: 306px;
     font-size: 28px;
@@ -12,5 +24,23 @@
       margin-bottom: 20px;
       font-size: 16px;
     }
+  }
+
+  &__aside {
+    display: none;
+
+    @include tablet {
+      display: initial;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 330px;
   }
 }
