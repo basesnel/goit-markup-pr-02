@@ -39,8 +39,7 @@
 
     &--mobmenu {
       @include mobile {
-        font-size: 14px;
-        line-height: 1.357;
+        @include fitFont(14px, 1.357);
       }
     }
   }
