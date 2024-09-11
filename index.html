@@ -405,7 +405,7 @@
                         ./images/about/tablet/about-img-1-1320.jpg 3072w
                       "
                       src="./images/about/tablet/about-img-1-990.jpg"
-                      alt="Image: shaving in the process"
+                      alt="Image 1: shaving in the process"
                       width="330"
                       height="235"
                       class="about__image image"
@@ -415,20 +415,33 @@
               </li>
               <li class="about__item item">
                 <div class="thumb">
-                  <img
-                    srcset="
-                      ./images/about/tablet/about-img-2-330.jpg   480w,
-                      ./images/about/tablet/about-img-2-660.jpg   960w,
-                      ./images/about/tablet/about-img-2-990.jpg  1440w,
-                      ./images/about/tablet/about-img-2-1320.jpg 1920w
-                    "
-                    src="./images/about/tablet/about-img-2-990.jpg"
-                    alt="Image: shaving in the process"
-                    width="330"
-                    height="235"
-                    class="about__image image"
-                  />
-                </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/about/tablet/about-img-2-330.webp   768w,
+                        ./images/about/tablet/about-img-2-660.webp  1536w,
+                        ./images/about/tablet/about-img-2-990.webp  2304w,
+                        ./images/about/tablet/about-img-2-1320.webp 3072w
+                      "
+                      type="image/webp"
+                      width="330"
+                      height="235"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/about/tablet/about-img-2-330.jpg   768w,
+                        ./images/about/tablet/about-img-2-660.jpg  1536w,
+                        ./images/about/tablet/about-img-2-990.jpg  2304w,
+                        ./images/about/tablet/about-img-2-1320.jpg 3072w
+                      "
+                      src="./images/about/tablet/about-img-2-990.jpg"
+                      alt="Image 2: haircut in the process"
+                      width="330"
+                      height="235"
+                      class="about__image image"
+                    />
+                  </picture>
               </li>
             </ul>
           </aside>
