@@ -265,8 +265,10 @@ label {
     flex-direction: row-reverse;
   }
 }
-.about__content {
-  width: 330px;
+@media screen and (min-width: 768px) {
+  .about__content {
+    flex-basis: 330px;
+  }
 }
 .about__title {
   max-width: 306px;
@@ -304,9 +306,6 @@ label {
   display: flex;
   gap: 30px;
   flex-direction: column;
-}
-.about__item {
-  width: 330px;
 }
 
 .services {

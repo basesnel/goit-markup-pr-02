@@ -7,8 +7,10 @@
     }
   }
 
-  &__content {
-    width: 330px;
+  @include tablet {
+    &__content {
+      flex-basis: 330px;
+    }
   }
 
   &__title {
@@ -50,7 +52,7 @@
     flex-direction: column;
   }
 
-  &__item {
-    width: 330px;
-  }
+  // &__item {
+  //   width: 330px;
+  // }
 }
