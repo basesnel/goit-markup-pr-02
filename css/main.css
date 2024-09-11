@@ -330,6 +330,11 @@ label {
   gap: 30px;
   flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+  .about__list {
+    flex-direction: row;
+  }
+}
 
 .services {
   text-align: center;

@@ -71,9 +71,9 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
-  }
 
-  // &__item {
-  //   width: 330px;
-  // }
+    @include desktop {
+      flex-direction: row;
+    }
+  }
 }
