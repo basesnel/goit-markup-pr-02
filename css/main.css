@@ -275,11 +275,22 @@ label {
 .about__text {
   margin-bottom: 40px;
   font-size: 14px;
-  line-height: 1.86;
+  line-height: 1.857;
+}
+@media screen and (min-width: 768px) {
+  .about__text {
+    margin-bottom: 77px;
+  }
 }
 .about__text--pretext {
   margin-bottom: 20px;
   font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .about__text--pretext {
+    font-size: 18px;
+    line-height: 1.66;
+  }
 }
 .about__aside {
   display: none;

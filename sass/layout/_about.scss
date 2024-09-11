@@ -18,11 +18,21 @@
 
   &__text {
     margin-bottom: 40px;
-    @include fitFont(14px, 1.86);
+
+    @include fitFont(14px, 1.857);
+
+    @include tablet {
+      margin-bottom: 77px;
+    }
 
     &--pretext {
       margin-bottom: 20px;
+
       font-size: 16px;
+
+      @include tablet {
+        @include fitFont(18px, 1.66);
+      }
     }
   }
 
