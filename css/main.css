@@ -270,9 +270,27 @@ label {
     flex-basis: 330px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .about__content {
+    flex-basis: 570px;
+    padding-right: 100px;
+  }
+}
 .about__title {
   max-width: 306px;
   font-size: 28px;
+}
+@media screen and (min-width: 480px) {
+  .about__title {
+    word-break: normal;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__title {
+    max-width: initial;
+    font-size: 42px;
+    line-height: 1.166;
+  }
 }
 .about__text {
   margin-bottom: 40px;
@@ -282,6 +300,11 @@ label {
 @media screen and (min-width: 768px) {
   .about__text {
     margin-bottom: 77px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__text {
+    margin-bottom: 42px;
   }
 }
 .about__text--pretext {

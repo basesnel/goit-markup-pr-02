@@ -7,15 +7,32 @@
     }
   }
 
-  @include tablet {
-    &__content {
+  &__content {
+    @include tablet {
       flex-basis: 330px;
+    }
+
+    @include desktop {
+      flex-basis: 570px;
+
+      padding-right: 100px;
     }
   }
 
   &__title {
     max-width: 306px;
-    font-size: 28px;
+
+    @include fitFont(28px);
+
+    @include mobile {
+      word-break: normal;
+    }
+
+    @include desktop {
+      max-width: initial;
+
+      @include fitFont(42px, 1.166);
+    }
   }
 
   &__text {
@@ -25,6 +42,10 @@
 
     @include tablet {
       margin-bottom: 77px;
+    }
+
+    @include desktop {
+      margin-bottom: 42px;
     }
 
     &--pretext {
