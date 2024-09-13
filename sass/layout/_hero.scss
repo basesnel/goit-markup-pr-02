@@ -20,15 +20,15 @@
   &__content {
     position: relative;
 
-    padding: 208px 31px 209px;
+    padding: 208px 50px 209px;
 
     @include tablet {
       flex-grow: 1;
-      padding: 272px 31px 237px 120px;
+      padding: 272px 50px 237px 120px;
     }
 
     @include desktop {
-      padding: 272px 31px 208px 100px;
+      padding: 272px 50px 208px 100px;
     }
   }
 

@@ -5,15 +5,6 @@
 
   @include fitSize(100%, 100%);
 
-  text-align: center;
-
-  &__next,
-  &__prev,
-  &__dot {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
   &__wrapper {
     @include fitSize(100%, 100%);
 
@@ -33,7 +24,7 @@
 
     background-color: getColor('foregroundSecond');
 
-    // transition: 250ms;
+    transition: 250ms;
   }
 
   &__buttons {

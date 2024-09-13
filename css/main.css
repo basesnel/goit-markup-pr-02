@@ -179,17 +179,17 @@ label {
 }
 .hero__content {
   position: relative;
-  padding: 208px 31px 209px;
+  padding: 208px 50px 209px;
 }
 @media screen and (min-width: 768px) {
   .hero__content {
     flex-grow: 1;
-    padding: 272px 31px 237px 120px;
+    padding: 272px 50px 237px 120px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__content {
-    padding: 272px 31px 208px 100px;
+    padding: 272px 50px 208px 100px;
   }
 }
 .hero__title {
@@ -887,11 +887,6 @@ label {
   left: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
-}
-.slider__next, .slider__prev, .slider__dot {
-  display: inline-block;
-  vertical-align: middle;
 }
 .slider__wrapper {
   width: 100%;
@@ -906,6 +901,7 @@ label {
   display: flex;
   height: 100%;
   background-color: #111319;
+  transition: 250ms;
 }
 .slider__buttons {
   display: none;
