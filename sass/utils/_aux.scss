@@ -57,7 +57,7 @@
 .subtitle {
   margin-bottom: 20px;
 
-  @include fitFont(11px, 1.363, 600);
+  @include fitFont(11px, 1.363, 600, 0);
   text-transform: uppercase;
 
   color: getColor('titleDark');
@@ -72,10 +72,6 @@
       @include fitSize(60px, 1px);
       background-color: currentColor;
     }
-  }
-
-  @include tablet {
-    letter-spacing: 0;
   }
 }
 

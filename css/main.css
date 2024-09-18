@@ -90,6 +90,7 @@ label {
   font-size: 11px;
   line-height: 1.363;
   font-weight: 600;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: #303030;
 }
@@ -104,11 +105,6 @@ label {
     width: 60px;
     height: 1px;
     background-color: currentColor;
-  }
-}
-@media screen and (min-width: 768px) {
-  .subtitle {
-    letter-spacing: 0;
   }
 }
 
@@ -357,6 +353,8 @@ label {
 .services__title {
   margin-bottom: 44px;
   font-size: 40px;
+  line-height: 1.175;
+  text-align: left;
   color: #fff;
 }
 .services__subtitle {
@@ -369,7 +367,7 @@ label {
 }
 @media screen and (min-width: 480px) {
   .services__list {
-    padding: 20px 20px 20px 40px;
+    padding: 30px 20px 30px 40px;
   }
 }
 .services__item {
@@ -378,9 +376,15 @@ label {
   gap: 4px;
   padding: 10px 0;
   font-size: 14px;
-  line-height: 1.43;
+  line-height: 1.428;
   word-break: break-all;
   color: rgba(157, 164, 189, 0.6);
+}
+.services__item:first-child {
+  padding-top: 0;
+}
+.services__item:last-child {
+  padding-bottom: 0;
 }
 .services__item::after {
   content: "";

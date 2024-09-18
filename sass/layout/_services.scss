@@ -1,5 +1,6 @@
 .services {
   text-align: center;
+
   background-color: getColor('foregroundSecond');
   background-image: url('../images/prices/mobile/prices-bg-480.png');
   background-repeat: no-repeat;
@@ -17,7 +18,10 @@
   &__title {
     margin-bottom: 44px;
 
-    font-size: 40px;
+    @include fitFont(40px, 1.175);
+
+    text-align: left;
+
     color: getColor('background');
   }
 
@@ -32,7 +36,7 @@
     background-image: getColor('servicesGradient');
 
     @include mobile {
-      padding: 20px 20px 20px 40px;
+      padding: 30px 20px 30px 40px;
     }
   }
 
@@ -42,10 +46,18 @@
     gap: 4px;
     padding: 10px 0;
 
-    @include fitFont(14px, 1.43);
+    @include fitFont(14px, 1.428);
     word-break: break-all;
 
     color: getColor('titleLight');
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
 
     &::after {
       content: '';
