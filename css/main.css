@@ -394,6 +394,7 @@ label {
 .services__list {
   margin-bottom: 44px;
   padding: 20px;
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 @media screen and (min-width: 480px) {
   .services__list {

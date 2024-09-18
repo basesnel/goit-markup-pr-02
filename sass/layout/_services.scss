@@ -49,7 +49,7 @@
     margin-bottom: 44px;
     padding: 20px;
 
-    background-image: getColor('servicesGradient');
+    background-image: getColor('servicesOddGradient');
 
     @include mobile {
       padding: 30px 20px 30px 40px;
