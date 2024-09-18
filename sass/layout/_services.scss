@@ -58,6 +58,15 @@
     @include tablet {
       padding: 32px 27px 32px 40px;
     }
+
+    @include desktop {
+      display: flex;
+      gap: 30px;
+
+      padding: 0;
+
+      background-image: none;
+    }
   }
 
   &__item {
@@ -69,6 +78,25 @@
 
     &:last-child {
       padding-bottom: 0;
+    }
+
+    @include desktop {
+      flex-basis: 570px;
+      padding: 0;
+
+      &:nth-child(odd) {
+        background-image: getColor('servicesOddGradient');
+      }
+
+      &:nth-child(even) {
+        background-image: linear-gradient(180deg, rgb(9, 11, 19), rgba(9, 11, 19, 0.2) 100%);
+      }
+    }
+  }
+
+  &__inner-list {
+    @include desktop {
+      padding: 30px 22px 30px 20px;
     }
   }
 
