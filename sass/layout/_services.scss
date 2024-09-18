@@ -15,6 +15,18 @@
     background-image: url('../images/prices/mobile/prices-bg-1440.png');
   }
 
+  @include tablet {
+    background-image: url('../images/prices/tablet/prices-bg-768.png');
+
+    @include retina-2 {
+      background-image: url('../images/prices/tablet/prices-bg-1536.png');
+    }
+
+    @include retina-3 {
+      background-image: url('../images/prices/tablet/prices-bg-2304.png');
+    }
+  }
+
   &__title {
     margin-bottom: 44px;
 
@@ -23,6 +35,10 @@
     text-align: left;
 
     color: getColor('background');
+
+    @include tablet {
+      @include fitFont(42px, 1.166);
+    }
   }
 
   &__subtitle {
@@ -37,6 +53,10 @@
 
     @include mobile {
       padding: 30px 20px 30px 40px;
+    }
+
+    @include tablet {
+      padding: 32px 27px 32px 40px;
     }
   }
 
@@ -64,6 +84,12 @@
       height: 1px;
       flex-grow: 1;
       background: currentColor;
+    }
+
+    @include tablet {
+      gap: 12px;
+
+      @include fitFont(18px, 1.666);
     }
   }
 
