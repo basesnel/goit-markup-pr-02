@@ -42,6 +42,11 @@ label {
     padding: 100px 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
+}
 
 .container {
   margin: 0 auto;
