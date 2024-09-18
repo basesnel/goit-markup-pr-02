@@ -375,6 +375,21 @@ label {
     background-image: url("../images/prices/tablet/prices-bg-2304.png");
   }
 }
+@media screen and (min-width: 1200px) {
+  .services {
+    background-image: url("../images/prices/desktop/prices-bg-1600.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .services {
+    background-image: url("../images/prices/desktop/prices-bg-3200.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
+  .services {
+    background-image: url("../images/prices/desktop/prices-bg-4800.png");
+  }
+}
 .services__title {
   margin-bottom: 44px;
   font-size: 40px;

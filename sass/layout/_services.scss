@@ -27,6 +27,18 @@
     }
   }
 
+  @include desktop {
+    background-image: url('../images/prices/desktop/prices-bg-1600.png');
+
+    @include retina-2 {
+      background-image: url('../images/prices/desktop/prices-bg-3200.png');
+    }
+
+    @include retina-3 {
+      background-image: url('../images/prices/desktop/prices-bg-4800.png');
+    }
+  }
+
   &__title {
     margin-bottom: 44px;
 
