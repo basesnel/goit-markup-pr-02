@@ -61,6 +61,18 @@
   }
 
   &__item {
+    padding: 10px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__inner-item {
     display: flex;
     align-items: baseline;
     gap: 4px;
