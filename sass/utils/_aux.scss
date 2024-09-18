@@ -1,5 +1,9 @@
 .section {
   padding: 84px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
 }
 
 .container {
