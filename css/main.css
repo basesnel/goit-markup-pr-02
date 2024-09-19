@@ -567,6 +567,7 @@ label {
 }
 .barbers__title {
   margin-bottom: 44px;
+  line-height: 1.166;
 }
 .barbers__item {
   margin-bottom: 64px;
@@ -896,14 +897,14 @@ label {
 .card__title {
   margin-bottom: 8px;
   font-size: 18px;
-  line-height: 1.39;
+  line-height: 1.388;
   font-weight: 400;
 }
 .card__text {
   margin-bottom: 30px;
   text-transform: capitalize;
   font-size: 14px;
-  line-height: 1.36;
+  line-height: 1.357;
   color: #ff6c00;
 }
 

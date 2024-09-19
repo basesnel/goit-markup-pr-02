@@ -8,7 +8,7 @@
   &__title {
     margin-bottom: 8px;
 
-    @include fitFont(18px, 1.39, 400);
+    @include fitFont(18px, 1.388, 400);
 
     color: getColor('darkTitle');
   }
@@ -17,7 +17,7 @@
     margin-bottom: 30px;
 
     text-transform: capitalize;
-    @include fitFont(14px, 1.36);
+    @include fitFont(14px, 1.357);
 
     color: getColor('accent');
   }
