@@ -1,6 +1,12 @@
 .barbers {
   background-color: getColor('foregroundThird');
 
+  &__container {
+    @include tablet {
+      max-width: 528px;
+    }
+  }
+
   &__title {
     margin-bottom: 44px;
 

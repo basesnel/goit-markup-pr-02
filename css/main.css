@@ -565,6 +565,11 @@ label {
 .barbers {
   background-color: #f7f7f7;
 }
+@media screen and (min-width: 768px) {
+  .barbers__container {
+    max-width: 528px;
+  }
+}
 .barbers__title {
   margin-bottom: 44px;
   line-height: 1.166;
