@@ -22,6 +22,12 @@
   }
 }
 
+@mixin features-mob {
+  @media screen and (min-width: $features-mob) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (min-width: $mobile) {
     @content;

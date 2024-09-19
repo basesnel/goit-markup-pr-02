@@ -1,10 +1,14 @@
 .features {
+  &__title {
+    line-height: 1.166;
+  }
+
   &__title::before {
     content: '\00BF';
   }
 
   &__text {
-    @include fitFont(18px, 1.67);
+    @include fitFont(18px, 1.666);
   }
 
   &__list {
@@ -13,7 +17,7 @@
     gap: 30px;
     justify-content: center;
 
-    padding-top: 80px;
+    padding-top: 79px;
   }
 
   &__item {
@@ -24,14 +28,14 @@
       width: 158px;
     }
 
+    @include features-mob {
+      &:nth-child(odd) {
+        transform: translateY(-36px);
+      }
+    }
+
     @include mobile {
       width: inherit;
-    }
-  }
-
-  &__item:nth-child(odd) {
-    @include mobile {
-      transform: translateY(-36px);
     }
   }
 }
