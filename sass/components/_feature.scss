@@ -3,8 +3,7 @@
   padding: 20px 20px;
 
   text-align: center;
-  font-weight: 600;
-  line-height: 1.36;
+
   background-color: getColor('foregroundThird');
   color: getColor('titleDark');
 
@@ -13,13 +12,17 @@
     padding: 20px 35px;
   }
 
+  @include tablet {
+    @include fitSize(210px, null);
+  }
+
   &__count {
     position: relative;
 
     display: inline-block;
     padding-bottom: 6px;
 
-    @include fitFont(42px, null, 700, 0.05em);
+    @include fitFont(42px, 1.357, 700, 0.05em);
 
     &:after {
       content: '+';
@@ -31,7 +34,7 @@
       width: 20px;
 
       text-align: center;
-      @include fitFont(16px, 1.38, 600);
+      @include fitFont(16px, 1.375, 600);
 
       color: getColor('accent');
     }
@@ -40,7 +43,7 @@
   &__text {
     margin: 0 auto;
 
-    @include fitFont(11px);
+    @include fitFont(11px, 1.363, 600, 0);
 
     &--small {
       width: 84px;
