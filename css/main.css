@@ -576,12 +576,28 @@ label {
     max-width: 528px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .barbers__container {
+    max-width: initial;
+  }
+}
 .barbers__title {
   margin-bottom: 44px;
   line-height: 1.166;
 }
+@media screen and (min-width: 1200px) {
+  .barbers__list {
+    display: flex;
+    gap: 30px;
+  }
+}
 .barbers__item {
   margin-bottom: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .barbers__item {
+    margin-bottom: 0;
+  }
 }
 .barbers__item:last-child {
   margin-bottom: 0;

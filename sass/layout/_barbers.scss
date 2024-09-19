@@ -5,6 +5,10 @@
     @include tablet {
       max-width: 528px;
     }
+
+    @include desktop {
+      max-width: initial;
+    }
   }
 
   &__title {
@@ -13,8 +17,19 @@
     line-height: 1.166;
   }
 
+  &__list {
+    @include desktop {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
   &__item {
     margin-bottom: 64px;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
   }
 
   &__item:last-child {
