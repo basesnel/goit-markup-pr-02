@@ -510,11 +510,17 @@ label {
 }
 @media screen and (min-width: 1200px) {
   .features__content {
+    margin-right: 70px;
     padding-top: 9px;
   }
 }
 .features__title {
   line-height: 1.166;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    max-width: 420px;
+  }
 }
 .features__title::before {
   content: "¿";

@@ -17,12 +17,17 @@
     }
 
     @include desktop {
+      margin-right: 70px;
       padding-top: 9px;
     }
   }
 
   &__title {
     line-height: 1.166;
+
+    @include tablet {
+      max-width: 420px;
+    }
   }
 
   &__title::before {
