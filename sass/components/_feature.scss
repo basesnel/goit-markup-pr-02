@@ -16,6 +16,10 @@
     @include fitSize(210px, null);
   }
 
+  @include tablet {
+    @include fitSize(170px, null);
+  }
+
   &__count {
     position: relative;
 

@@ -497,9 +497,20 @@ label {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 1200px) {
+  .features__container {
+    flex-direction: row-reverse;
+    gap: 130px;
+  }
+}
 @media screen and (min-width: 768px) {
   .features__content {
     max-width: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__content {
+    padding-top: 9px;
   }
 }
 .features__title {
@@ -523,6 +534,12 @@ label {
   .features__list {
     align-self: flex-end;
     max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    max-width: 370px;
+    padding-top: 35px;
   }
 }
 .features__item {
@@ -831,6 +848,11 @@ label {
 @media screen and (min-width: 768px) {
   .feature {
     width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .feature {
+    width: 170px;
   }
 }
 .feature__count {
