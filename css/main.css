@@ -608,11 +608,23 @@ label {
   left: 0;
   margin-bottom: 71px;
 }
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 .portfolio__item {
   margin-bottom: 30px;
 }
 .portfolio__item:last-child {
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    margin-bottom: 0;
+  }
 }
 
 .booking {

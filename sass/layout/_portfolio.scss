@@ -10,10 +10,22 @@
     margin-bottom: 71px;
   }
 
+  &__list {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
   &__item {
     margin-bottom: 30px;
 
     &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
       margin-bottom: 0;
     }
   }
