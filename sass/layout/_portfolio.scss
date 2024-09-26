@@ -33,4 +33,16 @@
       margin-bottom: 0;
     }
   }
+
+  &__thumb {
+    max-width: 418px;
+
+    @include tablet {
+      max-width: 330px;
+    }
+
+    @include desktop {
+      max-width: 270px;
+    }
+  }
 }

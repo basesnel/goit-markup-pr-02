@@ -631,6 +631,19 @@ label {
     margin-bottom: 0;
   }
 }
+.portfolio__thumb {
+  max-width: 418px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__thumb {
+    max-width: 330px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__thumb {
+    max-width: 270px;
+  }
+}
 
 .booking {
   text-align: center;
