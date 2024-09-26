@@ -813,11 +813,42 @@ label {
     background-image: url("../images/contacts/mobile/contacts-bg-1440.png");
   }
 }
+@media screen and (min-width: 768px) {
+  .contacts {
+    background-image: url("../images/contacts/tablet/contacts-bg-768.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url("../images/contacts/tablet/contacts-bg-1536.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .contacts {
+    background-image: url("../images/contacts/tablet/contacts-bg-2304.png");
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__container {
+    display: flex;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__content {
+    flex-basis: 330px;
+  }
+}
 .contacts__title {
   margin-bottom: 40px;
   line-height: 1.166;
   text-align: center;
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .contacts__title {
+    text-align: initial;
+  }
 }
 .contacts__subtitle {
   position: relative;
@@ -831,6 +862,11 @@ label {
 }
 .contacts__address {
   margin-bottom: 44px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__address {
+    margin-bottom: 0;
+  }
 }
 .contacts__item {
   margin-bottom: 20px;
@@ -863,9 +899,24 @@ label {
   height: 24px;
   fill: currentColor;
 }
+@media screen and (min-width: 768px) {
+  .contacts__item:first-child .contacts__icon {
+    transform: translateY(-12px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__aside {
+    padding-top: 89px;
+  }
+}
 
 .contacts__text--map-pin {
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .contacts__text--map-pin {
+    max-width: 190px;
+  }
 }
 
 .contacts__text--mail {

@@ -15,6 +15,31 @@
     background-image: url('../images/contacts/mobile/contacts-bg-1440.png');
   }
 
+  @include tablet {
+    background-image: url('../images/contacts/tablet/contacts-bg-768.png');
+
+    @include retina-2 {
+      background-image: url('../images/contacts/tablet/contacts-bg-1536.png');
+    }
+
+    @include retina-3 {
+      background-image: url('../images/contacts/tablet/contacts-bg-2304.png');
+    }
+  }
+
+  &__container {
+    @include tablet {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__content {
+    @include tablet {
+      flex-basis: 330px;
+    }
+  }
+
   &__title {
     margin-bottom: 40px;
 
@@ -22,6 +47,10 @@
     text-align: center;
 
     color: getColor('background');
+
+    @include tablet {
+      text-align: initial;
+    }
   }
 
   &__subtitle {
@@ -40,6 +69,10 @@
 
   &__address {
     margin-bottom: 44px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -80,11 +113,27 @@
     @include fitSize(24px, 24px);
 
     fill: currentColor;
+
+    @include tablet {
+      .contacts__item:first-child & {
+        transform: translateY(-12px);
+      }
+    }
+  }
+
+  &__aside {
+    @include tablet {
+      padding-top: 89px;
+    }
   }
 }
 
 .contacts__text--map-pin {
   font-weight: 700;
+
+  @include tablet {
+    max-width: 190px;
+  }
 }
 
 .contacts__text--mail {
