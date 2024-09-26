@@ -670,10 +670,29 @@ label {
   text-align: center;
   background-color: #111319;
 }
+@media screen and (min-width: 768px) {
+  .booking {
+    text-align: initial;
+  }
+}
 .booking__title {
   margin-bottom: 44px;
   line-height: 1.166;
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .booking__title {
+    margin-bottom: 39px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .booking__form {
+    display: flex;
+    row-gap: 44px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    flex-wrap: wrap;
+  }
 }
 .booking__field {
   position: relative;
@@ -687,6 +706,18 @@ label {
 }
 .booking__field:hover {
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .booking__field {
+    margin-bottom: 0;
+  }
+  .booking__field:nth-child(1), .booking__field:nth-child(2) {
+    flex-basis: 330px;
+  }
+  .booking__field:nth-child(3) {
+    flex-basis: 690px;
+    margin-bottom: 0;
+  }
 }
 .booking__input, .booking__textarea {
   display: block;
@@ -706,6 +737,11 @@ label {
 .booking__textarea {
   resize: none;
   height: 82px;
+}
+@media screen and (min-width: 768px) {
+  .booking__textarea {
+    height: 76px;
+  }
 }
 .booking__label {
   position: absolute;

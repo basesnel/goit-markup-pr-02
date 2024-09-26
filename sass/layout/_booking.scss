@@ -2,12 +2,29 @@
   text-align: center;
   background-color: getColor('foregroundSecond');
 
+  @include tablet {
+    text-align: initial;
+  }
+
   &__title {
     margin-bottom: 44px;
 
     line-height: 1.166;
 
     color: getColor('background');
+
+    @include tablet {
+      margin-bottom: 39px;
+    }
+  }
+
+  &__form {
+    @include tablet {
+      display: flex;
+      row-gap: 44px;
+      column-gap: 30px;
+      flex-wrap: wrap;
+    }
   }
 
   &__field {
@@ -23,6 +40,20 @@
 
     &:hover {
       color: getColor('background');
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        flex-basis: 330px;
+      }
+
+      &:nth-child(3) {
+        flex-basis: 690px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -49,6 +80,10 @@
   &__textarea {
     resize: none;
     height: 82px;
+
+    @include tablet {
+      height: 76px;
+    }
   }
 
   &__label {
