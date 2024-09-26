@@ -8,6 +8,10 @@
     top: 0;
     left: 0;
     margin-bottom: 71px;
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
   }
 
   &__list {
