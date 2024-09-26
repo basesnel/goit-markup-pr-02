@@ -5,6 +5,8 @@
   &__title {
     margin-bottom: 44px;
 
+    line-height: 1.166;
+
     text-align: center;
 
     color: getColor('background');
@@ -17,6 +19,10 @@
     color: getColor('elemForm');
     transition: color $tns-time $tns-func;
 
+    &:nth-child(3) {
+      margin-bottom: 44px;
+    }
+
     &:hover {
       color: getColor('background');
     }
@@ -24,10 +30,13 @@
 
   &__input,
   &__textarea {
-    @include fitSize(100%, 31px);
+    display: block;
+
+    @include fitSize(100%, 29px);
     border: none;
     outline: none;
     border-bottom: 1px solid currentColor;
+    padding: 0;
 
     background: transparent;
     color: currentColor;
@@ -41,19 +50,21 @@
 
   &__textarea {
     resize: none;
-    height: 83px;
+    height: 82px;
   }
 
   &__label {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
 
     text-transform: uppercase;
-    @include fitFont(11px, normal, null, 1.1px);
+    @include fitFont(11px, 1.363, 600, 0.1em);
 
     color: currentColor;
+
+    transform: translateY(-50%);
+
     transition: transform $tns-time $tns-func, font-size $tns-time $tns-func;
   }
 
