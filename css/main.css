@@ -673,7 +673,6 @@ label {
 .booking__title {
   margin-bottom: 44px;
   line-height: 1.166;
-  text-align: center;
   color: #fff;
 }
 .booking__field {
@@ -761,6 +760,7 @@ label {
 }
 
 .contacts {
+  color: #9da4bd;
   background-color: #111319;
   background-image: url("../images/contacts/mobile/contacts-bg-480.png");
   background-repeat: no-repeat;
@@ -779,6 +779,7 @@ label {
 }
 .contacts__title {
   margin-bottom: 40px;
+  line-height: 1.166;
   text-align: center;
   color: #fff;
 }
@@ -797,12 +798,13 @@ label {
 }
 .contacts__item {
   margin-bottom: 20px;
+  line-height: 1;
 }
 .contacts__item:last-child {
   margin-bottom: 0;
 }
 .contacts__link {
-  display: flex;
+  display: inline-flex;
   gap: 16px;
   align-items: center;
   text-decoration: none;
@@ -815,8 +817,8 @@ label {
 }
 .contacts__text {
   font-size: 18px;
-  line-height: 1.6667;
-  letter-spacing: 0.36px;
+  line-height: 1.666;
+  letter-spacing: 0.02em;
   font-style: normal;
   color: currentColor;
 }
