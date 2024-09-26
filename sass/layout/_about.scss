@@ -76,4 +76,12 @@
       flex-direction: row;
     }
   }
+
+  &__thumb {
+    max-width: 330px;
+
+    @include desktop {
+      max-width: 270px;
+    }
+  }
 }
