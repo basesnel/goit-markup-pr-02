@@ -35,4 +35,16 @@
   &__item:last-child {
     margin-bottom: 0;
   }
+
+  &__thumb {
+    max-width: 418px;
+
+    @include tablet {
+      max-width: 450px;
+    }
+
+    @include desktop {
+      max-width: 370px;
+    }
+  }
 }

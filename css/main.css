@@ -601,6 +601,19 @@ label {
 .barbers__item:last-child {
   margin-bottom: 0;
 }
+.barbers__thumb {
+  max-width: 418px;
+}
+@media screen and (min-width: 768px) {
+  .barbers__thumb {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .barbers__thumb {
+    max-width: 370px;
+  }
+}
 
 .portfolio__subtitle {
   position: relative;
