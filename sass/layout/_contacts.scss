@@ -27,10 +27,21 @@
     }
   }
 
+  @include desktop {
+    flex-basis: 50%;
+  }
+
   &__container {
     @include tablet {
       display: flex;
       gap: 30px;
+    }
+
+    @include desktop {
+      max-width: 585px;
+      padding: 0 15px 0 100px;
+      margin-right: auto;
+      margin-left: 0;
     }
   }
 

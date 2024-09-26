@@ -2,4 +2,8 @@
   &__title {
     @extend %visually-hidden;
   }
+
+  @include desktop {
+    display: flex;
+  }
 }
