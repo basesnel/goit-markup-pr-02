@@ -891,7 +891,6 @@ label {
 
 .btn {
   display: inline-block;
-  max-width: 160px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
   padding: 11px;
@@ -912,9 +911,9 @@ label {
   color: #fff;
   background-color: #ff6c00;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .btn {
-    width: 160px;
+    min-width: 160px;
   }
 }
 

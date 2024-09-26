@@ -1,7 +1,6 @@
 .btn {
   display: inline-block;
 
-  max-width: 160px;
   border: 1px solid getColor('accent');
   @include borderRadius(25px);
   padding: 11px;
@@ -25,7 +24,7 @@
     background-color: getColor('accent');
   }
 
-  @include mobile {
-    width: 160px;
+  @include s-mobile {
+    min-width: 160px;
   }
 }
