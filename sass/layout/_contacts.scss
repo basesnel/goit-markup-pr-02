@@ -27,6 +27,18 @@
     }
   }
 
+  @include tablet {
+    background-image: url('../images/contacts/desktop/contacts-bg-785.png');
+
+    @include retina-2 {
+      background-image: url('../images/contacts/desktop/contacts-bg-1570.png');
+    }
+
+    @include retina-3 {
+      background-image: url('../images/contacts/desktop/contacts-bg-2355.png');
+    }
+  }
+
   @include desktop {
     flex-basis: calc(50% - 15px);
 
