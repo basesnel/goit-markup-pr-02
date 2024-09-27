@@ -3,7 +3,7 @@
   padding: 44px 0;
 
   &__text {
-    @include fitFont(11px, normal, 600, 2.2px);
+    @include fitFont(11px, 1.363, 600, 0.2em);
 
     color: getColor('titleDark');
 
