@@ -683,7 +683,7 @@ label {
 }
 @media screen and (min-width: 1200px) {
   .booking {
-    flex-basis: 50%;
+    flex-basis: calc(50% + 15px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -849,7 +849,7 @@ label {
 }
 @media screen and (min-width: 1200px) {
   .contacts {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 15px);
   }
 }
 @media screen and (min-width: 768px) {
