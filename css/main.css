@@ -684,6 +684,7 @@ label {
 @media screen and (min-width: 1200px) {
   .booking {
     flex-basis: calc(50% + 15px);
+    padding: 130px 0 120px 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -736,6 +737,14 @@ label {
   .booking__field:nth-child(3) {
     flex-basis: 690px;
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking__field:nth-child(1), .booking__field:nth-child(2) {
+    flex-basis: 270px;
+  }
+  .booking__field:nth-child(3) {
+    flex-basis: 570px;
   }
 }
 .booking__input, .booking__textarea {
@@ -850,6 +859,7 @@ label {
 @media screen and (min-width: 1200px) {
   .contacts {
     flex-basis: calc(50% - 15px);
+    padding: 130px 0 120px 0;
   }
 }
 @media screen and (min-width: 768px) {
