@@ -40,16 +40,23 @@
     }
 
     @include desktop {
+      flex-wrap: wrap;
+      gap: 70px;
+
       max-width: 585px;
-      padding: 0 15px 0 100px;
       margin-right: auto;
       margin-left: 0;
+      padding: 0 15px 0 100px;
     }
   }
 
   &__content {
     @include tablet {
       flex-basis: 330px;
+    }
+
+    @include tablet {
+      flex-basis: 100%;
     }
   }
 
@@ -137,6 +144,10 @@
   &__aside {
     @include tablet {
       padding-top: 89px;
+    }
+
+    @include desktop {
+      padding-top: 0;
     }
   }
 }

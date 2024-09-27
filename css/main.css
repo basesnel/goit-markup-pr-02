@@ -870,15 +870,22 @@ label {
 }
 @media screen and (min-width: 1200px) {
   .contacts__container {
+    flex-wrap: wrap;
+    gap: 70px;
     max-width: 585px;
-    padding: 0 15px 0 100px;
     margin-right: auto;
     margin-left: 0;
+    padding: 0 15px 0 100px;
   }
 }
 @media screen and (min-width: 768px) {
   .contacts__content {
     flex-basis: 330px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__content {
+    flex-basis: 100%;
   }
 }
 .contacts__title {
@@ -949,6 +956,11 @@ label {
 @media screen and (min-width: 768px) {
   .contacts__aside {
     padding-top: 89px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__aside {
+    padding-top: 0;
   }
 }
 
