@@ -1010,6 +1010,16 @@ label {
   background-color: #f7f7f7;
   padding: 44px 0;
 }
+@media screen and (min-width: 768px) {
+  .page-footer {
+    padding: 56px 0;
+  }
+}
+.page-footer__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
 .page-footer__text {
   font-size: 11px;
   line-height: 1.363;
@@ -1434,6 +1444,11 @@ label {
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .soc-nav__list {
+    margin-bottom: 0;
+  }
 }
 .soc-nav__list--mobmenu {
   gap: 10px;

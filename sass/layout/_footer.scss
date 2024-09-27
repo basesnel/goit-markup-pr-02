@@ -2,6 +2,16 @@
   background-color: getColor('foregroundThird');
   padding: 44px 0;
 
+  @include tablet {
+    padding: 56px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
   &__text {
     @include fitFont(11px, 1.363, 600, 0.2em);
 
