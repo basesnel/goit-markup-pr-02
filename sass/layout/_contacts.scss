@@ -27,7 +27,7 @@
     }
   }
 
-  @include tablet {
+  @include desktop {
     background-image: url('../images/contacts/desktop/contacts-bg-785.png');
 
     @include retina-2 {
@@ -67,7 +67,7 @@
       flex-basis: 330px;
     }
 
-    @include tablet {
+    @include desktop {
       flex-basis: 100%;
     }
   }

@@ -856,17 +856,17 @@ label {
     background-image: url("../images/contacts/tablet/contacts-bg-2304.png");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .contacts {
     background-image: url("../images/contacts/desktop/contacts-bg-785.png");
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .contacts {
     background-image: url("../images/contacts/desktop/contacts-bg-1570.png");
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-resolution: 3dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .contacts {
     background-image: url("../images/contacts/desktop/contacts-bg-2355.png");
   }
@@ -898,7 +898,7 @@ label {
     flex-basis: 330px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .contacts__content {
     flex-basis: 100%;
   }
