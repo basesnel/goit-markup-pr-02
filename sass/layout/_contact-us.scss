@@ -1,4 +1,6 @@
 .contact-us {
+  background-color: getColor('foregroundSecond');
+
   &__title {
     @extend %visually-hidden;
   }

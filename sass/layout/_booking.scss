@@ -1,6 +1,5 @@
 .booking {
   text-align: center;
-  background-color: getColor('foregroundSecond');
 
   @include tablet {
     text-align: initial;
