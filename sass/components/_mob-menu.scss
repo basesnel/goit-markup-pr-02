@@ -24,7 +24,7 @@
   &__item {
     padding-bottom: 12px;
 
-    @include fitFont(14px, normal, 600, 1.8px);
+    @include fitFont(14px, normal, 600, 0.1em);
 
     @include mobile {
       padding-bottom: 24px;
